@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/snow_height2",
+  "textures": {
+    "particle": "soulfulnether:block/ashen_snow_block",
+    "texture": "soulfulnether:block/ashen_snow_block"
+  }
+}

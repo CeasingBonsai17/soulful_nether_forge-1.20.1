@@ -1,0 +1,34 @@
+{
+  "type": "minecraft:simple_block",
+  "config": {
+    "to_place": {
+      "type": "minecraft:weighted_state_provider",
+      "entries": [
+        {
+          "weight": 25,
+          "data": {
+            "Name": "soulfulnether:lichoss_carpet",
+            "Properties": {
+              "hanging": "true"
+            }
+          }
+        },
+        {
+          "weight": 20,
+          "data": {
+            "Name": "soulfulnether:ember_roots",
+            "Properties": {
+              "hanging": "true"
+            }
+          }
+        },
+        {
+          "weight": 4,
+          "data": {
+            "Name": "minecraft:air"
+          }
+        }
+      ]
+    }
+  }
+}

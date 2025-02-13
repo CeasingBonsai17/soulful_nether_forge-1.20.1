@@ -1,0 +1,37 @@
+{
+  "display": {
+    "icon": {
+      "item": "soulfulnether:soulroot"
+    },
+    "title": {
+      "translate": "advancements.nether.not_quite_mandrakes.title"
+    },
+    "description": {
+      "translate": "advancements.nether.not_quite_mandrakes.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent": "minecraft:nether/root",
+  "criteria": {
+    "has_soulroot": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "soulfulnether:soulroot"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_soulroot"
+    ]
+  ],
+  "sends_telemetry_event": false
+}

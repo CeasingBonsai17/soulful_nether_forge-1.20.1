@@ -1,0 +1,40 @@
+{
+  "type": "minecraft:simple_block",
+  "config": {
+    "to_place": {
+      "type": "minecraft:weighted_state_provider",
+      "entries": [
+        {
+          "weight": 3,
+          "data": {
+            "Name": "soulfulnether:fright_fungus"
+          }
+        },
+        {
+          "weight": 25,
+          "data": {
+            "Name": "soulfulnether:lichoss_carpet"
+          }
+        },
+        {
+          "weight": 20,
+          "data": {
+            "Name": "soulfulnether:ember_roots"
+          }
+        },
+        {
+          "weight": 8,
+          "data": {
+            "Name": "minecraft:nether_sprouts"
+          }
+        },
+        {
+          "weight": 4,
+          "data": {
+            "Name": "minecraft:air"
+          }
+        }
+      ]
+    }
+  }
+}

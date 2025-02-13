@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "group": "planks",
+  "ingredients": [
+    {
+      "tag": "soulfulnether:fright_stems"
+    }
+  ],
+  "result": {
+    "item": "soulfulnether:fright_planks",
+    "count": 4
+  }
+}

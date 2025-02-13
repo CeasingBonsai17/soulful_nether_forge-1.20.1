@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "marshmarrow_stacks",
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "soulfulnether:toasty_marshmarrow"
+    }
+  },
+  "result": {
+    "item": "soulfulnether:toasty_marshmarrow_stack",
+    "count": 1
+  },
+  "show_notification": true
+}

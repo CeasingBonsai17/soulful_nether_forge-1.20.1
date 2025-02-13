@@ -1,0 +1,49 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "add": false,
+              "conditions": [
+                {
+                  "block": "soulfulnether:marshmarrow",
+                  "condition": "minecraft:block_state_property",
+                  "properties": {
+                    "marshmarrows": "2"
+                  }
+                }
+              ],
+              "count": 2,
+              "function": "minecraft:set_count"
+            },
+            {
+              "add": false,
+              "conditions": [
+                {
+                  "block": "soulfulnether:marshmarrow",
+                  "condition": "minecraft:block_state_property",
+                  "properties": {
+                    "marshmarrows": "3"
+                  }
+                }
+              ],
+              "count": 3,
+              "function": "minecraft:set_count"
+            },
+            {
+              "function": "minecraft:explosion_decay"
+            }
+          ],
+          "name": "soulfulnether:marshmarrow"
+        }
+      ],
+      "rolls": 1
+    }
+  ],
+  "random_sequence": "soulfulnether:blocks/marshmarrow"
+}

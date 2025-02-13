@@ -1,0 +1,16 @@
+{
+  "replace": false,
+  "values": [
+    "soulfulnether:fright_wart_block",
+    "soulfulnether:lichoss_block",
+    "soulfulnether:hanging_lichoss",
+    "soulfulnether:hanging_lichoss_plant",
+    "soulfulnether:lichoss_carpet",
+    "soulfulnether:marshmarrow_stack",
+    "soulfulnether:marshmarrow",
+    "soulfulnether:toasty_marshmarrow_stack",
+    "soulfulnether:toasty_marshmarrow",
+    "soulfulnether:roasted_marshmarrow_stack",
+    "soulfulnether:roasted_marshmarrow"
+  ]
+}

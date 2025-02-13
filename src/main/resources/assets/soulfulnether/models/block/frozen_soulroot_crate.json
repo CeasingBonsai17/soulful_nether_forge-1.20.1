@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "bottom": "soulfulnether:block/fright_crate_bottom",
+    "side": "soulfulnether:block/frozen_soulroot_crate_side",
+    "top": "soulfulnether:block/frozen_soulroot_crate_top"
+  }
+}

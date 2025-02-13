@@ -1,0 +1,61 @@
+{
+  "display": {
+    "icon": {
+      "item": "soulfulnether:soulroot_pie"
+    },
+    "title": {
+      "translate": "advancements.nether.food_for_the_soul.title"
+    },
+    "description": {
+      "translate": "advancements.nether.food_for_the_soul.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "parent": "soulfulnether:nether/not_quite_mandrakes",
+  "criteria": {
+    "soulroot": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": [
+            "soulfulnether:soulroot"
+          ]
+        }
+      }
+    },
+    "charred_soulroot": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": [
+            "soulfulnether:charred_soulroot"
+          ]
+        }
+      }
+    },
+    "soulroot_pie": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": [
+            "soulfulnether:soulroot_pie"
+          ]
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "soulroot"
+    ],
+    [
+      "charred_soulroot"
+    ],
+    [
+      "soulroot_pie"
+    ]
+  ]
+}

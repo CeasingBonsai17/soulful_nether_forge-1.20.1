@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "soulfulnether:block/polished_ashen_basalt_top",
+    "side": "soulfulnether:block/polished_ashen_basalt"
+  }
+}

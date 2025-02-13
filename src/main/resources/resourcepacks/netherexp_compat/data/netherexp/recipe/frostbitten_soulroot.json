@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "soulfulnether:soulroot"
+    },
+    {
+      "item": "netherexp:black_icicle"
+    }
+  ],
+  "result": {
+    "item": "soulfulnether:frostbitten_soulroot",
+    "count": 2
+  }
+}

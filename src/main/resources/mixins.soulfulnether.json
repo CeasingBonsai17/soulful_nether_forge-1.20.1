@@ -1,0 +1,20 @@
+{
+  "required": true,
+  "package": "net.bon.soulfulnether.mixin",
+  "refmap": "mixins.soulfulnether.refmap.json",
+  "compatibilityLevel": "JAVA_17",
+  "minVersion": "0.8",
+  "mixins": [
+    "BeetrootBlockMixin",
+    "BlockEntityTypeMixin",
+    "FungusBlockMixin",
+    "RootsBlockMixin",
+    "SproutsBlockMixin",
+    "SoulFireBlockMixin"
+  ],
+  "client": [],
+  "server": [],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "bark",
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "soulfulnether:stripped_fright_stem"
+    }
+  },
+  "result": {
+    "item": "soulfulnether:stripped_fright_hyphae",
+    "count": 3
+  },
+  "show_notification": true
+}

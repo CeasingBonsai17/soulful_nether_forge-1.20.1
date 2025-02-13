@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:campfire_cooking",
+  "category": "food",
+  "ingredient": {
+    "item": "soulfulnether:marshmarrow_stack"
+  },
+  "result": "soulfulnether:toasty_marshmarrow_stack",
+  "experience": 0.35,
+  "cookingtime": 200
+}

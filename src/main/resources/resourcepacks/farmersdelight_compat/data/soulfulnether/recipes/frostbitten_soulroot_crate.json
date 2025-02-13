@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "soulfulnether:frostbitten_soulroot"
+    }
+  },
+  "result": {
+    "id": "soulfulnether:frostbitten_soulroot_crate"
+  }
+}

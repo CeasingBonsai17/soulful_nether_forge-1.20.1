@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "soulfulnether:block/fright_stem_top",
+    "side": "soulfulnether:block/fright_stem"
+  }
+}

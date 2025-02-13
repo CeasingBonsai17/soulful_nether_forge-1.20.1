@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:campfire_cooking",
+  "category": "food",
+  "ingredient": {
+    "item": "soulfulnether:soulroot"
+  },
+  "result": "soulfulnether:charred_soulroot",
+  "experience": 0.35,
+  "cookingtime": 600
+}

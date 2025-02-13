@@ -1,0 +1,7 @@
+{
+  "parent": "soulfulnether:block/template_marshmarrow_1",
+  "textures": {
+    "all": "soulfulnether:block/toasty_marshmarrow_placed",
+    "particle": "soulfulnether:block/toasty_marshmarrow_placed"
+  }
+}

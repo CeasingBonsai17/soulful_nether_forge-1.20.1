@@ -1,0 +1,27 @@
+{
+  "feature": "soulfulnether:ashen_deltas/magma_patch",
+  "placement": [
+    {
+      "type": "minecraft:count",
+      "count": 2
+    },
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "below_top": 256
+      }
+    },
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "above_bottom": 31
+      }
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}

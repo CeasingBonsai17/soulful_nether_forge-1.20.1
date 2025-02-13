@@ -1,0 +1,76 @@
+{
+  "advancements.nether.not_quite_mandrakes.title": "Not Quite Mandrakes",
+  "advancements.nether.not_quite_mandrakes.description": "Obtain a Soulroot by planting a beetroot into a valid soul related blocks",
+  "advancements.nether.food_for_the_soul.title": "Food For the Soul",
+  "advancements.nether.food_for_the_soul.description": "Eat all the Soulroot foods",
+  "advancements.nether.snow_flakes.title": "Whats this! Whats this!",
+  "advancements.nether.snow_flakes.description": "Find the Ashen Deltas biome",
+
+  "block.soulfulnether.fright_stem": "Fright Stem",
+  "block.soulfulnether.fright_hyphae": "Fright Hyphae",
+  "block.soulfulnether.stripped_fright_stem": "Stripped Fright Stem",
+  "block.soulfulnether.stripped_fright_hyphae": "Stripped Fright Hyphae",
+  "block.soulfulnether.fright_planks": "Fright Planks",
+  "block.soulfulnether.fright_stairs": "Fright Stairs",
+  "block.soulfulnether.fright_slab": "Fright Slab",
+  "block.soulfulnether.fright_fence": "Fright Fence",
+  "block.soulfulnether.fright_fence_gate": "Fright Fence Gate",
+  "block.soulfulnether.fright_door": "Fright Door",
+  "block.soulfulnether.fright_trapdoor": "Fright Trapdoor",
+  "block.soulfulnether.fright_pressure_plate": "Fright Pressure Plate",
+  "block.soulfulnether.fright_sign": "Fright Sign",
+  "block.soulfulnether.fright_hanging_sign": "Fright Hanging Sign",
+  "block.soulfulnether.fright_button": "Fright Button",
+  "block.soulfulnether.fright_fungus": "Fright Fungus",
+  "block.soulfulnether.fright_roots": "Fright Roots",
+  "block.soulfulnether.fright_wart_block": "Fright Wart Block",
+  "block.soulfulnether.spiraling_vines": "Spiraling Vines",
+  "block.soulfulnether.lichoss_block": "Lichoss Block",
+  "block.soulfulnether.hanging_lichoss": "Hanging Lichoss",
+  "block.soulfulnether.lichoss_carpet": "Lichoss Carpet",
+  "block.soulfulnether.ember_roots": "Ember Roots",
+  "item.soulfulnether.soulroot_seeds": "Soulroot Seeds",
+
+  "item.soulfulnether.frostbitten_soulroot": "Frostbitten Soulroot",
+  "item.soulfulnether.frostbitten_popsicle": "Frostbitten Popsicle",
+  "block.soulfulnether.frostbitten_soulroot_crate": "Frostbitten Soulroot Crate",
+
+  "item.soulfulnether.frozen_soulroot": "Frozen Soulroot",
+  "block.soulfulnether.frozen_soulroot_crate": "Frozen Soulroot Crate",
+
+  "item.soulfulnether.soulroot": "Soulroot",
+
+  "block.soulfulnether.soulroot_crate": "Soulroot Crate",
+
+  "item.soulfulnether.charred_soulroot": "Charred Soulroot",
+
+  "block.soulfulnether.charred_soulroot_crate": "Charred Soulroot Crate",
+
+  "item.soulfulnether.soulroot_pie": "Soulroot Pie",
+  "block.soulfulnether.marshmarrow": "Marshmarrow",
+  "block.soulfulnether.marshmarrow_stack": "Marshmarrow Stack",
+  "block.soulfulnether.toasty_marshmarrow": "Toasty Marshmarrow",
+  "block.soulfulnether.toasty_marshmarrow_stack": "Toasty Marshmarrow Stack",
+  "block.soulfulnether.roasted_marshmarrow": "Roasted Marshmarrow",
+  "block.soulfulnether.roasted_marshmarrow_stack": "Roasted Marshmarrow Stack",
+  "item.soulfulnether.marshmarrow_heart": "Marshmarrow Heart",
+
+  "item.soulfulnether.marshmarrow_mochi": "Marshmarrow Mochi",
+
+
+  "block.soulfulnether.ashen_basalt": "Ashen Basalt",
+  "block.soulfulnether.polished_ashen_basalt": "Polished Ashen Basalt",
+  "block.soulfulnether.volcanic_quartz_block": "Volcanic Quartz Block",
+  "block.soulfulnether.volcanic_quartz_bricks": "Volcanic Quartz Bricks",
+  "block.soulfulnether.polished_volcanic_quartz": "Polished Volcanic Quartz",
+  "block.soulfulnether.ashen_snow_block": "Ashen Snow Block",
+  "block.soulfulnether.ashen_snow_layer": "Ashen Snow Layer",
+  "item.soulfulnether.ashen_snow": "Ashen Snow",
+
+  "effect.soulfulnether.frostbite": "Frostbite",
+
+  "creativetab.soulfulnether": "Soulful Nether",
+
+  "biome.soulfulnether.fright_forest": "Fright Forest",
+  "biome.soulfulnether.ashen_deltas": "Ashen Deltas"
+}

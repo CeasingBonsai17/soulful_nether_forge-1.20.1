@@ -1,0 +1,55 @@
+{
+  "variants": {
+    "marshmarrows=1": [
+      {
+        "model": "soulfulnether:block/toasty_marshmarrow_1"
+      },
+      {
+        "model": "soulfulnether:block/toasty_marshmarrow_1",
+        "y": 90
+      },
+      {
+        "model": "soulfulnether:block/toasty_marshmarrow_1",
+        "y": 180
+      },
+      {
+        "model": "soulfulnether:block/toasty_marshmarrow_1",
+        "y": 270
+      }
+    ],
+    "marshmarrows=2": [
+      {
+        "model": "soulfulnether:block/toasty_marshmarrow_2"
+      },
+      {
+        "model": "soulfulnether:block/toasty_marshmarrow_2",
+        "y": 90
+      },
+      {
+        "model": "soulfulnether:block/toasty_marshmarrow_2",
+        "y": 180
+      },
+      {
+        "model": "soulfulnether:block/toasty_marshmarrow_2",
+        "y": 270
+      }
+    ],
+    "marshmarrows=3": [
+      {
+        "model": "soulfulnether:block/toasty_marshmarrow_3"
+      },
+      {
+        "model": "soulfulnether:block/toasty_marshmarrow_3",
+        "y": 90
+      },
+      {
+        "model": "soulfulnether:block/toasty_marshmarrow_3",
+        "y": 180
+      },
+      {
+        "model": "soulfulnether:block/toasty_marshmarrow_3",
+        "y": 270
+      }
+    ]
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "values": [
+    "#minecraft:nylium",
+    "minecraft:soul_soil",
+    "soulfulnether:lichoss_block",
+    {
+      "id": "#netherexp:roots_plantable_on",
+      "required": false
+    }
+  ]
+}

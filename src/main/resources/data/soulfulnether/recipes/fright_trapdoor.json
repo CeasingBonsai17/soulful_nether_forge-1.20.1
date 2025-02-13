@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "group": "wooden_trapdoor",
+  "pattern": [
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "soulfulnether:fright_planks"
+    }
+  },
+  "result": {
+    "item": "soulfulnether:fright_trapdoor",
+    "count": 2
+  },
+  "show_notification": true
+}

@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "wooden_stairs",
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "soulfulnether:fright_planks"
+    }
+  },
+  "result": {
+    "item": "soulfulnether:fright_stairs",
+    "count": 4
+  },
+  "show_notification": true
+}

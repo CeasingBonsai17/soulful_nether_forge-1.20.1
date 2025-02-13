@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "soulfulnether:block/fright_hyphae",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "soulfulnether:block/fright_hyphae"
+    },
+    "axis=z": {
+      "model": "soulfulnether:block/fright_hyphae",
+      "x": 90
+    }
+  }
+}

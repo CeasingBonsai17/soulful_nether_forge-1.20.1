@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "soulfulnether:frozen_soulroot"
+    },
+    {
+      "item": "soulfulnether:marshmarrow"
+    }
+  ],
+  "result": {
+    "item": "soulfulnether:marshmarrow_mochi",
+    "count": 2
+  }
+}

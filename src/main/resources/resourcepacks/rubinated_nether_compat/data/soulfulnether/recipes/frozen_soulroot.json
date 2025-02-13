@@ -1,0 +1,10 @@
+{
+  "type": "rubinated_nether:freezing",
+  "category": "freezable_misc",
+  "cookingtime": 200,
+  "experience": 1.0,
+  "ingredient": {
+    "item": "soulfulnether:soulroot"
+  },
+  "result": "soulfulnether:frozen_soulroot"
+}

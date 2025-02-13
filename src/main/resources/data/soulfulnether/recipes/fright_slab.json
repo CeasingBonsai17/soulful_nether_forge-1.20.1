@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "wooden_slab",
+  "pattern": [
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "soulfulnether:fright_planks"
+    }
+  },
+  "result": {
+    "item": "soulfulnether:fright_slab",
+    "count": 6
+  },
+  "show_notification": true
+}

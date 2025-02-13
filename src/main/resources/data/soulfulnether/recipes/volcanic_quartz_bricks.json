@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "soulfulnether:volcanic_quartz_block"
+    }
+  },
+  "result": {
+    "item": "soulfulnether:volcanic_quartz_bricks",
+    "count": 4
+  },
+  "show_notification": true
+}

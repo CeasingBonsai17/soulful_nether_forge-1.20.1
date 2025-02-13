@@ -1,0 +1,72 @@
+{
+  "advancements.nether.not_quite_mandrakes.title": "No exactamente una mandrágora",
+  "advancements.nether.not_quite_mandrakes.description": "Obtené una remolalma plantando una remolacha en cualquier bloque de almas.",
+  "advancements.nether.food_for_the_soul.title": "Comida para el alma",
+  "advancements.nether.food_for_the_soul.description": "Comé todas las comidas de remolalma.",
+  "advancements.nether.snow_flakes.title": "Quesejo?",
+  "advancements.nether.snow_flakes.description": "Encontrá un bioma de Deltas Cenizos",
+
+  "block.soulfulnether.fright_stem": "Tallo espantoso",
+  "block.soulfulnether.fright_hyphae": "Hifas espantosas",
+  "block.soulfulnether.stripped_fright_stem": "Tallo espantoso sin corteza",
+  "block.soulfulnether.stripped_fright_hyphae": "Hifas espantosas sin corteza",
+  "block.soulfulnether.fright_planks": "Madera espantosa",
+  "block.soulfulnether.fright_stairs": "Escaleras espantosas",
+  "block.soulfulnether.fright_slab": "Baldosa espantosa",
+  "block.soulfulnether.fright_fence": "Valla espantosa",
+  "block.soulfulnether.fright_fence_gate": "Puerta de valla espantosa",
+  "block.soulfulnether.fright_door": "Puerta espantosa",
+  "block.soulfulnether.fright_trapdoor": "Escotilla espantosa",
+  "block.soulfulnether.fright_pressure_plate": "Placa de presión espantosa",
+  "block.soulfulnether.fright_sign": "Cartel espantoso",
+  "block.soulfulnether.fright_hanging_sign": "Cartel colgante espantoso",
+  "block.soulfulnether.fright_button": "Botón espantoso",
+  "block.soulfulnether.fright_fungus": "Hongo espantoso",
+  "block.soulfulnether.fright_roots": "Yuyos espantosos",
+  "block.soulfulnether.fright_wart_block": "Bloque de verrugas espantosas",
+  "block.soulfulnether.spiraling_vines": "Enredaderas espiral",
+  "block.soulfulnether.lichoss_block": "Bloque de lichusgo",
+  "block.soulfulnether.hanging_lichoss": "Lichusgo colgante",
+  "block.soulfulnether.lichoss_carpet": "Alfombra de lichusgo",
+  "block.soulfulnether.ember_roots": "Yuyos ascuos",
+  "item.soulfulnether.soulroot_seeds": "Semillas de remolalma",
+
+  "item.soulfulnether.frostbitten_soulroot": "Remolalma gélida",
+  "item.soulfulnether.frostbitten_popsicle": "Paleta gélida",
+  "block.soulfulnether.frostbitten_soulroot_crate": "Cajón de remolalma gélida",
+
+  "item.soulfulnether.frozen_soulroot": "Remolalma congelada",
+  "block.soulfulnether.frozen_soulroot_crate": "Cajón de remolalma congelada",
+
+  "item.soulfulnether.soulroot": "Remolalma",
+
+  "block.soulfulnether.soulroot_crate": "Cajón de remolalma",
+
+  "item.soulfulnether.charred_soulroot": "Remolalma chamuscada",
+
+  "block.soulfulnether.charred_soulroot_crate": "Cajón de remolalma chamuscada",
+
+  "item.soulfulnether.soulroot_pie": "Tarta de remolalma",
+  "block.soulfulnether.marshmarrow": "Malvavisco",
+  "block.soulfulnether.marshmarrow_stack": "Malvaviscos apilados",
+  "block.soulfulnether.toasty_marshmarrow": "Malvavisco tostado",
+  "block.soulfulnether.toasty_marshmarrow_stack": "Malvaviscos tostados apilados",
+  "block.soulfulnether.roasted_marshmarrow": "Malvavisco asado",
+  "block.soulfulnether.roasted_marshmarrow_stack": "Malvaviscos asados apilados",
+  "item.soulfulnether.marshmarrow_heart": "Corazón de malvavisco",
+
+  "item.soulfulnether.marshmarrow_mochi": "Mochi de malvavisco",
+
+
+  "block.soulfulnether.ashen_basalt": "Basalto cenizo",
+  "block.soulfulnether.polished_ashen_basalt": "Basalto cenizo pulido",
+  "block.soulfulnether.volcanic_quartz_block": "Cuarzo volcánico",
+  "block.soulfulnether.volcanic_quartz_bricks": "Ladrillos de cuarzo volcánico",
+  "block.soulfulnether.polished_volcanic_quartz": "Cuarzo volcánico pulido",
+
+
+  "creativetab.soulfulnether": "Soulful Nether",
+
+  "biome.soulfulnether.fright_forest": "Bosque espantoso",
+  "biome.soulfulnether.ashen_deltas": "Deltas cenizos"
+}

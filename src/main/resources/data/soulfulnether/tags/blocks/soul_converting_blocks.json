@@ -1,0 +1,14 @@
+{
+  "values": [
+    "minecraft:soul_sand",
+    {
+      "id": "netherexp:ecto_soul_sand",
+      "required": false
+    },
+    {
+      "id": "netherexp:sorroweed",
+      "required": false
+    },
+    "soulfulnether:lichoss_block"
+  ]
+}

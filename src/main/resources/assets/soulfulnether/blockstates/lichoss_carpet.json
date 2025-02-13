@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "hanging=false": {
+      "model": "soulfulnether:block/lichoss_carpet"
+    },
+    "hanging=true": {
+      "model": "soulfulnether:block/hanging_lichoss_carpet"
+    }
+  }
+}

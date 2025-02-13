@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "wooden_fence",
+  "pattern": [
+    "W#W",
+    "W#W"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:stick"
+    },
+    "W": {
+      "item": "soulfulnether:fright_planks"
+    }
+  },
+  "result": {
+    "item": "soulfulnether:fright_fence",
+    "count": 3
+  },
+  "show_notification": true
+}

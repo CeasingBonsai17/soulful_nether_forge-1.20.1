@@ -1,0 +1,28 @@
+{
+  "replace": false,
+  "values": [
+    "soulfulnether:fright_stem",
+    "soulfulnether:stripped_fright_stem",
+    "soulfulnether:fright_hyphae",
+    "soulfulnether:stripped_fright_hyphae",
+    "soulfulnether:fright_planks",
+    "soulfulnether:fright_stairs",
+    "soulfulnether:fright_slab",
+    "soulfulnether:fright_fence",
+    "soulfulnether:fright_fence_gate",
+    "soulfulnether:fright_door",
+    "soulfulnether:fright_trapdoor",
+    "soulfulnether:fright_pressure_plate",
+    "soulfulnether:fright_button",
+    "soulfulnether:spiraling_vines",
+    "soulfulnether:spiraling_vines_plant",
+    "soulfulnether:fright_fungus",
+    "soulfulnether:soulroots",
+    "soulfulnether:fright_hanging_sign",
+    "soulfulnether:fright_wall_hanging_sign",
+    "soulfulnether:fright_sign",
+    "soulfulnether:fright_wall_sign",
+    "soulfulnether:hanging_lichoss",
+    "soulfulnether:hanging_lichoss_plant"
+  ]
+}

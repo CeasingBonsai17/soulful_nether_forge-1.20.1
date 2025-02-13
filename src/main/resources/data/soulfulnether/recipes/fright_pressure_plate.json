@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "group": "wooden_pressure_plate",
+  "pattern": [
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "soulfulnether:fright_planks"
+    }
+  },
+  "result": {
+    "item": "soulfulnether:fright_pressure_plate"
+  },
+  "show_notification": true
+}

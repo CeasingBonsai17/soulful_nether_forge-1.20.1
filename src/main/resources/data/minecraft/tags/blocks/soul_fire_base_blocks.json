@@ -1,0 +1,23 @@
+{
+  "replace": false,
+  "values": [
+    "soulfulnether:lichoss_block",
+    "soulfulnether:lichoss_carpet",
+    "soulfulnether:fright_wart_block",
+    "soulfulnether:fright_stem",
+    "soulfulnether:fright_hyphae",
+    "soulfulnether:stripped_fright_stem",
+    "soulfulnether:stripped_fright_hyphae",
+    "soulfulnether:fright_planks",
+    "soulfulnether:fright_stairs",
+    "soulfulnether:fright_slab",
+    "soulfulnether:fright_trapdoor",
+    "soulfulnether:ashen_basalt",
+    "soulfulnether:polished_ashen_basalt",
+    "soulfulnether:volcanic_quartz_block",
+    "soulfulnether:volcanic_quartz_bricks",
+    "soulfulnether:polished_volcanic_quartz",
+    "soulfulnether:ashen_snow_layer",
+    "soulfulnether:ashen_snow_block"
+  ]
+}

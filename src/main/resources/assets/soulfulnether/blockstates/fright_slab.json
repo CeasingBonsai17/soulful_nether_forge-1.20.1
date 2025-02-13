@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "soulfulnether:block/fright_slab"
+    },
+    "type=double": {
+      "model": "soulfulnether:block/fright_planks"
+    },
+    "type=top": {
+      "model": "soulfulnether:block/fright_slab_top"
+    }
+  }
+}

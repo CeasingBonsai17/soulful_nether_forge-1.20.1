@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "soulfulnether:volcanic_quartz_block"
+        }
+      ],
+      "rolls": 1
+    }
+  ],
+  "random_sequence": "soulfulnether:blocks/volcanic_quartz_block"
+}
