@@ -35,7 +35,7 @@
                       "function": "minecraft:set_count"
                     }
                   ],
-                  "name": "soulfulnether:ashen_snow"
+                  "name": "minecraft:snowball"
                 },
                 {
                   "type": "minecraft:item",
@@ -55,7 +55,7 @@
                       "function": "minecraft:set_count"
                     }
                   ],
-                  "name": "soulfulnether:ashen_snow"
+                  "name": "minecraft:snowball"
                 },
                 {
                   "type": "minecraft:item",
@@ -75,7 +75,7 @@
                       "function": "minecraft:set_count"
                     }
                   ],
-                  "name": "soulfulnether:ashen_snow"
+                  "name": "minecraft:snowball"
                 },
                 {
                   "type": "minecraft:item",
@@ -95,7 +95,7 @@
                       "function": "minecraft:set_count"
                     }
                   ],
-                  "name": "soulfulnether:ashen_snow"
+                  "name": "minecraft:snowball"
                 },
                 {
                   "type": "minecraft:item",
@@ -115,7 +115,7 @@
                       "function": "minecraft:set_count"
                     }
                   ],
-                  "name": "soulfulnether:ashen_snow"
+                  "name": "minecraft:snowball"
                 },
                 {
                   "type": "minecraft:item",
@@ -135,7 +135,7 @@
                       "function": "minecraft:set_count"
                     }
                   ],
-                  "name": "soulfulnether:ashen_snow"
+                  "name": "minecraft:snowball"
                 },
                 {
                   "type": "minecraft:item",
@@ -155,7 +155,7 @@
                       "function": "minecraft:set_count"
                     }
                   ],
-                  "name": "soulfulnether:ashen_snow"
+                  "name": "minecraft:snowball"
                 },
                 {
                   "type": "minecraft:item",
@@ -175,7 +175,7 @@
                       "function": "minecraft:set_count"
                     }
                   ],
-                  "name": "soulfulnether:ashen_snow"
+                  "name": "minecraft:snowball"
                 }
               ],
               "conditions": [
@@ -218,7 +218,7 @@
                       "function": "minecraft:set_count"
                     }
                   ],
-                  "name": "soulfulnether:ashen_snow_layer"
+                  "name": "minecraft:snow"
                 },
                 {
                   "type": "minecraft:item",
@@ -238,7 +238,7 @@
                       "function": "minecraft:set_count"
                     }
                   ],
-                  "name": "soulfulnether:ashen_snow_layer"
+                  "name": "minecraft:snow"
                 },
                 {
                   "type": "minecraft:item",
@@ -258,7 +258,7 @@
                       "function": "minecraft:set_count"
                     }
                   ],
-                  "name": "soulfulnether:ashen_snow_layer"
+                  "name": "minecraft:snow"
                 },
                 {
                   "type": "minecraft:item",
@@ -278,7 +278,7 @@
                       "function": "minecraft:set_count"
                     }
                   ],
-                  "name": "soulfulnether:ashen_snow_layer"
+                  "name": "minecraft:snow"
                 },
                 {
                   "type": "minecraft:item",
@@ -298,7 +298,7 @@
                       "function": "minecraft:set_count"
                     }
                   ],
-                  "name": "soulfulnether:ashen_snow_layer"
+                  "name": "minecraft:snow"
                 },
                 {
                   "type": "minecraft:item",
@@ -318,7 +318,7 @@
                       "function": "minecraft:set_count"
                     }
                   ],
-                  "name": "soulfulnether:ashen_snow_layer"
+                  "name": "minecraft:snow"
                 },
                 {
                   "type": "minecraft:item",
@@ -338,11 +338,11 @@
                       "function": "minecraft:set_count"
                     }
                   ],
-                  "name": "soulfulnether:ashen_snow_layer"
+                  "name": "minecraft:snow"
                 },
                 {
                   "type": "minecraft:item",
-                  "name": "soulfulnether:ashen_snow_block"
+                  "name": "minecraft:snow_block"
                 }
               ]
             }

@@ -121,9 +121,9 @@ public class SoulfulBlocks {
     public static final RegistryObject<Block> POLISHED_VOLCANIC_QUARTZ = registerBlock("polished_volcanic_quartz", () ->
             new Block(BlockBehaviour.Properties.copy(Blocks.POLISHED_BASALT).mapColor(MapColor.COLOR_LIGHT_GRAY)));
     public static final RegistryObject<Block> ASHEN_SNOW_BLOCK = registerBlock("ashen_snow_block", () ->
-            new Block(BlockBehaviour.Properties.copy(Blocks.SNOW_BLOCK).mapColor(MapColor.CLAY)));
+            new Block(BlockBehaviour.Properties.copy(Blocks.SNOW_BLOCK).mapColor(MapColor.CLAY).sound(SoundType.SAND)));
     public static final RegistryObject<Block> ASHEN_SNOW_LAYER = registerBlock("ashen_snow_layer", () ->
-            new AshenSnowLayerBlock(BlockBehaviour.Properties.copy(Blocks.SNOW).mapColor(MapColor.CLAY)));
+            new AshenSnowLayerBlock(BlockBehaviour.Properties.copy(Blocks.SNOW).mapColor(MapColor.CLAY).sound(SoundType.SAND)));
 
 
     public static final RegistryObject<Block> CHARRED_SOULROOT_CRATE = registerCompatBlock("charred_soulroot_crate", () ->

@@ -80,7 +80,7 @@ public class AshenSnowLayerBlock extends Block {
 
     public boolean canSurvive(BlockState p_56602_, LevelReader p_56603_, BlockPos p_56604_) {
         BlockState $$3 = p_56603_.getBlockState(p_56604_.below());
-        return Block.isFaceFull($$3.getCollisionShape(p_56603_, p_56604_.below()), Direction.UP) || $$3.is(this) && (Integer)$$3.getValue(LAYERS) == 8;
+        return Block.isFaceFull($$3.getCollisionShape(p_56603_, p_56604_.below()), Direction.UP) || $$3.is(this) && (Integer)$$3.getValue(LAYERS) == 8 || $$3.is(Blocks.SOUL_SAND);
     }
 
     public BlockState updateShape(BlockState p_56606_, Direction p_56607_, BlockState p_56608_, LevelAccessor p_56609_, BlockPos p_56610_, BlockPos p_56611_) {
