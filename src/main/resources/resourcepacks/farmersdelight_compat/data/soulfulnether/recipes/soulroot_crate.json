@@ -11,6 +11,7 @@
     }
   },
   "result": {
-    "id": "soulfulnether:soulroot_crate"
-  }
+    "item": "soulfulnether:soulroot_crate"
+  },
+  "show_notification": true
 }

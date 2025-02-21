@@ -2,9 +2,9 @@ package net.bon.soulfulnether.block;
 
 import net.bon.soulfulnether.SoulfulNether;
 import net.bon.soulfulnether.block.type.*;
-import net.bon.soulfulnether.block.sapling.HugeFrightFungusGrower;
 import net.bon.soulfulnether.item.SoulfulItems;
 import net.bon.soulfulnether.util.CompatUtil;
+import net.bon.soulfulnether.worldgen.feature.SoulfulConfiguredFeatures;
 import net.minecraft.core.Direction;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -21,7 +21,7 @@ import net.minecraftforge.registries.RegistryObject;
 
 import java.util.function.Supplier;
 
-@SuppressWarnings("unused")
+@SuppressWarnings("deprecation unused")
 
 public class SoulfulBlocks {
     public static final DeferredRegister<Block> BLOCK =
@@ -32,33 +32,32 @@ public class SoulfulBlocks {
             new SoulrootsBlock(BlockBehaviour.Properties.copy(Blocks.BEETROOTS).mapColor(MapColor.COLOR_CYAN).randomTicks()));
 
     public static final RegistryObject<Block> ROASTED_MARSHMARROW = registerBlockWithoutItem("roasted_marshmarrow", () ->
-            new MarshmarrowBlock(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_ORANGE).strength(0.2F).sound(SoundType.WOOL), 1.0F));
+            new MarshmarrowBlock(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_ORANGE).strength(0.2F).sound(SoundType.WOOL)));
     public static final RegistryObject<Block> ROASTED_MARSHMARROW_STACK = registerBlock("roasted_marshmarrow_stack", () ->
-            new Block(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_ORANGE).instrument(NoteBlockInstrument.XYLOPHONE).strength(0.5F).sound(SoundType.WOOL)));
+            new MarshmarrowStackBlock(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_ORANGE).instrument(NoteBlockInstrument.XYLOPHONE).strength(0.5F).sound(SoundType.WOOL)));
     public static final RegistryObject<Block> TOASTY_MARSHMARROW = registerBlockWithoutItem("toasty_marshmarrow", () ->
-            new MarshmarrowBlock(BlockBehaviour.Properties.of().mapColor(MapColor.RAW_IRON).strength(0.2F).sound(SoundType.WOOL), 0.5F));
+            new ToastingMarshmarrowBlock(BlockBehaviour.Properties.of().mapColor(MapColor.RAW_IRON).strength(0.2F).sound(SoundType.WOOL), 0.5F, ROASTED_MARSHMARROW.get()));
     public static final RegistryObject<Block> TOASTY_MARSHMARROW_STACK = registerBlock("toasty_marshmarrow_stack", () ->
-            new MarshmarrowStackBlock(BlockBehaviour.Properties.of().mapColor(MapColor.RAW_IRON).instrument(NoteBlockInstrument.XYLOPHONE).strength(0.5F).sound(SoundType.WOOL).randomTicks(), 0.5F, ROASTED_MARSHMARROW_STACK.get()));
+            new ToastingMarshmarrowStackBlock(BlockBehaviour.Properties.of().mapColor(MapColor.RAW_IRON).instrument(NoteBlockInstrument.XYLOPHONE).strength(0.5F).sound(SoundType.WOOL).randomTicks(), 0.5F, ROASTED_MARSHMARROW_STACK.get()));
     public static final RegistryObject<Block> MARSHMARROW = registerBlockWithoutItem("marshmarrow", () ->
-            new MarshmarrowBlock(BlockBehaviour.Properties.of().mapColor(MapColor.SAND).strength(0.2F).sound(SoundType.WOOL), 0.1F));
+            new ToastingMarshmarrowBlock(BlockBehaviour.Properties.of().mapColor(MapColor.SAND).strength(0.2F).sound(SoundType.WOOL), 0.1F, TOASTY_MARSHMARROW.get()));
     public static final RegistryObject<Block> MARSHMARROW_STACK = registerBlock("marshmarrow_stack", () ->
-            new MarshmarrowStackBlock(BlockBehaviour.Properties.of().mapColor(MapColor.SAND).instrument(NoteBlockInstrument.XYLOPHONE).strength(0.5F).sound(SoundType.WOOL).randomTicks(), 0.1F, TOASTY_MARSHMARROW_STACK.get()));
+            new ToastingMarshmarrowStackBlock(BlockBehaviour.Properties.of().mapColor(MapColor.SAND).instrument(NoteBlockInstrument.XYLOPHONE).strength(0.5F).sound(SoundType.WOOL).randomTicks(), 0.1F, TOASTY_MARSHMARROW_STACK.get()));
 
     public static final RegistryObject<Block> SPIRALING_VINES = registerBlock("spiraling_vines", () ->
             new SpiralingVinesBlock(BlockBehaviour.Properties.copy(Blocks.TWISTING_VINES).mapColor(MapColor.COLOR_BLACK).randomTicks()));
     public static final RegistryObject<Block> SPIRALING_VINES_PLANT = registerBlockWithoutItem("spiraling_vines_plant", () ->
             new SpiralingVinesPlantBlock(BlockBehaviour.Properties.copy(Blocks.TWISTING_VINES_PLANT).mapColor(MapColor.COLOR_BLACK)));
 
-    public static final RegistryObject<Block> FRIGHT_STEM = registerBlock("fright_stem", () ->
-            new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.WARPED_STEM).mapColor((blockState) -> {
-        return blockState.getValue(RotatedPillarBlock.AXIS) == Direction.Axis.Y ? MapColor.CLAY : MapColor.COLOR_BLUE;
-    })));
-    public static final RegistryObject<Block> FRIGHT_HYPHAE = registerBlock("fright_hyphae", () ->
-            new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.WARPED_HYPHAE).mapColor(MapColor.COLOR_BLUE)));
     public static final RegistryObject<Block> STRIPPED_FRIGHT_STEM = registerBlock("stripped_fright_stem", () ->
             new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_WARPED_STEM).mapColor(MapColor.CLAY)));
+    public static final RegistryObject<Block> FRIGHT_STEM = registerBlock("fright_stem", () ->
+            new StrippablePillarBlock(BlockBehaviour.Properties.copy(Blocks.WARPED_STEM).mapColor((blockState) -> {
+                return blockState.getValue(RotatedPillarBlock.AXIS) == Direction.Axis.Y ? MapColor.CLAY : MapColor.COLOR_BLUE;}), STRIPPED_FRIGHT_STEM));
     public static final RegistryObject<Block> STRIPPED_FRIGHT_HYPHAE = registerBlock("stripped_fright_hyphae", () ->
             new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_WARPED_HYPHAE).mapColor(MapColor.CLAY)));
+    public static final RegistryObject<Block> FRIGHT_HYPHAE = registerBlock("fright_hyphae", () ->
+            new StrippablePillarBlock(BlockBehaviour.Properties.copy(Blocks.WARPED_HYPHAE).mapColor(MapColor.COLOR_BLUE), STRIPPED_FRIGHT_HYPHAE));
     public static final RegistryObject<Block> FRIGHT_PLANKS = registerBlock("fright_planks", () ->
             new Block(BlockBehaviour.Properties.copy(Blocks.WARPED_PLANKS).mapColor(MapColor.CLAY)));
     public static final RegistryObject<Block> FRIGHT_SLAB = registerBlock("fright_slab", () ->
@@ -98,7 +97,7 @@ public class SoulfulBlocks {
     public static final RegistryObject<Block> FRIGHT_WART_BLOCK = registerBlock("fright_wart_block", () ->
             new Block(BlockBehaviour.Properties.copy(Blocks.WARPED_WART_BLOCK).mapColor(MapColor.COLOR_BLACK)));
     public static final RegistryObject<Block> FRIGHT_FUNGUS = registerBlock("fright_fungus", () ->
-            new FrightFungusBlock(new HugeFrightFungusGrower(), BlockBehaviour.Properties.copy(Blocks.WARPED_FUNGUS).mapColor(MapColor.COLOR_BLACK), LICHOSS_BLOCK.get()));
+            new FrightFungusBlock(BlockBehaviour.Properties.copy(Blocks.WARPED_FUNGUS).mapColor(MapColor.COLOR_BLACK), SoulfulConfiguredFeatures.FRIGHT_FUNGUS_PLANTED, LICHOSS_BLOCK.get()));
     public static final RegistryObject<Block> FRIGHT_ROOTS = registerBlock("fright_roots", () ->
             new FrightRootsBlock(BlockBehaviour.Properties.copy(Blocks.WARPED_ROOTS).mapColor(MapColor.COLOR_BLACK)));
 
@@ -109,9 +108,15 @@ public class SoulfulBlocks {
     public static final RegistryObject<Block> POTTED_FRIGHT_ROOTS = registerBlockWithoutItem("potted_fright_roots", () ->
             new FlowerPotBlock(FRIGHT_ROOTS.get(), (BlockBehaviour.Properties.copy(Blocks.POTTED_WARPED_ROOTS))));
 
-
+      
+    public static final RegistryObject<Block> ASHEN_SNOW_BLOCK = registerBlock("ashen_snow_block", () ->
+            new Block(BlockBehaviour.Properties.copy(Blocks.SNOW_BLOCK).mapColor(MapColor.CLAY).sound(SoundType.SAND)));
+    public static final RegistryObject<Block> ASHEN_SNOW_LAYER = registerBlock("ashen_snow_layer", () ->
+            new AshenSnowLayerBlock(BlockBehaviour.Properties.copy(Blocks.SNOW).mapColor(MapColor.CLAY).sound(SoundType.SAND)));
     public static final RegistryObject<Block> ASHEN_BASALT = registerBlock("ashen_basalt", () ->
             new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.BASALT).mapColor(MapColor.COLOR_LIGHT_GRAY)));
+    public static final RegistryObject<Block> SMOOTH_ASHEN_BASALT = registerBlock("smooth_ashen_basalt", () ->
+            new Block(BlockBehaviour.Properties.copy(Blocks.SMOOTH_BASALT).mapColor(MapColor.COLOR_LIGHT_GRAY)));
     public static final RegistryObject<Block> POLISHED_ASHEN_BASALT = registerBlock("polished_ashen_basalt", () ->
             new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.POLISHED_BASALT).mapColor(MapColor.COLOR_LIGHT_GRAY)));
     public static final RegistryObject<Block> VOLCANIC_QUARTZ_BLOCK = registerBlock("volcanic_quartz_block", () ->
@@ -120,10 +125,11 @@ public class SoulfulBlocks {
             new Block(BlockBehaviour.Properties.copy(Blocks.POLISHED_BASALT).mapColor(MapColor.COLOR_LIGHT_GRAY)));
     public static final RegistryObject<Block> POLISHED_VOLCANIC_QUARTZ = registerBlock("polished_volcanic_quartz", () ->
             new Block(BlockBehaviour.Properties.copy(Blocks.POLISHED_BASALT).mapColor(MapColor.COLOR_LIGHT_GRAY)));
-    public static final RegistryObject<Block> ASHEN_SNOW_BLOCK = registerBlock("ashen_snow_block", () ->
-            new Block(BlockBehaviour.Properties.copy(Blocks.SNOW_BLOCK).mapColor(MapColor.CLAY).sound(SoundType.SAND)));
-    public static final RegistryObject<Block> ASHEN_SNOW_LAYER = registerBlock("ashen_snow_layer", () ->
-            new AshenSnowLayerBlock(BlockBehaviour.Properties.copy(Blocks.SNOW).mapColor(MapColor.CLAY).sound(SoundType.SAND)));
+    public static final RegistryObject<Block> VOLCANIC_ICE = registerBlock("volcanic_ice", () ->
+            new HalfTransparentBlock(BlockBehaviour.Properties.copy(Blocks.ICE).mapColor(MapColor.CLAY)));
+    public static final RegistryObject<Block> PACKED_VOLCANIC_ICE = registerBlock("packed_volcanic_ice", () ->
+            new PackedVolcanicIceBlock(BlockBehaviour.Properties.copy(Blocks.ICE).mapColor(MapColor.CLAY).randomTicks()));
+
 
 
     public static final RegistryObject<Block> CHARRED_SOULROOT_CRATE = registerCompatBlock("charred_soulroot_crate", () ->
@@ -147,8 +153,7 @@ public class SoulfulBlocks {
     }
 
     private static <T extends Block> RegistryObject<T> registerBlockWithoutItem(String name, Supplier<T> block) {
-        RegistryObject<T> toReturn = BLOCK.register(name, block);
-        return toReturn;
+        return BLOCK.register(name, block);
     }
 
     public static <T extends Block> RegistryObject<T> registerCompatBlock(String name, Supplier<T> block, String modId) {

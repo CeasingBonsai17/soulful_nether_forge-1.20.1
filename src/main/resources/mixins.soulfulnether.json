@@ -10,6 +10,7 @@
     "FungusBlockMixin",
     "RootsBlockMixin",
     "SproutsBlockMixin",
+    "FireBlockMixin",
     "SoulFireBlockMixin"
   ],
   "client": [],

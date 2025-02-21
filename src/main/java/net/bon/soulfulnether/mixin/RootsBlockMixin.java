@@ -1,5 +1,6 @@
 package net.bon.soulfulnether.mixin;
 
+import net.bon.soulfulnether.block.SoulfulBlocks;
 import net.bon.soulfulnether.util.SoulfulBlockTags;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.BlockGetter;
@@ -20,7 +21,7 @@ public class RootsBlockMixin {
             cancellable = true
     )
     private void soulfulnether$changeMayPlaceOn(BlockState floor, BlockGetter world, BlockPos pos, CallbackInfoReturnable<Boolean> cir) {
-        if (floor.is(SoulfulBlockTags.LICHOSS)) {
+        if (floor.is(SoulfulBlocks.LICHOSS_BLOCK.get())) {
             cir.setReturnValue(true);
         }
     }

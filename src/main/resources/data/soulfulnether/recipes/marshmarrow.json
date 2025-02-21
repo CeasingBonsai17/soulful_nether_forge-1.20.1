@@ -12,5 +12,6 @@
   "result": {
     "item": "soulfulnether:marshmarrow",
     "count": 2
-  }
+  },
+  "show_notification": true
 }

@@ -11,6 +11,7 @@
   ],
   "result": {
     "item": "soulfulnether:frostbitten_soulroot",
-    "count": 2
-  }
+    "count": 1
+  },
+  "show_notification": true
 }

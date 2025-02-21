@@ -19,32 +19,32 @@ public class LichossBlock extends Block implements BonemealableBlock {
         super(properties);
     }
 
-    public boolean isValidBonemealTarget(LevelReader levelReader, BlockPos blockPos, BlockState blockState, boolean bl) {
-        return levelReader.getBlockState(blockPos.above()).isAir() || levelReader.getBlockState(blockPos.below()).isAir();
+    public boolean isValidBonemealTarget(LevelReader levelReader, BlockPos pos, BlockState state, boolean bl) {
+        return levelReader.getBlockState(pos.above()).isAir() || levelReader.getBlockState(pos.below()).isAir();
     }
 
-    public boolean isBonemealSuccess(Level level, RandomSource randomSource, BlockPos blockPos, BlockState blockState) {
+    public boolean isBonemealSuccess(Level level, RandomSource randomSource, BlockPos pos, BlockState state) {
         return true;
     }
 
-    public void performBonemeal(ServerLevel serverLevel, RandomSource randomSource, BlockPos blockPos, BlockState blockState) {
+    public void performBonemeal(ServerLevel serverLevel, RandomSource randomSource, BlockPos pos, BlockState blockState) {
         serverLevel.registryAccess().registry(Registries.CONFIGURED_FEATURE).flatMap((registry) -> {
             return registry.getHolder(SoulfulConfiguredFeatures.LICHOSS_PATCH_BONE_MEAL);
 
         }).ifPresent((reference) -> {
-            ((ConfiguredFeature)reference.value()).place(serverLevel, serverLevel.getChunkSource().getGenerator(), randomSource, blockPos.above());
+            ((ConfiguredFeature)reference.value()).place(serverLevel, serverLevel.getChunkSource().getGenerator(), randomSource, pos.above());
         });
         serverLevel.registryAccess().registry(Registries.CONFIGURED_FEATURE).flatMap((registry) -> {
             return registry.getHolder(SoulfulConfiguredFeatures.LICHOSS_PATCH_CEILING);
 
         }).ifPresent((reference) -> {
-            ((ConfiguredFeature)reference.value()).place(serverLevel, serverLevel.getChunkSource().getGenerator(), randomSource, blockPos.above());
+            ((ConfiguredFeature)reference.value()).place(serverLevel, serverLevel.getChunkSource().getGenerator(), randomSource, pos.above());
         });
         serverLevel.registryAccess().registry(Registries.CONFIGURED_FEATURE).flatMap((registry) -> {
             return registry.getHolder(SoulfulConfiguredFeatures.LICHOSS_PATCH_CEILING_BONE_MEAL);
 
         }).ifPresent((reference) -> {
-            ((ConfiguredFeature)reference.value()).place(serverLevel, serverLevel.getChunkSource().getGenerator(), randomSource, blockPos.above());
+            ((ConfiguredFeature)reference.value()).place(serverLevel, serverLevel.getChunkSource().getGenerator(), randomSource, pos.above());
         });
     }
 }

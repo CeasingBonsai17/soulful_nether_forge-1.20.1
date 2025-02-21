@@ -41,8 +41,8 @@ public class SoulrootsBlock extends BushBlock implements BonemealableBlock {
     public static final IntegerProperty AGE;
     private static final VoxelShape[] AGE_TO_SHAPE;
 
-    public SoulrootsBlock(BlockBehaviour.Properties settings) {
-        super(settings);
+    public SoulrootsBlock(BlockBehaviour.Properties properties) {
+        super(properties);
         this.registerDefaultState((BlockState)((BlockState)this.stateDefinition.any()).setValue(AGE, 0));
     }
 
@@ -60,15 +60,15 @@ public class SoulrootsBlock extends BushBlock implements BonemealableBlock {
     }
 
     @Override
-    protected boolean mayPlaceOn(BlockState floor, BlockGetter world, BlockPos pos) {
-        return floor.is(SoulfulBlockTags.SOUL_CONVERTING_BLOCKS);
+    protected boolean mayPlaceOn(BlockState state, BlockGetter blockGetter, BlockPos pos) {
+        return state.is(SoulfulBlockTags.SOUL_CONVERTING_BLOCKS);
     }
 
-    public ItemStack getItem(BlockGetter world, BlockPos pos, BlockState state) {
+    public ItemStack getItem(BlockGetter blockGetter, BlockPos pos, BlockState state) {
         return new ItemStack(SoulfulItems.SOULROOT_SEEDS.get());
     }
 
-    public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
+    public VoxelShape getShape(BlockState state, BlockGetter blockGetter, BlockPos pos, CollisionContext context) {
         return AGE_TO_SHAPE[this.getAge(state)];
     }
 
@@ -76,29 +76,29 @@ public class SoulrootsBlock extends BushBlock implements BonemealableBlock {
         return (Integer)state.getValue(AGE) < 5;
     }
 
-    public void randomTick(BlockState state, ServerLevel world, BlockPos pos, Random random) {
+    public void randomTick(BlockState state, ServerLevel serverLevel, BlockPos pos, Random random) {
         int i = (Integer)state.getValue(AGE);
-        if (i < 5 && random.nextInt(5) == 0 && world.getRawBrightness(pos.above(), 0) >= 0) {
+        if (i < 5 && random.nextInt(5) == 0 && serverLevel.getRawBrightness(pos.above(), 0) >= 0) {
             BlockState blockState = (BlockState)state.setValue(AGE, i + 1);
-            world.setBlockAndUpdate(pos, blockState);
-            world.gameEvent(GameEvent.BLOCK_CHANGE, pos, GameEvent.Context.of(blockState));
+            serverLevel.setBlockAndUpdate(pos, blockState);
+            serverLevel.gameEvent(GameEvent.BLOCK_CHANGE, pos, GameEvent.Context.of(blockState));
         }
 
     }
 
 
-    public InteractionResult use(BlockState state, Level world, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
+    public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
         int i = (Integer)state.getValue(AGE);
         boolean bl = i == 5;
         if (!bl && player.getItemInHand(hand).is(Items.BONE_MEAL)) {
             return InteractionResult.PASS;
         } else {
-            return super.use(state, world, pos, player, hand, hit);
+            return super.use(state, level, pos, player, hand, hit);
         }
     }
 
-    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
-        builder.add(new Property[]{AGE});
+    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> state) {
+        state.add(new Property[]{AGE});
     }
 
     public boolean isValidBonemealTarget(LevelReader world, BlockPos pos, BlockState state, boolean isClient) {

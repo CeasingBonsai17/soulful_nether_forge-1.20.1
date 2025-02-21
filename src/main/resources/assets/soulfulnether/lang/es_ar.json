@@ -3,7 +3,7 @@
   "advancements.nether.not_quite_mandrakes.description": "Obtené una remolalma plantando una remolacha en cualquier bloque de almas.",
   "advancements.nether.food_for_the_soul.title": "Comida para el alma",
   "advancements.nether.food_for_the_soul.description": "Comé todas las comidas de remolalma.",
-  "advancements.nether.snow_flakes.title": "Quesejo?",
+  "advancements.nether.snow_flakes.title": "¿Que es? ¿Que es?",
   "advancements.nether.snow_flakes.description": "Encontrá un bioma de Deltas Cenizos",
 
   "block.soulfulnether.fright_stem": "Tallo espantoso",
@@ -47,15 +47,15 @@
   "block.soulfulnether.charred_soulroot_crate": "Cajón de remolalma chamuscada",
 
   "item.soulfulnether.soulroot_pie": "Tarta de remolalma",
-  "block.soulfulnether.marshmarrow": "Malvavisco",
-  "block.soulfulnether.marshmarrow_stack": "Malvaviscos apilados",
-  "block.soulfulnether.toasty_marshmarrow": "Malvavisco tostado",
-  "block.soulfulnether.toasty_marshmarrow_stack": "Malvaviscos tostados apilados",
-  "block.soulfulnether.roasted_marshmarrow": "Malvavisco asado",
-  "block.soulfulnether.roasted_marshmarrow_stack": "Malvaviscos asados apilados",
-  "item.soulfulnether.marshmarrow_heart": "Corazón de malvavisco",
+  "block.soulfulnether.marshmarrow": "Malvacaracú",
+  "block.soulfulnether.marshmarrow_stack": "Malvacaracúes apilados",
+  "block.soulfulnether.toasty_marshmarrow": "Malvacaracú tostado",
+  "block.soulfulnether.toasty_marshmarrow_stack": "Malvacaracúes tostados apilados",
+  "block.soulfulnether.roasted_marshmarrow": "Malvacaracú asado",
+  "block.soulfulnether.roasted_marshmarrow_stack": "Malvacaracúes asados apilados",
+  "item.soulfulnether.marshmarrow_heart": "Corazón de malvacaracú",
 
-  "item.soulfulnether.marshmarrow_mochi": "Mochi de malvavisco",
+  "item.soulfulnether.marshmarrow_mochi": "Mochi de malvacaracú",
 
 
   "block.soulfulnether.ashen_basalt": "Basalto cenizo",
@@ -63,7 +63,11 @@
   "block.soulfulnether.volcanic_quartz_block": "Cuarzo volcánico",
   "block.soulfulnether.volcanic_quartz_bricks": "Ladrillos de cuarzo volcánico",
   "block.soulfulnether.polished_volcanic_quartz": "Cuarzo volcánico pulido",
+  "block.soulfulnether.ashen_snow_block": "Bloque de nieve ceniza",
+  "block.soulfulnether.ashen_snow_layer": "Capa de nieve ceniza",
+  "item.soulfulnether.ashen_snow": "Nieve ceniza",
 
+  "effect.soulfulnether.frostbite": "Frostbite",
 
   "creativetab.soulfulnether": "Soulful Nether",
 

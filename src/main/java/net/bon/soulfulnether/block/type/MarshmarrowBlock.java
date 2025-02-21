@@ -1,6 +1,7 @@
 package net.bon.soulfulnether.block.type;
 
 import net.bon.soulfulnether.state.property.SoulfulProperties;
+import net.bon.soulfulnether.util.SoulfulBlockTags;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.entity.Entity;
@@ -26,58 +27,64 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 import javax.annotation.Nullable;
 
 public class MarshmarrowBlock extends BushBlock implements SimpleWaterloggedBlock {
-    private final Float fall;
     public static final int MAX_MARSHMARROWS = 3;
     public static final IntegerProperty MARSHMARROWS;
     public static final BooleanProperty WATERLOGGED;
+    public static final BooleanProperty TOASTY;
     protected static final VoxelShape ONE_AABB;
     protected static final VoxelShape TWO_AABB;
 
-    public MarshmarrowBlock(BlockBehaviour.Properties p_56082_, Float fall) {
-        super(p_56082_);
-        this.fall = fall;
-        this.registerDefaultState((BlockState)((BlockState)((BlockState)this.stateDefinition.any()).setValue(MARSHMARROWS, 1)).setValue(WATERLOGGED, true));
+    public MarshmarrowBlock(BlockBehaviour.Properties properties) {
+        super(properties);
+        this.registerDefaultState((BlockState)((BlockState)((BlockState)this.stateDefinition.any()).setValue(TOASTY, false).setValue(MARSHMARROWS, 1)).setValue(WATERLOGGED, false));
     }
 
     @Nullable
-    public BlockState getStateForPlacement(BlockPlaceContext p_56089_) {
-        BlockState $$1 = p_56089_.getLevel().getBlockState(p_56089_.getClickedPos());
+    public BlockState getStateForPlacement(BlockPlaceContext context) {
+        BlockState $$1 = context.getLevel().getBlockState(context.getClickedPos());
         if ($$1.is(this)) {
             return (BlockState)$$1.setValue(MARSHMARROWS, Math.min(3, (Integer)$$1.getValue(MARSHMARROWS) + 1));
         } else {
-            FluidState $$2 = p_56089_.getLevel().getFluidState(p_56089_.getClickedPos());
+            FluidState $$2 = context.getLevel().getFluidState(context.getClickedPos());
+            LevelAccessor levelaccessor = context.getLevel();
+            BlockPos blockpos = context.getClickedPos();
             boolean $$3 = $$2.getType() == Fluids.WATER;
-            return (BlockState)super.getStateForPlacement(p_56089_).setValue(WATERLOGGED, $$3);
+            return (BlockState)super.getStateForPlacement(context).setValue(WATERLOGGED, $$3).setValue(TOASTY, this.isHeatSource(levelaccessor.getBlockState(blockpos.below())));
         }
     }
 
-    protected boolean mayPlaceOn(BlockState p_56127_, BlockGetter p_56128_, BlockPos p_56129_) {
-        return !p_56127_.getCollisionShape(p_56128_, p_56129_).getFaceShape(Direction.UP).isEmpty() || p_56127_.isFaceSturdy(p_56128_, p_56129_, Direction.UP);
+    protected boolean mayPlaceOn(BlockState state, BlockGetter blockGetter, BlockPos pos) {
+        return !state.getCollisionShape(blockGetter, pos).getFaceShape(Direction.UP).isEmpty() || state.isFaceSturdy(blockGetter, pos, Direction.UP);
     }
 
-    public boolean canSurvive(BlockState p_56109_, LevelReader p_56110_, BlockPos p_56111_) {
-        BlockPos $$3 = p_56111_.below();
-        return this.mayPlaceOn(p_56110_.getBlockState($$3), p_56110_, $$3);
+    public boolean canSurvive(BlockState state, LevelReader level, BlockPos pos) {
+        BlockPos $$3 = pos.below();
+        return this.mayPlaceOn(level.getBlockState($$3), level, $$3);
     }
 
-    public BlockState updateShape(BlockState p_56113_, Direction p_56114_, BlockState p_56115_, LevelAccessor p_56116_, BlockPos p_56117_, BlockPos p_56118_) {
-        if (!p_56113_.canSurvive(p_56116_, p_56117_)) {
+    public BlockState updateShape(BlockState state, Direction direction, BlockState blockState, LevelAccessor level, BlockPos pos, BlockPos blockPos) {
+        if (!state.canSurvive(level, pos)) {
             return Blocks.AIR.defaultBlockState();
         } else {
-            if ((Boolean)p_56113_.getValue(WATERLOGGED)) {
-                p_56116_.scheduleTick(p_56117_, Fluids.WATER, Fluids.WATER.getTickDelay(p_56116_));
+            if ((Boolean)state.getValue(WATERLOGGED)) {
+                level.scheduleTick(pos, Fluids.WATER, Fluids.WATER.getTickDelay(level));
             }
 
-            return super.updateShape(p_56113_, p_56114_, p_56115_, p_56116_, p_56117_, p_56118_);
+            return direction == Direction.DOWN ? (BlockState)state.setValue(TOASTY, this.isHeatSource(blockState)) : super.updateShape(state, direction, blockState, level, pos, blockPos);
         }
     }
 
-    public boolean canBeReplaced(BlockState p_56101_, BlockPlaceContext p_56102_) {
-        return !p_56102_.isSecondaryUseActive() && p_56102_.getItemInHand().is(this.asItem()) && (Integer)p_56101_.getValue(MARSHMARROWS) < 3 ? true : super.canBeReplaced(p_56101_, p_56102_);
+    private boolean isHeatSource(BlockState state) {
+        return state.is(SoulfulBlockTags.MARSHMARROW_HEAT_SOURCES);
     }
 
-    public VoxelShape getShape(BlockState p_56122_, BlockGetter p_56123_, BlockPos p_56124_, CollisionContext p_56125_) {
-        switch ((Integer)p_56122_.getValue(MARSHMARROWS)) {
+
+    public boolean canBeReplaced(BlockState state, BlockPlaceContext context) {
+        return !context.isSecondaryUseActive() && context.getItemInHand().is(this.asItem()) && (Integer)state.getValue(MARSHMARROWS) < 3 ? true : super.canBeReplaced(state, context);
+    }
+
+    public VoxelShape getShape(BlockState state, BlockGetter blockGetter, BlockPos pos, CollisionContext context) {
+        switch ((Integer)state.getValue(MARSHMARROWS)) {
             case 1:
             default:
                 return ONE_AABB;
@@ -86,26 +93,23 @@ public class MarshmarrowBlock extends BushBlock implements SimpleWaterloggedBloc
         }
     }
 
-    public FluidState getFluidState(BlockState p_56131_) {
-        return (Boolean)p_56131_.getValue(WATERLOGGED) ? Fluids.WATER.getSource(false) : super.getFluidState(p_56131_);
+    public FluidState getFluidState(BlockState state) {
+        return (Boolean)state.getValue(WATERLOGGED) ? Fluids.WATER.getSource(false) : super.getFluidState(state);
     }
 
-    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> p_56120_) {
-        p_56120_.add(new Property[]{MARSHMARROWS, WATERLOGGED});
+    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> blockState) {
+        blockState.add(new Property[]{MARSHMARROWS, WATERLOGGED, TOASTY});
     }
 
-    public boolean isPathfindable(BlockState p_56104_, BlockGetter p_56105_, BlockPos p_56106_, PathComputationType p_56107_) {
+    public boolean isPathfindable(BlockState state, BlockGetter blockGetter, BlockPos pos, PathComputationType pathComputationType) {
         return false;
-    }
-
-    public void fallOn(Level world, BlockState state, BlockPos pos, Entity entity, float fallDistance) {
-        entity.causeFallDamage(fallDistance, fall, world.damageSources().fall());
     }
 
     static {
         MARSHMARROWS = SoulfulProperties.MARSHMARROWS;
         WATERLOGGED = BlockStateProperties.WATERLOGGED;
+        TOASTY = SoulfulProperties.TOASTY;
         ONE_AABB = Block.box(5.0, 0.0, 5.0, 11.0, 9.0, 11.0);
         TWO_AABB = Block.box(2.0, 0.0, 2.0, 14.0, 9.0, 14.0);
-        }
+    }
 }

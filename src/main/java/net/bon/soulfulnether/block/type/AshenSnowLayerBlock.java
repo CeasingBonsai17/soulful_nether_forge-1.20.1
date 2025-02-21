@@ -36,15 +36,15 @@ public class AshenSnowLayerBlock extends Block {
     protected static final VoxelShape[] SHAPE_BY_LAYER;
     public static final int HEIGHT_IMPASSABLE = 5;
 
-    public AshenSnowLayerBlock(BlockBehaviour.Properties p_56585_) {
-        super(p_56585_);
+    public AshenSnowLayerBlock(BlockBehaviour.Properties properties) {
+        super(properties);
         this.registerDefaultState((BlockState)((BlockState)this.stateDefinition.any()).setValue(LAYERS, 1));
     }
 
-    public boolean isPathfindable(BlockState p_56592_, BlockGetter p_56593_, BlockPos p_56594_, PathComputationType p_56595_) {
-        switch (p_56595_) {
+    public boolean isPathfindable(BlockState state, BlockGetter blockGetter, BlockPos pos, PathComputationType pathComputationType) {
+        switch (pathComputationType) {
             case LAND:
-                return (Integer)p_56592_.getValue(LAYERS) < 5;
+                return (Integer)state.getValue(LAYERS) < 5;
             case WATER:
                 return false;
             case AIR:
@@ -54,44 +54,44 @@ public class AshenSnowLayerBlock extends Block {
         }
     }
 
-    public VoxelShape getShape(BlockState p_56620_, BlockGetter p_56621_, BlockPos p_56622_, CollisionContext p_56623_) {
-        return SHAPE_BY_LAYER[(Integer)p_56620_.getValue(LAYERS)];
+    public VoxelShape getShape(BlockState state, BlockGetter blockGetter, BlockPos pos, CollisionContext context) {
+        return SHAPE_BY_LAYER[(Integer)state.getValue(LAYERS)];
     }
 
-    public VoxelShape getCollisionShape(BlockState p_56625_, BlockGetter p_56626_, BlockPos p_56627_, CollisionContext p_56628_) {
-        return SHAPE_BY_LAYER[(Integer)p_56625_.getValue(LAYERS) - 1];
+    public VoxelShape getCollisionShape(BlockState state, BlockGetter blockGetter, BlockPos pos, CollisionContext context) {
+        return SHAPE_BY_LAYER[(Integer)state.getValue(LAYERS) - 1];
     }
 
-    public VoxelShape getBlockSupportShape(BlockState p_56632_, BlockGetter p_56633_, BlockPos p_56634_) {
-        return SHAPE_BY_LAYER[(Integer)p_56632_.getValue(LAYERS)];
+    public VoxelShape getBlockSupportShape(BlockState state, BlockGetter blockGetter, BlockPos pos) {
+        return SHAPE_BY_LAYER[(Integer)state.getValue(LAYERS)];
     }
 
-    public VoxelShape getVisualShape(BlockState p_56597_, BlockGetter p_56598_, BlockPos p_56599_, CollisionContext p_56600_) {
-        return SHAPE_BY_LAYER[(Integer)p_56597_.getValue(LAYERS)];
+    public VoxelShape getVisualShape(BlockState state, BlockGetter blockGetter, BlockPos pos, CollisionContext context) {
+        return SHAPE_BY_LAYER[(Integer)state.getValue(LAYERS)];
     }
 
-    public boolean useShapeForLightOcclusion(BlockState p_56630_) {
+    public boolean useShapeForLightOcclusion(BlockState state) {
         return true;
     }
 
-    public float getShadeBrightness(BlockState p_222453_, BlockGetter p_222454_, BlockPos p_222455_) {
-        return (Integer)p_222453_.getValue(LAYERS) == 8 ? 0.2F : 1.0F;
+    public float getShadeBrightness(BlockState state, BlockGetter blockGetter, BlockPos pos) {
+        return (Integer)state.getValue(LAYERS) == 8 ? 0.2F : 1.0F;
     }
 
-    public boolean canSurvive(BlockState p_56602_, LevelReader p_56603_, BlockPos p_56604_) {
-        BlockState $$3 = p_56603_.getBlockState(p_56604_.below());
-        return Block.isFaceFull($$3.getCollisionShape(p_56603_, p_56604_.below()), Direction.UP) || $$3.is(this) && (Integer)$$3.getValue(LAYERS) == 8 || $$3.is(Blocks.SOUL_SAND);
+    public boolean canSurvive(BlockState state, LevelReader p_56603_, BlockPos pos) {
+        BlockState $$3 = p_56603_.getBlockState(pos.below());
+        return Block.isFaceFull($$3.getCollisionShape(p_56603_, pos.below()), Direction.UP) || $$3.is(this) && (Integer)$$3.getValue(LAYERS) == 8 || $$3.is(Blocks.SOUL_SAND);
     }
 
-    public BlockState updateShape(BlockState p_56606_, Direction p_56607_, BlockState p_56608_, LevelAccessor p_56609_, BlockPos p_56610_, BlockPos p_56611_) {
-        return !p_56606_.canSurvive(p_56609_, p_56610_) ? Blocks.AIR.defaultBlockState() : super.updateShape(p_56606_, p_56607_, p_56608_, p_56609_, p_56610_, p_56611_);
+    public BlockState updateShape(BlockState state, Direction direction, BlockState blockState, LevelAccessor level, BlockPos pos, BlockPos blockPos) {
+        return !state.canSurvive(level, pos) ? Blocks.AIR.defaultBlockState() : super.updateShape(state, direction, blockState, level, pos, blockPos);
     }
 
-    public boolean canBeReplaced(BlockState p_56589_, BlockPlaceContext p_56590_) {
-        int $$2 = (Integer)p_56589_.getValue(LAYERS);
-        if (p_56590_.getItemInHand().is(this.asItem()) && $$2 < 8) {
-            if (p_56590_.replacingClickedOnBlock()) {
-                return p_56590_.getClickedFace() == Direction.UP;
+    public boolean canBeReplaced(BlockState state, BlockPlaceContext context) {
+        int $$2 = (Integer)state.getValue(LAYERS);
+        if (context.getItemInHand().is(this.asItem()) && $$2 < 8) {
+            if (context.replacingClickedOnBlock()) {
+                return context.getClickedFace() == Direction.UP;
             } else {
                 return true;
             }
@@ -101,18 +101,18 @@ public class AshenSnowLayerBlock extends Block {
     }
 
     @Nullable
-    public BlockState getStateForPlacement(BlockPlaceContext p_56587_) {
-        BlockState $$1 = p_56587_.getLevel().getBlockState(p_56587_.getClickedPos());
+    public BlockState getStateForPlacement(BlockPlaceContext context) {
+        BlockState $$1 = context.getLevel().getBlockState(context.getClickedPos());
         if ($$1.is(this)) {
             int $$2 = (Integer)$$1.getValue(LAYERS);
             return (BlockState)$$1.setValue(LAYERS, Math.min(8, $$2 + 1));
         } else {
-            return super.getStateForPlacement(p_56587_);
+            return super.getStateForPlacement(context);
         }
     }
 
-    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> p_56613_) {
-        p_56613_.add(new Property[]{LAYERS});
+    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> state) {
+        state.add(new Property[]{LAYERS});
     }
 
     static {

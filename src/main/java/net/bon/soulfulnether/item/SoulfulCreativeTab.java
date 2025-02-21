@@ -77,10 +77,13 @@ public class  SoulfulCreativeTab {
                         if (CompatUtil.checkRubinatedNether()) {
                             output.accept(SoulfulItems.MARSHMARROW_MOCHI.get());
                         }
+                        output.accept(SoulfulBlocks.VOLCANIC_ICE.get());
+                        output.accept(SoulfulBlocks.PACKED_VOLCANIC_ICE.get());
                         output.accept(SoulfulBlocks.ASHEN_SNOW_BLOCK.get());
                         output.accept(SoulfulBlocks.ASHEN_SNOW_LAYER.get());
                         output.accept(SoulfulItems.ASHEN_SNOW.get());
                         output.accept(SoulfulBlocks.ASHEN_BASALT.get());
+                        output.accept(SoulfulBlocks.SMOOTH_ASHEN_BASALT.get());
                         output.accept(SoulfulBlocks.POLISHED_ASHEN_BASALT.get());
                         output.accept(SoulfulBlocks.VOLCANIC_QUARTZ_BLOCK.get());
                         output.accept(SoulfulBlocks.VOLCANIC_QUARTZ_BRICKS.get());

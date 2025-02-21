@@ -59,10 +59,13 @@
 
 
   "block.soulfulnether.ashen_basalt": "Ashen Basalt",
+  "block.soulfulnether.smooth_ashen_basalt": "Smooth Ashen Basalt",
   "block.soulfulnether.polished_ashen_basalt": "Polished Ashen Basalt",
   "block.soulfulnether.volcanic_quartz_block": "Volcanic Quartz Block",
   "block.soulfulnether.volcanic_quartz_bricks": "Volcanic Quartz Bricks",
   "block.soulfulnether.polished_volcanic_quartz": "Polished Volcanic Quartz",
+  "block.soulfulnether.volcanic_ice": "Volcanic Ice",
+  "block.soulfulnether.packed_volcanic_ice": "Packed Volcanic Ice",
   "block.soulfulnether.ashen_snow_block": "Ashen Snow Block",
   "block.soulfulnether.ashen_snow_layer": "Ashen Snow Layer",
   "item.soulfulnether.ashen_snow": "Ashen Snow",

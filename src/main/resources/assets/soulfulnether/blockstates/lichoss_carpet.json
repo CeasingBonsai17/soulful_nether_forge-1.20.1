@@ -4,7 +4,10 @@
       "model": "soulfulnether:block/lichoss_carpet"
     },
     "hanging=true": {
-      "model": "soulfulnether:block/hanging_lichoss_carpet"
+      "model": "soulfulnether:block/lichoss_carpet",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
     }
   }
 }

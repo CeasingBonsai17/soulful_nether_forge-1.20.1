@@ -2,7 +2,7 @@ package net.bon.soulfulnether.item;
 
 import net.bon.soulfulnether.SoulfulNether;
 import net.bon.soulfulnether.block.SoulfulBlocks;
-import net.bon.soulfulnether.util.CompatUtil;
+import net.bon.soulfulnether.item.type.FrostbittenPopsicleItem;
 import net.minecraft.world.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -48,7 +48,7 @@ public class  SoulfulItems {
         public static final RegistryObject<Item> FROSTBITTEN_SOULROOT = ITEM.register("frostbitten_soulroot", () ->
                 new Item(new Item.Properties().food(SoulfulFoods.SOULROOT).food(SoulfulFoods.FROSTBITTEN_SOULROOT)));
         public static final RegistryObject<Item> FROSTBITTEN_POPSICLE = ITEM.register("frostbitten_popsicle", () ->
-                new Item(new Item.Properties().food(SoulfulFoods.MARSHMARROW_FOODS).food(SoulfulFoods.FROSTBITTEN_POPSICLE).craftRemainder(Items.GLASS_BOTTLE)));
+                new FrostbittenPopsicleItem(new Item.Properties().food(SoulfulFoods.MARSHMARROW_FOODS).food(SoulfulFoods.FROSTBITTEN_POPSICLE).craftRemainder(Items.GLASS_BOTTLE)));
 
 
 

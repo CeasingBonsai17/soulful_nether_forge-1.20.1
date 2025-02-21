@@ -10,8 +10,8 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 
 public class SpiralingVinesPlantBlock extends GrowingPlantBodyBlock {
     public static final VoxelShape SHAPE = Block.box(4.0, 0.0, 4.0, 12.0, 16.0, 12.0);
-    public SpiralingVinesPlantBlock(BlockBehaviour.Properties settings) {
-        super(settings, Direction.UP, SHAPE, false);
+    public SpiralingVinesPlantBlock(BlockBehaviour.Properties properties) {
+        super(properties, Direction.UP, SHAPE, false);
     }
         protected GrowingPlantHeadBlock getHeadBlock() {
             return (GrowingPlantHeadBlock) SoulfulBlocks.SPIRALING_VINES.get();

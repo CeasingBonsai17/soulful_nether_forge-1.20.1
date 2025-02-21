@@ -14,7 +14,7 @@
         "max_inclusive": 2
       }
     },
-    "replaceable": "#soulfulnether:lichoss_patch_replaceable",
+    "replaceable": "#soulfulnether:lichoss_replaceable_world_gen",
     "ground_state": {
       "type": "minecraft:simple_state_provider",
       "state": {

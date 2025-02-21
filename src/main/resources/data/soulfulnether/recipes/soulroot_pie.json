@@ -14,5 +14,6 @@
   ],
   "result": {
     "item": "soulfulnether:soulroot_pie"
-  }
+  },
+  "show_notification": true
 }

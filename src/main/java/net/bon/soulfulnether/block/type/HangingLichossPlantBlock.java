@@ -11,8 +11,8 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 public class HangingLichossPlantBlock extends GrowingPlantBodyBlock {
     public static final VoxelShape SHAPE = Block.box(1.0, 0.0, 1.0, 15.0, 16.0, 15.0);
 
-    public HangingLichossPlantBlock(BlockBehaviour.Properties p_154975_) {
-        super(p_154975_, Direction.DOWN, SHAPE, false);
+    public HangingLichossPlantBlock(BlockBehaviour.Properties properties) {
+        super(properties, Direction.DOWN, SHAPE, false);
     }
 
     protected GrowingPlantHeadBlock getHeadBlock() {

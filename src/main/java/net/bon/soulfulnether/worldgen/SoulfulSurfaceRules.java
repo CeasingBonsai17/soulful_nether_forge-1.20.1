@@ -12,7 +12,7 @@ public class SoulfulSurfaceRules {
     private static final SurfaceRules.RuleSource SOUL_SAND = SurfaceRules.state(Blocks.SOUL_SAND.defaultBlockState());
     private static final SurfaceRules.RuleSource SOUL_SOIL = SurfaceRules.state(Blocks.SOUL_SOIL.defaultBlockState());
     private static final SurfaceRules.RuleSource GRAVEL = SurfaceRules.state(Blocks.GRAVEL.defaultBlockState());
-    private static final SurfaceRules.RuleSource ASHEN_BASALT = SurfaceRules.state(SoulfulBlocks.ASHEN_BASALT.get().defaultBlockState());
+    private static final SurfaceRules.RuleSource SMOOTH_ASHEN_BASALT = SurfaceRules.state(SoulfulBlocks.SMOOTH_ASHEN_BASALT.get().defaultBlockState());
 
     public static SurfaceRules.RuleSource register() {return SurfaceRules.sequence(
             SurfaceRules.ifTrue(SurfaceRules.verticalGradient("bedrock_floor", VerticalAnchor.bottom(), VerticalAnchor.aboveBottom(5)), BEDROCK),
@@ -24,7 +24,7 @@ public class SoulfulSurfaceRules {
                             SOUL_SOIL
                     )),
                     SurfaceRules.ifTrue(SurfaceRules.isBiome(SoulfulBiomes.ASHEN_DELTAS), SurfaceRules.sequence(
-                            SurfaceRules.ifTrue(SurfaceRules.noiseCondition(Noises.NETHER_STATE_SELECTOR, 0, 2.7976931348623157e+301), ASHEN_BASALT),
+                            SurfaceRules.ifTrue(SurfaceRules.noiseCondition(Noises.NETHER_STATE_SELECTOR, 0, 2.7976931348623157e+301), SMOOTH_ASHEN_BASALT),
                             SOUL_SOIL
                     ))
             )),
@@ -40,7 +40,7 @@ public class SoulfulSurfaceRules {
                             SurfaceRules.ifTrue(SurfaceRules.noiseCondition(Noises.PATCH, -0.012, 1.7976931348623157e+30),
                                     SurfaceRules.ifTrue(SurfaceRules.yStartCheck(VerticalAnchor.absolute(30), 0),
                                             SurfaceRules.ifTrue(SurfaceRules.not(SurfaceRules.yStartCheck(VerticalAnchor.absolute(35), 0)), GRAVEL))),
-                            SurfaceRules.ifTrue(SurfaceRules.noiseCondition(Noises.NETHER_STATE_SELECTOR, 0, 2.7976931348623157e+301), ASHEN_BASALT),
+                            SurfaceRules.ifTrue(SurfaceRules.noiseCondition(Noises.NETHER_STATE_SELECTOR, 0, 2.7976931348623157e+301), SMOOTH_ASHEN_BASALT),
                             SOUL_SOIL
                     ))
             ))

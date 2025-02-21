@@ -1,7 +1,16 @@
 {
   "variants": {
-    "": {
+    "axis=x": {
+      "model": "soulfulnether:block/polished_ashen_basalt",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
       "model": "soulfulnether:block/polished_ashen_basalt"
+    },
+    "axis=z": {
+      "model": "soulfulnether:block/polished_ashen_basalt",
+      "x": 90
     }
   }
 }

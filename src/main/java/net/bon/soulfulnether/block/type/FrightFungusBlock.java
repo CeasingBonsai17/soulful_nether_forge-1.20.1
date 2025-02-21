@@ -1,31 +1,44 @@
 package net.bon.soulfulnether.block.type;
 
+import net.bon.soulfulnether.block.SoulfulBlocks;
 import net.bon.soulfulnether.util.SoulfulBlockTags;
+import net.bon.soulfulnether.worldgen.feature.SoulfulConfiguredFeatures;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.LevelReader;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.BonemealableBlock;
-import net.minecraft.world.level.block.SaplingBlock;
-import net.minecraft.world.level.block.grower.AbstractTreeGrower;
-import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
+import net.minecraftforge.event.ForgeEventFactory;
+import net.minecraftforge.event.level.SaplingGrowTreeEvent;
+import net.minecraftforge.eventbus.api.Event;
 
-public class FrightFungusBlock extends SaplingBlock implements BonemealableBlock {
-    private final Block nylium;
-    public FrightFungusBlock(AbstractTreeGrower generator, BlockBehaviour.Properties settings, Block nylium) {
-        super(generator, settings);
-        this.nylium = nylium;
+public class FrightFungusBlock extends FungusBlock implements BonemealableBlock {
+
+    public FrightFungusBlock(Properties properties, ResourceKey<ConfiguredFeature<?, ?>> feature, Block requiredBlock) {
+        super(properties, feature, requiredBlock);
     }
 
-    protected boolean mayPlaceOn(BlockState floor, BlockGetter world, BlockPos pos) {
-        return floor.is(BlockTags.NYLIUM) || floor.is(SoulfulBlockTags.LICHOSS) || floor.is(Blocks.MYCELIUM) || floor.is(Blocks.SOUL_SOIL) || super.mayPlaceOn(floor, world, pos);
-    }
-    public boolean isValidBonemealTarget (LevelReader world, BlockPos pos, BlockState state, boolean isClient) {
-        BlockState blockState = world.getBlockState(pos.below());
-        return blockState.is(this.nylium);
+    protected boolean mayPlaceOn(BlockState state, BlockGetter blockGetter, BlockPos pos) {
+        return state.is(BlockTags.NYLIUM) || state.is(SoulfulBlocks.LICHOSS_BLOCK.get()) || state.is(Blocks.MYCELIUM) || state.is(Blocks.SOUL_SOIL) || super.mayPlaceOn(state, blockGetter, pos);
     }
 
+    public boolean isValidBonemealTarget(LevelReader level, BlockPos pos, BlockState blockState, boolean bl) {
+        BlockState blockstate = level.getBlockState(pos.below());
+        return blockstate.is(Blocks.SOUL_SOIL) || blockstate.is(SoulfulBlocks.LICHOSS_BLOCK.get());
+    }
+
+    public void performBonemeal(ServerLevel level, RandomSource source, BlockPos pos, BlockState state) {
+        level.registryAccess().registry(Registries.CONFIGURED_FEATURE).flatMap((registry) -> {
+            return registry.getHolder(SoulfulConfiguredFeatures.FRIGHT_FUNGUS_PLANTED);
+
+        }).ifPresent((reference) -> {
+            ((ConfiguredFeature)reference.value()).place(level, level.getChunkSource().getGenerator(), source, pos.above());
+        });
+    }
 }

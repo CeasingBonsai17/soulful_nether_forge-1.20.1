@@ -1,6 +1,6 @@
 {
   "values": [
-    "#soulfulnether:lichoss_patch_replaceable",
+    "#soulfulnether:lichoss_replaceable_world_gen",
     {
       "id": "netherexp:ecto_soul_sand",
       "required": false
@@ -16,6 +16,7 @@
     "minecraft:basalt",
     "minecraft:moss_block",
     "soulfulnether:ashen_basalt",
+    "soulfulnether:smooth_ashen_basalt",
     "soulfulnether:volcanic_quartz_block",
     "soulfulnether:volcanic_quartz_bricks",
     "soulfulnether:polished_volcanic_quartz"

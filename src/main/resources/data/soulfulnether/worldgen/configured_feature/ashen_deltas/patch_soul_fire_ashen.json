@@ -25,7 +25,8 @@
               {
                 "type": "minecraft:matching_blocks",
                 "blocks": [
-                  "minecraft:air"
+                  "minecraft:air",
+                  "soulfulnether:ashen_snow_layer"
                 ]
               },
               {
@@ -35,7 +36,10 @@
                   -1,
                   0
                 ],
-                "blocks": "soulfulnether:ashen_basalt"
+                "blocks": [
+                  "soulfulnether:ashen_basalt",
+                  "soulfulnether:smooth_ashen_basalt"
+                ]
               }
             ]
           }

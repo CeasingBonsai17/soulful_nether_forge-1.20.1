@@ -12,7 +12,10 @@
     "dirt_provider": {
       "type": "minecraft:simple_state_provider",
       "state": {
-        "Name": "soulfulnether:lichoss_block"
+        "Name": "soulfulnether:fright_stem",
+        "Properties": {
+          "axis": "y"
+        }
       }
     },
     "trunk_provider": {

@@ -7,7 +7,7 @@
       {
         "target": {
           "predicate_type": "minecraft:tag_match",
-          "tag": "soulfulnether:fright_forest_ground_blocks"
+          "tag": "soulfulnether:fright_forest_floors"
         },
         "state": {
           "Name": "minecraft:basalt"

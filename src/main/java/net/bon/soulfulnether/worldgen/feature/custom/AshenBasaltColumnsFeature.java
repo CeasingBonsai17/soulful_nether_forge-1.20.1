@@ -13,6 +13,7 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.FeaturePlaceContext;
+import net.minecraft.world.level.levelgen.feature.configurations.BlockColumnConfiguration;
 import net.minecraft.world.level.levelgen.feature.configurations.ColumnFeatureConfiguration;
 
 import javax.annotation.Nullable;
@@ -125,7 +126,7 @@ public class AshenBasaltColumnsFeature extends Feature<AshenColumnFeatureConfigu
                 return null;
             }
 
-            if ($$3.isAir()) {
+            if ($$3.isAir() || $$3.is(SoulfulBlocks.ASHEN_SNOW_LAYER.get())) {
                 return p_65175_;
             }
 
@@ -137,10 +138,10 @@ public class AshenBasaltColumnsFeature extends Feature<AshenColumnFeatureConfigu
 
     private static boolean isAirOrLavaOcean(LevelAccessor p_65164_, int p_65165_, BlockPos p_65166_) {
         BlockState $$3 = p_65164_.getBlockState(p_65166_);
-        return $$3.isAir() || $$3.is(Blocks.LAVA) && p_65166_.getY() <= p_65165_;
+        return $$3.isAir() || $$3.is(Blocks.LAVA) || $$3.is(SoulfulBlocks.ASHEN_SNOW_LAYER.get()) && p_65166_.getY() <= p_65165_;
     }
 
     static {
-        CANNOT_PLACE_ON = ImmutableList.of(Blocks.LAVA, Blocks.BEDROCK, Blocks.MAGMA_BLOCK, Blocks.SOUL_SAND, Blocks.NETHER_BRICKS, Blocks.NETHER_BRICK_FENCE, Blocks.NETHER_BRICK_STAIRS, Blocks.NETHER_WART, Blocks.CHEST, Blocks.SPAWNER);
+        CANNOT_PLACE_ON = ImmutableList.of(Blocks.LAVA, Blocks.BEDROCK, Blocks.MAGMA_BLOCK, Blocks.SOUL_SAND, Blocks.NETHER_BRICKS, Blocks.NETHER_BRICK_FENCE, Blocks.NETHER_BRICK_STAIRS, Blocks.NETHER_WART, Blocks.CHEST, Blocks.SPAWNER, Blocks.SOUL_FIRE, SoulfulBlocks.ASHEN_SNOW_LAYER.get());
     }
 }

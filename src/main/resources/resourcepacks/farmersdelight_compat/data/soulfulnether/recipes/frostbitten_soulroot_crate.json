@@ -11,6 +11,7 @@
     }
   },
   "result": {
-    "id": "soulfulnether:frostbitten_soulroot_crate"
-  }
+    "item": "soulfulnether:frostbitten_soulroot_crate"
+  },
+  "show_notification": true
 }
