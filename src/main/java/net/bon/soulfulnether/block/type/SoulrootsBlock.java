@@ -4,8 +4,10 @@ import net.bon.soulfulnether.block.SoulfulBlocks;
 import net.bon.soulfulnether.item.SoulfulItems;
 import net.bon.soulfulnether.util.SoulfulBlockTags;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
@@ -13,6 +15,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.Block;
@@ -46,6 +49,15 @@ public class SoulrootsBlock extends BushBlock implements BonemealableBlock {
         this.registerDefaultState((BlockState)((BlockState)this.stateDefinition.any()).setValue(AGE, 0));
     }
 
+    protected boolean mayPlaceOn(BlockState state, BlockGetter blockGetter, BlockPos pos) {
+        return state.is(SoulfulBlockTags.SOUL_CONVERTING_BLOCKS) && !state.is(BlockTags.DIRT) && !state.is(Blocks.FARMLAND);
+    }
+
+    public boolean canSurvive(BlockState p_51028_, LevelReader p_51029_, BlockPos p_51030_) {
+        BlockPos blockpos = p_51030_.below();
+        return this.mayPlaceOn(p_51029_.getBlockState(blockpos), p_51029_, blockpos);
+    }
+
     protected IntegerProperty getAgeProperty() {
         return AGE;
     }
@@ -59,13 +71,13 @@ public class SoulrootsBlock extends BushBlock implements BonemealableBlock {
         return 5;
     }
 
-    @Override
-    protected boolean mayPlaceOn(BlockState state, BlockGetter blockGetter, BlockPos pos) {
-        return state.is(SoulfulBlockTags.SOUL_CONVERTING_BLOCKS);
+
+    protected ItemLike getBaseSeedId() {
+        return SoulfulItems.SOULROOT_SEEDS.get();
     }
 
-    public ItemStack getItem(BlockGetter blockGetter, BlockPos pos, BlockState state) {
-        return new ItemStack(SoulfulItems.SOULROOT_SEEDS.get());
+    public ItemStack getCloneItemStack(BlockGetter p_52254_, BlockPos p_52255_, BlockState p_52256_) {
+        return new ItemStack(this.getBaseSeedId());
     }
 
     public VoxelShape getShape(BlockState state, BlockGetter blockGetter, BlockPos pos, CollisionContext context) {

@@ -6,6 +6,7 @@ import net.bon.soulfulnether.effect.SoulfulEffects;
 import net.bon.soulfulnether.item.SoulfulCreativeTab;
 import net.bon.soulfulnether.item.SoulfulItems;
 import net.bon.soulfulnether.pack.SoulfulBuiltInPacks;
+import net.bon.soulfulnether.painting.SoulfulPaintings;
 import net.bon.soulfulnether.particle.SoulfulParticleTypes;
 import net.bon.soulfulnether.util.CompatUtil;
 import net.bon.soulfulnether.worldgen.SoulfulBiomes;
@@ -46,6 +47,7 @@ public class SoulfulNether
         DistExecutor.safeRunWhenOn(Dist.CLIENT, () -> SoulfulNetherClient::register);
         SoulfulBlocks.register(modEventBus);
         SoulfulItems.register(modEventBus);
+        SoulfulPaintings.register(modEventBus);
         SoulfulCreativeTab.register(modEventBus);
         SoulfulFeature.register(modEventBus);
         SoulfulParticleTypes.register(modEventBus);

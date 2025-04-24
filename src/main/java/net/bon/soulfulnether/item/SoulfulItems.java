@@ -10,7 +10,6 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
 public class  SoulfulItems {
-
         public static final DeferredRegister<Item> ITEM =
                 DeferredRegister.create(ForgeRegistries.ITEMS, SoulfulNether.MOD_ID);
 
@@ -51,8 +50,7 @@ public class  SoulfulItems {
                 new FrostbittenPopsicleItem(new Item.Properties().food(SoulfulFoods.MARSHMARROW_FOODS).food(SoulfulFoods.FROSTBITTEN_POPSICLE).craftRemainder(Items.GLASS_BOTTLE)));
 
 
-
-        public static void register(IEventBus eventBus) {
-        ITEM.register(eventBus);
-        }
+    public static void register(IEventBus eventBus) {
+    ITEM.register(eventBus);
+    }
 }

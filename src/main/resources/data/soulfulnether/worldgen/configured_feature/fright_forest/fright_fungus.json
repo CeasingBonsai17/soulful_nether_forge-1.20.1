@@ -114,6 +114,12 @@
               "data": {
                 "Name": "minecraft:air"
               }
+            },
+            {
+              "weight": 5,
+              "data": {
+                "Name": "soulfulnether:spiraling_vines"
+              }
             }
           ]
         },

@@ -21,7 +21,7 @@ import net.minecraftforge.registries.RegistryObject;
 
 import java.util.function.Supplier;
 
-@SuppressWarnings("deprecation unused")
+ @SuppressWarnings("deprecation unused")
 
 public class SoulfulBlocks {
     public static final DeferredRegister<Block> BLOCK =

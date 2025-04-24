@@ -15,7 +15,7 @@ public class  SoulfulCreativeTab {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TAB =
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, SoulfulNether.MOD_ID);
 
-    public static final RegistryObject<CreativeModeTab> SOULFULNETHER = CREATIVE_MODE_TAB.register("tutorial_tab",
+    public static final RegistryObject<CreativeModeTab> SOULFULNETHER = CREATIVE_MODE_TAB.register("soulfulnether_tab",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(SoulfulItems.SOULROOT.get()))
                     .title(Component.translatable("creativetab.soulfulnether"))
                     .displayItems((parameters, output) -> {

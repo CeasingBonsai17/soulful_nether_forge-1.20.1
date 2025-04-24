@@ -4,8 +4,9 @@ import net.bon.soulfulnether.SoulfulNether;
 import net.bon.soulfulnether.worldgen.feature.custom.AshenBasaltColumnsFeature;
 import net.bon.soulfulnether.worldgen.feature.custom.AshenColumnFeatureConfiguration;
 import net.bon.soulfulnether.worldgen.feature.custom.HugeFrightFungusFeature;
-import net.minecraft.world.level.levelgen.feature.AbstractHugeMushroomFeature;
+import net.bon.soulfulnether.worldgen.feature.custom.VolcanicIceCubesFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
+import net.minecraft.world.level.levelgen.feature.configurations.BlockStateConfiguration;
 import net.minecraft.world.level.levelgen.feature.configurations.HugeMushroomFeatureConfiguration;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -20,6 +21,8 @@ public class SoulfulFeature {
             new AshenBasaltColumnsFeature(AshenColumnFeatureConfiguration.CODEC));
     public static final RegistryObject<Feature<HugeMushroomFeatureConfiguration>> HUGE_FRIGHT_FUNGUS = FEATURES.register("huge_fright_fungus", () ->
             new HugeFrightFungusFeature(HugeMushroomFeatureConfiguration.CODEC));
+    public static final RegistryObject<Feature<BlockStateConfiguration>> VOLCANIC_ICE_CUBES = FEATURES.register("volcanic_ice_cubes", () ->
+            new VolcanicIceCubesFeature(BlockStateConfiguration.CODEC));
 
 
     public static void register(IEventBus eventBus) {
