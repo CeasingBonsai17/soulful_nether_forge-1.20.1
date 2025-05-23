@@ -98,7 +98,6 @@ public class SoulrootsBlock extends BushBlock implements BonemealableBlock {
 
     }
 
-
     public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
         int i = (Integer)state.getValue(AGE);
         boolean bl = i == 5;
@@ -107,10 +106,6 @@ public class SoulrootsBlock extends BushBlock implements BonemealableBlock {
         } else {
             return super.use(state, level, pos, player, hand, hit);
         }
-    }
-
-    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> state) {
-        state.add(new Property[]{AGE});
     }
 
     public boolean isValidBonemealTarget(LevelReader world, BlockPos pos, BlockState state, boolean isClient) {
@@ -125,6 +120,10 @@ public class SoulrootsBlock extends BushBlock implements BonemealableBlock {
     public void performBonemeal(ServerLevel world, RandomSource randomSource, BlockPos pos, BlockState state) {
         int i = Math.min(5, (Integer)state.getValue(AGE) + 2);
         world.setBlockAndUpdate(pos, (BlockState)state.setValue(AGE, i));
+    }
+
+    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> state) {
+        state.add(new Property[]{AGE});
     }
 
     static {

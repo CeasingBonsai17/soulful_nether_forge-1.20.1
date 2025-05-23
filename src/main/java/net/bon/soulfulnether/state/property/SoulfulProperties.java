@@ -6,4 +6,7 @@ import net.minecraft.world.level.block.state.properties.IntegerProperty;
 public class SoulfulProperties {
     public static final IntegerProperty MARSHMARROWS = IntegerProperty.create("marshmarrows", 1, 3);
     public static final BooleanProperty TOASTY = BooleanProperty.create("toasty");
+    public static final BooleanProperty HEAD = BooleanProperty.create("head");
+    public static final BooleanProperty GROWING = BooleanProperty.create("growing");
+
 }

@@ -18,6 +18,7 @@ import net.minecraft.core.RegistryAccess;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.packs.PackType;
 import net.minecraft.world.level.biome.Biomes;
+import net.minecraft.world.level.block.ComposterBlock;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.AddPackFindersEvent;
@@ -56,6 +57,7 @@ public class SoulfulNether
         modEventBus.addListener(this::commonSetup);
         modEventBus.addListener(SoulfulNether::addBuiltInPacks);
 
+
         MinecraftForge.EVENT_BUS.register(this);
 
         modEventBus.addListener(this::addCreative);
@@ -66,6 +68,7 @@ public class SoulfulNether
     private void commonSetup(final FMLCommonSetupEvent event) {
         event.enqueueWork(() -> {
             SurfaceRulesRegistry.registerSurfaceRule(SoulfulSurfaceRules.register());
+            registerCompostables();
         });
     }
 
@@ -83,6 +86,8 @@ public class SoulfulNether
                 new ResourceLocation(MOD_ID, "soul_sand_vally1"), registryAccess);
         ElysiumBiomeRegistry.replaceNetherBiome(Biomes.BASALT_DELTAS, SoulfulBiomes.ASHEN_DELTAS, 0.2, 20,
                 new ResourceLocation(MOD_ID, "basalt_deltas1"), registryAccess);
+        ElysiumBiomeRegistry.replaceNetherBiome(Biomes.WARPED_FOREST, SoulfulBiomes.GLOOM_FOREST, 0.2, 16,
+                new ResourceLocation(MOD_ID, "warped_forest1"), registryAccess);
     }
 
     @Mod.EventBusSubscriber(modid = MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
@@ -90,6 +95,20 @@ public class SoulfulNether
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
         }
+    }
+
+    protected void registerCompostables() {
+        ComposterBlock.COMPOSTABLES.put(SoulfulItems.SOULROOT_SEEDS.get(), 0.3f);
+        ComposterBlock.COMPOSTABLES.put(SoulfulItems.SOULROOT.get(), 0.65f);
+        ComposterBlock.COMPOSTABLES.put(SoulfulItems.CHARRED_SOULROOT.get(), 0.85f);
+        ComposterBlock.COMPOSTABLES.put(SoulfulItems.SOULROOT_PIE.get(), 1.0f);
+        ComposterBlock.COMPOSTABLES.put(SoulfulItems.LICHOSS_BLOCK.get(), 0.65f);
+        ComposterBlock.COMPOSTABLES.put(SoulfulItems.HANGING_LICHOSS.get(), 0.5f);
+        ComposterBlock.COMPOSTABLES.put(SoulfulItems.LICHOSS_CARPET.get(), 0.3f);
+        ComposterBlock.COMPOSTABLES.put(SoulfulItems.EMBER_ROOTS.get(), 0.65f);
+        ComposterBlock.COMPOSTABLES.put(SoulfulItems.FRIGHT_FUNGUS.get(), 0.65f);
+        ComposterBlock.COMPOSTABLES.put(SoulfulItems.FRIGHT_ROOTS.get(), 0.65f);
+        ComposterBlock.COMPOSTABLES.put(SoulfulItems.SPIRALING_VINES.get(), 0.5f);
     }
 
     private static void addBuiltInPacks(AddPackFindersEvent event) {

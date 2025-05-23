@@ -12,6 +12,8 @@ public class SoulfulConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> LICHOSS_PATCH_CEILING = registerKey("fright_forest/lichoss_patch_ceiling");
     public static final ResourceKey<ConfiguredFeature<?, ?>> LICHOSS_PATCH_CEILING_BONE_MEAL = registerKey("fright_forest/lichoss_patch_ceiling_bone_meal");
     public static final ResourceKey<ConfiguredFeature<?, ?>> ASHEN_SNOW_LAYERS = registerKey("ashen_deltas/ashen_snow_layers");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> HUGE_GLOOM_FUNGUS = registerKey("gloom_forest/huge_gloom_fungus");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> LARGE_GLOOM_FUNGUS = registerKey("gloom_forest/large_gloom_fungus");
 
 
 

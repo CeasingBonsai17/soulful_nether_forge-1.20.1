@@ -8,8 +8,8 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 
 public final class SoulfulItemTags {
-    public static final TagKey<Item> MARROWS = createTag("marrows");
     public static final TagKey<Item> FRIGHT_STEMS = createTag("fright_stems");
+    public static final TagKey<Item> MARROWS = createTag("marrows");
 
     private SoulfulItemTags() {
     }

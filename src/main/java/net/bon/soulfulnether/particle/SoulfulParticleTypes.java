@@ -14,6 +14,9 @@ public class SoulfulParticleTypes {
     public static final RegistryObject<SimpleParticleType> FRIGHT_EMBER = PARTICLE_TYPES.register("fright_ember", () -> new SimpleParticleType(false){});
     public static final RegistryObject<SimpleParticleType> FRIGHT_SPORE = PARTICLE_TYPES.register("fright_spore", () -> new SimpleParticleType(false){});
     public static final RegistryObject<SimpleParticleType> ASHEN_SNOW = PARTICLE_TYPES.register("ashen_snow", () -> new SimpleParticleType(false){});
+    public static final RegistryObject<SimpleParticleType> FALLING_GLOOMY_RAIN = PARTICLE_TYPES.register("falling_gloomy_rain", () -> new SimpleParticleType(false){});
+    public static final RegistryObject<SimpleParticleType> LANDING_GLOOMY_RAIN = PARTICLE_TYPES.register("landing_gloomy_rain", () -> new SimpleParticleType(false){});
+    public static final RegistryObject<SimpleParticleType> GLOOMY_FOG = PARTICLE_TYPES.register("gloomy_fog", () -> new SimpleParticleType(false){});
 
 
     public static void register(IEventBus eventBus) {

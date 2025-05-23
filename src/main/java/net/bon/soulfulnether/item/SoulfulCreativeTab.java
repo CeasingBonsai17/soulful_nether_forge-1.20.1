@@ -32,16 +32,16 @@ public class  SoulfulCreativeTab {
                         output.accept(SoulfulBlocks.FRIGHT_TRAPDOOR.get());
                         output.accept(SoulfulBlocks.FRIGHT_PRESSURE_PLATE.get());
                         output.accept(SoulfulBlocks.FRIGHT_BUTTON.get());
-                        output.accept(SoulfulBlocks.LICHOSS_BLOCK.get());
-                        output.accept(SoulfulBlocks.HANGING_LICHOSS.get());
-                        output.accept(SoulfulBlocks.LICHOSS_CARPET.get());
-                        output.accept(SoulfulBlocks.EMBER_ROOTS.get());
+                        output.accept(SoulfulItems.LICHOSS_BLOCK.get());
+                        output.accept(SoulfulItems.HANGING_LICHOSS.get());
+                        output.accept(SoulfulItems.LICHOSS_CARPET.get());
+                        output.accept(SoulfulItems.EMBER_ROOTS.get());
                         output.accept(SoulfulBlocks.FRIGHT_WART_BLOCK.get());
-                        output.accept(SoulfulBlocks.FRIGHT_FUNGUS.get());
-                        output.accept(SoulfulBlocks.FRIGHT_ROOTS.get());
+                        output.accept(SoulfulItems.FRIGHT_FUNGUS.get());
+                        output.accept(SoulfulItems.FRIGHT_ROOTS.get());
                         output.accept(SoulfulItems.FRIGHT_SIGN.get());
                         output.accept(SoulfulItems.FRIGHT_HANGING_SIGN.get());
-                        output.accept(SoulfulBlocks.SPIRALING_VINES.get());
+                        output.accept(SoulfulItems.SPIRALING_VINES.get());
                         output.accept(SoulfulItems.SOULROOT_SEEDS.get());
                         output.accept(SoulfulItems.SOULROOT.get());
                         if (CompatUtil.checkFarmersDelight()) {
@@ -88,6 +88,11 @@ public class  SoulfulCreativeTab {
                         output.accept(SoulfulBlocks.VOLCANIC_QUARTZ_BLOCK.get());
                         output.accept(SoulfulBlocks.VOLCANIC_QUARTZ_BRICKS.get());
                         output.accept(SoulfulBlocks.POLISHED_VOLCANIC_QUARTZ.get());
+                        output.accept(SoulfulBlocks.GLOOM_FUNGUS_STEM.get());
+                        output.accept(SoulfulBlocks.GLOOM_FUNGUS_CAP.get());
+                        output.accept(SoulfulBlocks.GLOOM_FUNGUS.get());
+                        output.accept(SoulfulBlocks.DROWSY_VINES.get());
+                        output.accept(SoulfulBlocks.WARPED_VEIN_ROOT.get());
 
 
 

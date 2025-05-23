@@ -54,10 +54,6 @@ public class EmberRootsBlock extends Block {
         return (Boolean)state.getValue(HANGING) ? HANGING_SHAPE : SHAPE;
     }
 
-    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> state) {
-        state.add(new Property[]{HANGING});
-    }
-
     public boolean canSurvive(BlockState state, LevelReader level, BlockPos pos) {
         Direction $$3 = getConnectedDirection(state).getOpposite();
         return mayPlaceOn(level, pos.relative($$3), $$3.getOpposite());
@@ -77,6 +73,9 @@ public class EmberRootsBlock extends Block {
         return getConnectedDirection(state).getOpposite() == direction && !state.canSurvive(level, pos) ? Blocks.AIR.defaultBlockState() : super.updateShape(state, direction, blockState, level, pos, blockPos);
     }
 
+    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> state) {
+        state.add(new Property[]{HANGING});
+    }
     static {
         HANGING = BlockStateProperties.HANGING;
         SHAPE = Block.box(2.0, 0.0, 2.0, 14.0, 13.0, 14.0);

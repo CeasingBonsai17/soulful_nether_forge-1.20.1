@@ -1,0 +1,12 @@
+{
+  "feature": "soulfulnether:gloom_forest/huge_gloom_fungus",
+  "placement": [
+    {
+      "type": "minecraft:count_on_every_layer",
+      "count": 5
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}

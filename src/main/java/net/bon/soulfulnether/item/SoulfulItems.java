@@ -50,7 +50,26 @@ public class  SoulfulItems {
                 new FrostbittenPopsicleItem(new Item.Properties().food(SoulfulFoods.MARSHMARROW_FOODS).food(SoulfulFoods.FROSTBITTEN_POPSICLE).craftRemainder(Items.GLASS_BOTTLE)));
 
 
-    public static void register(IEventBus eventBus) {
+        // block-items required for composting
+        public static final RegistryObject<Item> LICHOSS_BLOCK = ITEM.register("lichoss_block", () ->
+                new ItemNameBlockItem(SoulfulBlocks.LICHOSS_BLOCK.get(), new Item.Properties()));
+        public static final RegistryObject<Item> HANGING_LICHOSS = ITEM.register("hanging_lichoss", () ->
+                new ItemNameBlockItem(SoulfulBlocks.HANGING_LICHOSS.get(), new Item.Properties()));
+        public static final RegistryObject<Item> LICHOSS_CARPET = ITEM.register("lichoss_carpet", () ->
+                new ItemNameBlockItem(SoulfulBlocks.LICHOSS_CARPET.get(), new Item.Properties()));
+        public static final RegistryObject<Item> EMBER_ROOTS = ITEM.register("ember_roots", () ->
+                new ItemNameBlockItem(SoulfulBlocks.EMBER_ROOTS.get(), new Item.Properties()));
+        public static final RegistryObject<Item> FRIGHT_FUNGUS = ITEM.register("fright_fungus", () ->
+                new ItemNameBlockItem(SoulfulBlocks.FRIGHT_FUNGUS.get(), new Item.Properties()));
+        public static final RegistryObject<Item> FRIGHT_ROOTS = ITEM.register("fright_roots", () ->
+                new ItemNameBlockItem(SoulfulBlocks.FRIGHT_ROOTS.get(), new Item.Properties()));
+        public static final RegistryObject<Item> SPIRALING_VINES = ITEM.register("spiraling_vines", () ->
+                new ItemNameBlockItem(SoulfulBlocks.SPIRALING_VINES.get(), new Item.Properties()));
+
+
+
+
+        public static void register(IEventBus eventBus) {
     ITEM.register(eventBus);
     }
 }

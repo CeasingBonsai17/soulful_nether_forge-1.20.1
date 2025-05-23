@@ -1,6 +1,7 @@
 package net.bon.soulfulnether.block;
 
 import net.bon.soulfulnether.SoulfulNether;
+import net.bon.soulfulnether.block.grower.HugeGloomFungusGrower;
 import net.bon.soulfulnether.block.type.*;
 import net.bon.soulfulnether.item.SoulfulItems;
 import net.bon.soulfulnether.util.CompatUtil;
@@ -44,7 +45,7 @@ public class SoulfulBlocks {
     public static final RegistryObject<Block> MARSHMARROW_STACK = registerBlock("marshmarrow_stack", () ->
             new ToastingMarshmarrowStackBlock(BlockBehaviour.Properties.of().mapColor(MapColor.SAND).instrument(NoteBlockInstrument.XYLOPHONE).strength(0.5F).sound(SoundType.WOOL).randomTicks(), 0.1F, TOASTY_MARSHMARROW_STACK.get()));
 
-    public static final RegistryObject<Block> SPIRALING_VINES = registerBlock("spiraling_vines", () ->
+    public static final RegistryObject<Block> SPIRALING_VINES = registerBlockWithoutItem("spiraling_vines", () ->
             new SpiralingVinesBlock(BlockBehaviour.Properties.copy(Blocks.TWISTING_VINES).mapColor(MapColor.COLOR_BLACK).randomTicks()));
     public static final RegistryObject<Block> SPIRALING_VINES_PLANT = registerBlockWithoutItem("spiraling_vines_plant", () ->
             new SpiralingVinesPlantBlock(BlockBehaviour.Properties.copy(Blocks.TWISTING_VINES_PLANT).mapColor(MapColor.COLOR_BLACK)));
@@ -52,8 +53,7 @@ public class SoulfulBlocks {
     public static final RegistryObject<Block> STRIPPED_FRIGHT_STEM = registerBlock("stripped_fright_stem", () ->
             new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_WARPED_STEM).mapColor(MapColor.CLAY)));
     public static final RegistryObject<Block> FRIGHT_STEM = registerBlock("fright_stem", () ->
-            new StrippablePillarBlock(BlockBehaviour.Properties.copy(Blocks.WARPED_STEM).mapColor((blockState) -> {
-                return blockState.getValue(RotatedPillarBlock.AXIS) == Direction.Axis.Y ? MapColor.CLAY : MapColor.COLOR_BLUE;}), STRIPPED_FRIGHT_STEM));
+            new StrippablePillarBlock(BlockBehaviour.Properties.copy(Blocks.WARPED_STEM).mapColor((blockState) -> {return blockState.getValue(RotatedPillarBlock.AXIS) == Direction.Axis.Y ? MapColor.CLAY : MapColor.COLOR_BLUE;}), STRIPPED_FRIGHT_STEM));
     public static final RegistryObject<Block> STRIPPED_FRIGHT_HYPHAE = registerBlock("stripped_fright_hyphae", () ->
             new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_WARPED_HYPHAE).mapColor(MapColor.CLAY)));
     public static final RegistryObject<Block> FRIGHT_HYPHAE = registerBlock("fright_hyphae", () ->
@@ -84,21 +84,21 @@ public class SoulfulBlocks {
             new CeilingHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.WARPED_HANGING_SIGN).mapColor(MapColor.CLAY), SoulfulWoodType.FRIGHT));
     public static final RegistryObject<Block> FRIGHT_WALL_HANGING_SIGN = registerBlockWithoutItem("fright_wall_hanging_sign", () ->
             new WallHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.WARPED_WALL_HANGING_SIGN).mapColor(MapColor.CLAY), SoulfulWoodType.FRIGHT));
-    public static final RegistryObject<Block> LICHOSS_BLOCK = registerBlock("lichoss_block", () ->
+    public static final RegistryObject<Block> LICHOSS_BLOCK = registerBlockWithoutItem("lichoss_block", () ->
             new LichossBlock(BlockBehaviour.Properties.copy(Blocks.MOSS_BLOCK).mapColor(MapColor.COLOR_CYAN)));
-    public static final RegistryObject<Block> HANGING_LICHOSS = registerBlock("hanging_lichoss", () ->
+    public static final RegistryObject<Block> HANGING_LICHOSS = registerBlockWithoutItem("hanging_lichoss", () ->
             new HangingLichossBlock(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_CYAN).noCollission().instabreak().sound(SoundType.WEEPING_VINES).pushReaction(PushReaction.DESTROY).randomTicks()));
     public static final RegistryObject<Block> HANGING_LICHOSS_PLANT = registerBlockWithoutItem("hanging_lichoss_plant", () ->
             new HangingLichossPlantBlock(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_CYAN).noCollission().instabreak().sound(SoundType.WEEPING_VINES).pushReaction(PushReaction.DESTROY)));
-    public static final RegistryObject<Block> LICHOSS_CARPET = registerBlock("lichoss_carpet", () ->
+    public static final RegistryObject<Block> LICHOSS_CARPET = registerBlockWithoutItem("lichoss_carpet", () ->
             new LichossCarpetBlock(BlockBehaviour.Properties.copy(Blocks.MOSS_CARPET).mapColor(MapColor.COLOR_CYAN)));
-    public static final RegistryObject<Block> EMBER_ROOTS = registerBlock("ember_roots", () ->
+    public static final RegistryObject<Block> EMBER_ROOTS = registerBlockWithoutItem("ember_roots", () ->
             new EmberRootsBlock(BlockBehaviour.Properties.copy(Blocks.WARPED_ROOTS).mapColor(MapColor.COLOR_CYAN)));
     public static final RegistryObject<Block> FRIGHT_WART_BLOCK = registerBlock("fright_wart_block", () ->
             new Block(BlockBehaviour.Properties.copy(Blocks.WARPED_WART_BLOCK).mapColor(MapColor.COLOR_BLACK)));
-    public static final RegistryObject<Block> FRIGHT_FUNGUS = registerBlock("fright_fungus", () ->
+    public static final RegistryObject<Block> FRIGHT_FUNGUS = registerBlockWithoutItem("fright_fungus", () ->
             new FrightFungusBlock(BlockBehaviour.Properties.copy(Blocks.WARPED_FUNGUS).mapColor(MapColor.COLOR_BLACK), SoulfulConfiguredFeatures.FRIGHT_FUNGUS_PLANTED, LICHOSS_BLOCK.get()));
-    public static final RegistryObject<Block> FRIGHT_ROOTS = registerBlock("fright_roots", () ->
+    public static final RegistryObject<Block> FRIGHT_ROOTS = registerBlockWithoutItem("fright_roots", () ->
             new FrightRootsBlock(BlockBehaviour.Properties.copy(Blocks.WARPED_ROOTS).mapColor(MapColor.COLOR_BLACK)));
 
     public static final RegistryObject<Block> POTTED_FRIGHT_FUNGUS = registerBlockWithoutItem("potted_fright_fungus", () ->
@@ -129,6 +129,22 @@ public class SoulfulBlocks {
             new HalfTransparentBlock(BlockBehaviour.Properties.copy(Blocks.ICE).mapColor(MapColor.CLAY)));
     public static final RegistryObject<Block> PACKED_VOLCANIC_ICE = registerBlock("packed_volcanic_ice", () ->
             new PackedVolcanicIceBlock(BlockBehaviour.Properties.copy(Blocks.ICE).mapColor(MapColor.CLAY).randomTicks()));
+
+    public static final RegistryObject<Block> GLOOM_FUNGUS_STEM = registerBlock("gloom_fungus_stem", () ->
+            new GloomStemBlock(BlockBehaviour.Properties.copy(Blocks.WARPED_STEM).mapColor((blockState) -> {return blockState.getValue(GloomStemBlock.LIT) ? MapColor.COLOR_CYAN : MapColor.COLOR_LIGHT_GREEN;})));
+    public static final RegistryObject<Block> GLOOM_FUNGUS_CAP = registerBlock("gloom_fungus_cap", () ->
+            new GloomCapBlock(BlockBehaviour.Properties.copy(Blocks.WARPED_WART_BLOCK).mapColor(MapColor.SAND).lightLevel((p_152607_) -> {return 8;})));
+    public static final RegistryObject<Block> GLOOM_FUNGUS = registerBlock("gloom_fungus", () ->
+            new GloomFungusBlock( new HugeGloomFungusGrower(), BlockBehaviour.Properties.copy(Blocks.RED_MUSHROOM).mapColor(MapColor.SAND).lightLevel((p_152607_) -> {return 8;})));
+
+    public static final RegistryObject<Block> DROWSY_VINES = registerBlock("drowsy_vines", () ->
+            new DrowsyVinesBlock(BlockBehaviour.Properties.copy(Blocks.WEEPING_VINES).mapColor((blockState) -> {return blockState.getValue(DrowsyVinesBlock.HEAD) ? MapColor.SAND : MapColor.COLOR_LIGHT_GREEN;})));
+
+    public static final RegistryObject<Block> WARPED_VEIN_ROOT = registerBlock("warped_vein_root", () ->
+            new WarpedVeinRootBlock(BlockBehaviour.Properties.copy(Blocks.ROSE_BUSH).mapColor(MapColor.COLOR_CYAN).sound(SoundType.ROOTS).lightLevel((p_152607_) -> {return 4;})));
+
+
+
 
 
 
