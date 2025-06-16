@@ -60,7 +60,6 @@
 
   "item.soulfulnether.marshmarrow_mochi": "Marshmarrow Mochi",
 
-
   "block.soulfulnether.ashen_basalt": "Ashen Basalt",
   "block.soulfulnether.smooth_ashen_basalt": "Smooth Ashen Basalt",
   "block.soulfulnether.polished_ashen_basalt": "Polished Ashen Basalt",
@@ -82,6 +81,7 @@
   "block.soulfulnether.warped_vein_root": "Warped VeinRoot",
 
   "effect.soulfulnether.frostbite": "Frostbite",
+  "effect.soulfulnether.frostbite.description": "§kDescription Missing§r",
 
   "creativetab.soulfulnether": "Soulful Nether",
 
