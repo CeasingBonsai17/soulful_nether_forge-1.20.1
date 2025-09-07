@@ -9,6 +9,7 @@ import net.bon.soulfulnether.pack.SoulfulBuiltInPacks;
 import net.bon.soulfulnether.painting.SoulfulPaintings;
 import net.bon.soulfulnether.particle.SoulfulParticleTypes;
 import net.bon.soulfulnether.util.CompatUtil;
+import net.bon.soulfulnether.world.entity.SoulfulEntityType;
 import net.bon.soulfulnether.worldgen.SoulfulBiomes;
 import net.bon.soulfulnether.worldgen.SoulfulSurfaceRules;
 import net.bon.soulfulnether.worldgen.feature.SoulfulFeature;
@@ -53,6 +54,7 @@ public class SoulfulNether
         SoulfulFeature.register(modEventBus);
         SoulfulParticleTypes.register(modEventBus);
         SoulfulEffects.register(modEventBus);
+        SoulfulEntityType.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
         modEventBus.addListener(SoulfulNether::addBuiltInPacks);
@@ -102,13 +104,18 @@ public class SoulfulNether
         ComposterBlock.COMPOSTABLES.put(SoulfulItems.SOULROOT.get(), 0.65f);
         ComposterBlock.COMPOSTABLES.put(SoulfulItems.CHARRED_SOULROOT.get(), 0.85f);
         ComposterBlock.COMPOSTABLES.put(SoulfulItems.SOULROOT_PIE.get(), 1.0f);
-        ComposterBlock.COMPOSTABLES.put(SoulfulItems.LICHOSS_BLOCK.get(), 0.65f);
-        ComposterBlock.COMPOSTABLES.put(SoulfulItems.HANGING_LICHOSS.get(), 0.5f);
-        ComposterBlock.COMPOSTABLES.put(SoulfulItems.LICHOSS_CARPET.get(), 0.3f);
-        ComposterBlock.COMPOSTABLES.put(SoulfulItems.EMBER_ROOTS.get(), 0.65f);
-        ComposterBlock.COMPOSTABLES.put(SoulfulItems.FRIGHT_FUNGUS.get(), 0.65f);
-        ComposterBlock.COMPOSTABLES.put(SoulfulItems.FRIGHT_ROOTS.get(), 0.65f);
-        ComposterBlock.COMPOSTABLES.put(SoulfulItems.SPIRALING_VINES.get(), 0.5f);
+        ComposterBlock.COMPOSTABLES.put(SoulfulBlocks.LICHOSS_BLOCK.get().asItem(), 0.65f);
+        ComposterBlock.COMPOSTABLES.put(SoulfulBlocks.HANGING_LICHOSS.get().asItem(), 0.5f);
+        ComposterBlock.COMPOSTABLES.put(SoulfulBlocks.LICHOSS_CARPET.get().asItem(), 0.3f);
+        ComposterBlock.COMPOSTABLES.put(SoulfulBlocks.EMBER_ROOTS.get().asItem(), 0.65f);
+        ComposterBlock.COMPOSTABLES.put(SoulfulBlocks.FRIGHT_FUNGUS.get().asItem(), 0.65f);
+        ComposterBlock.COMPOSTABLES.put(SoulfulBlocks.FRIGHT_ROOTS.get().asItem(), 0.65f);
+        ComposterBlock.COMPOSTABLES.put(SoulfulBlocks.SPIRALING_VINES.get().asItem(), 0.5f);
+
+        ComposterBlock.COMPOSTABLES.put(SoulfulBlocks.GLOOM_FUNGUS.get().asItem(), 0.65f);
+        ComposterBlock.COMPOSTABLES.put(SoulfulBlocks.GLOOMY_FIDDLEHEAD.get().asItem(), 0.65f);
+        ComposterBlock.COMPOSTABLES.put(SoulfulBlocks.TALL_GLOOMY_FIDDLEHEAD.get().asItem(), 0.65f);
+        ComposterBlock.COMPOSTABLES.put(SoulfulBlocks.DROWSY_VINES.get().asItem(), 0.5f);
     }
 
     private static void addBuiltInPacks(AddPackFindersEvent event) {

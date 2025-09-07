@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_hyphae": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "soulfulnether:gloom_fungus_hyphae"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "soulfulnether:warped_planks_from_gloomy_hyphae"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_hyphae",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "soulfulnether:warped_planks_from_gloomy_hyphae"
+    ]
+  },
+  "sends_telemetry_event": false
+}

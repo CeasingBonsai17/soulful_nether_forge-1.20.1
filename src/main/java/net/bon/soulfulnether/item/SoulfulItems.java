@@ -2,6 +2,7 @@ package net.bon.soulfulnether.item;
 
 import net.bon.soulfulnether.SoulfulNether;
 import net.bon.soulfulnether.block.SoulfulBlocks;
+import net.bon.soulfulnether.block.type.*;
 import net.bon.soulfulnether.item.type.FrostbittenPopsicleItem;
 import net.minecraft.world.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -36,6 +37,8 @@ public class  SoulfulItems {
 
         public static final RegistryObject<Item> ASHEN_SNOW = ITEM.register("ashen_snow", () ->
                 new Item(new Item.Properties()));
+        public static final RegistryObject<Item> ASHEN_SNOWBALL = ITEM.register("ashen_snowball", () ->
+                new SnowballItem(new Item.Properties()));
 
 
         public static final RegistryObject<Item> FROZEN_SOULROOT = ITEM.register("frozen_soulroot", () ->
@@ -45,31 +48,16 @@ public class  SoulfulItems {
 
 
         public static final RegistryObject<Item> FROSTBITTEN_SOULROOT = ITEM.register("frostbitten_soulroot", () ->
-                new Item(new Item.Properties().food(SoulfulFoods.SOULROOT).food(SoulfulFoods.FROSTBITTEN_SOULROOT)));
+                new Item(new Item.Properties().food(SoulfulFoods.FROSTBITTEN_SOULROOT)));
         public static final RegistryObject<Item> FROSTBITTEN_POPSICLE = ITEM.register("frostbitten_popsicle", () ->
-                new FrostbittenPopsicleItem(new Item.Properties().food(SoulfulFoods.MARSHMARROW_FOODS).food(SoulfulFoods.FROSTBITTEN_POPSICLE).craftRemainder(Items.GLASS_BOTTLE)));
+                new FrostbittenPopsicleItem(new Item.Properties().food(SoulfulFoods.FROSTBITTEN_POPSICLE).craftRemainder(Items.STICK)));
 
 
-        // block-items required for composting
-        public static final RegistryObject<Item> LICHOSS_BLOCK = ITEM.register("lichoss_block", () ->
-                new ItemNameBlockItem(SoulfulBlocks.LICHOSS_BLOCK.get(), new Item.Properties()));
-        public static final RegistryObject<Item> HANGING_LICHOSS = ITEM.register("hanging_lichoss", () ->
-                new ItemNameBlockItem(SoulfulBlocks.HANGING_LICHOSS.get(), new Item.Properties()));
-        public static final RegistryObject<Item> LICHOSS_CARPET = ITEM.register("lichoss_carpet", () ->
-                new ItemNameBlockItem(SoulfulBlocks.LICHOSS_CARPET.get(), new Item.Properties()));
-        public static final RegistryObject<Item> EMBER_ROOTS = ITEM.register("ember_roots", () ->
-                new ItemNameBlockItem(SoulfulBlocks.EMBER_ROOTS.get(), new Item.Properties()));
-        public static final RegistryObject<Item> FRIGHT_FUNGUS = ITEM.register("fright_fungus", () ->
-                new ItemNameBlockItem(SoulfulBlocks.FRIGHT_FUNGUS.get(), new Item.Properties()));
-        public static final RegistryObject<Item> FRIGHT_ROOTS = ITEM.register("fright_roots", () ->
-                new ItemNameBlockItem(SoulfulBlocks.FRIGHT_ROOTS.get(), new Item.Properties()));
-        public static final RegistryObject<Item> SPIRALING_VINES = ITEM.register("spiraling_vines", () ->
-                new ItemNameBlockItem(SoulfulBlocks.SPIRALING_VINES.get(), new Item.Properties()));
 
 
 
 
         public static void register(IEventBus eventBus) {
-    ITEM.register(eventBus);
+                ITEM.register(eventBus);
     }
 }

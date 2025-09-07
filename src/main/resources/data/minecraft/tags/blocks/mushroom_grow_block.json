@@ -1,6 +1,8 @@
 {
   "replace": false,
   "values": [
-    "soulfulnether:lichoss_block"
+    "soulfulnether:lichoss_block",
+    "soulfulnether:gloom_fungus_stem",
+    "soulfulnether:gloom_fungus_hyphae"
   ]
 }

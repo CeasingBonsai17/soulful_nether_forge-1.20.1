@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_stem": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "soulfulnether:gloom_fungus_stem"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "soulfulnether:gloom_fungus_hyphae"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_stem",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "soulfulnether:gloom_fungus_hyphae"
+    ]
+  },
+  "sends_telemetry_event": false
+}

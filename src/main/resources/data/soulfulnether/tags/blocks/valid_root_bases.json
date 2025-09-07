@@ -3,7 +3,6 @@
     "#minecraft:nylium",
     "minecraft:soul_soil",
     "soulfulnether:lichoss_block",
-    "soulfulnether:gloom_fungus_cap",
     {
       "id": "#netherexp:roots_plantable_on",
       "required": false

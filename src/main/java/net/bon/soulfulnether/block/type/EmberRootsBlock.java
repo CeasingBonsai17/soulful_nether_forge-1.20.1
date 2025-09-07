@@ -30,20 +30,20 @@ public class EmberRootsBlock extends Block {
 
     public EmberRootsBlock(BlockBehaviour.Properties properties) {
         super(properties);
-        this.registerDefaultState((BlockState)((BlockState)this.stateDefinition.any()).setValue(HANGING, false)) ;
+        this.registerDefaultState((BlockState)this.stateDefinition.any().setValue(HANGING, false));
     }
 
     @Nullable
     public BlockState getStateForPlacement(BlockPlaceContext context) {
-         Direction[] var3 = context.getNearestLookingDirections();
+        Direction[] var3 = context.getNearestLookingDirections();
         int var4 = var3.length;
 
         for(int var5 = 0; var5 < var4; ++var5) {
-            Direction $$2 = var3[var5];
-            if ($$2.getAxis() == Direction.Axis.Y) {
-                BlockState $$3 = (BlockState)this.defaultBlockState().setValue(HANGING, $$2 == Direction.UP);
-                if ($$3.canSurvive(context.getLevel(), context.getClickedPos()));
-                return (BlockState)$$3.setValue(HANGING, $$2 == Direction.UP);
+            Direction direction = var3[var5];
+            if (direction.getAxis() == Direction.Axis.Y) {
+                BlockState blockState = (BlockState)this.defaultBlockState().setValue(HANGING, direction == Direction.UP);
+                if (blockState.canSurvive(context.getLevel(), context.getClickedPos()));
+                return (BlockState)blockState.setValue(HANGING, direction == Direction.UP);
             }
         }
 

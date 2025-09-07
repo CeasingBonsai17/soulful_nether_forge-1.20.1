@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_large_fiddlehead": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "soulfulnether:tall_gloomy_fiddlehead"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "soulfulnether:gloomy_fiddlehead"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_large_fiddlehead",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "soulfulnether:gloomy_fiddlehead"
+    ]
+  },
+  "sends_telemetry_event": false
+}

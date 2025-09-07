@@ -38,7 +38,7 @@ public class FrightFungusBlock extends FungusBlock implements BonemealableBlock 
             return registry.getHolder(SoulfulConfiguredFeatures.FRIGHT_FUNGUS_PLANTED);
 
         }).ifPresent((reference) -> {
-            ((ConfiguredFeature)reference.value()).place(level, level.getChunkSource().getGenerator(), source, pos.above());
+            (reference.value()).place(level, level.getChunkSource().getGenerator(), source, pos.above());
         });
     }
 }

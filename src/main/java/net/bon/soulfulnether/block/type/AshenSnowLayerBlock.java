@@ -38,7 +38,7 @@ public class AshenSnowLayerBlock extends Block {
 
     public AshenSnowLayerBlock(BlockBehaviour.Properties properties) {
         super(properties);
-        this.registerDefaultState((BlockState)((BlockState)this.stateDefinition.any()).setValue(LAYERS, 1));
+        this.registerDefaultState(this.stateDefinition.any().setValue(LAYERS, 1));
     }
 
     public boolean isPathfindable(BlockState state, BlockGetter blockGetter, BlockPos pos, PathComputationType pathComputationType) {
@@ -55,19 +55,19 @@ public class AshenSnowLayerBlock extends Block {
     }
 
     public VoxelShape getShape(BlockState state, BlockGetter blockGetter, BlockPos pos, CollisionContext context) {
-        return SHAPE_BY_LAYER[(Integer)state.getValue(LAYERS)];
+        return SHAPE_BY_LAYER[state.getValue(LAYERS)];
     }
 
     public VoxelShape getCollisionShape(BlockState state, BlockGetter blockGetter, BlockPos pos, CollisionContext context) {
-        return SHAPE_BY_LAYER[(Integer)state.getValue(LAYERS) - 1];
+        return SHAPE_BY_LAYER[state.getValue(LAYERS) - 1];
     }
 
     public VoxelShape getBlockSupportShape(BlockState state, BlockGetter blockGetter, BlockPos pos) {
-        return SHAPE_BY_LAYER[(Integer)state.getValue(LAYERS)];
+        return SHAPE_BY_LAYER[state.getValue(LAYERS)];
     }
 
     public VoxelShape getVisualShape(BlockState state, BlockGetter blockGetter, BlockPos pos, CollisionContext context) {
-        return SHAPE_BY_LAYER[(Integer)state.getValue(LAYERS)];
+        return SHAPE_BY_LAYER[state.getValue(LAYERS)];
     }
 
     public boolean useShapeForLightOcclusion(BlockState state) {
@@ -75,7 +75,7 @@ public class AshenSnowLayerBlock extends Block {
     }
 
     public float getShadeBrightness(BlockState state, BlockGetter blockGetter, BlockPos pos) {
-        return (Integer)state.getValue(LAYERS) == 8 ? 0.2F : 1.0F;
+        return state.getValue(LAYERS) == 8 ? 0.2F : 1.0F;
     }
 
     public boolean canSurvive(BlockState state, LevelReader p_56603_, BlockPos pos) {
@@ -88,7 +88,7 @@ public class AshenSnowLayerBlock extends Block {
     }
 
     public boolean canBeReplaced(BlockState state, BlockPlaceContext context) {
-        int $$2 = (Integer)state.getValue(LAYERS);
+        int $$2 = state.getValue(LAYERS);
         if (context.getItemInHand().is(this.asItem()) && $$2 < 8) {
             if (context.replacingClickedOnBlock()) {
                 return context.getClickedFace() == Direction.UP;
@@ -104,8 +104,8 @@ public class AshenSnowLayerBlock extends Block {
     public BlockState getStateForPlacement(BlockPlaceContext context) {
         BlockState $$1 = context.getLevel().getBlockState(context.getClickedPos());
         if ($$1.is(this)) {
-            int $$2 = (Integer)$$1.getValue(LAYERS);
-            return (BlockState)$$1.setValue(LAYERS, Math.min(8, $$2 + 1));
+            int $$2 = $$1.getValue(LAYERS);
+            return $$1.setValue(LAYERS, Math.min(8, $$2 + 1));
         } else {
             return super.getStateForPlacement(context);
         }

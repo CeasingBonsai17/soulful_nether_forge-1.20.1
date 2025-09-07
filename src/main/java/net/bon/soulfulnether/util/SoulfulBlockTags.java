@@ -12,6 +12,7 @@ public final class SoulfulBlockTags {
     public static final TagKey<Block> VOLCANIC_COLD_SOURCES = createTag("volcanic_cold_sources");
     public static final TagKey<Block> MARSHMARROW_HEAT_SOURCES = createTag("marshmarrow_heat_sources");
     public static final TagKey<Block> INVALID_FIRE_BASE = createTag("invalid_fire_base");
+    public static final TagKey<Block> VALID_GLOOMY_FIDDLEHEAD_SOILS = createTag("valid_gloomy_fiddlehead_soils");
 
 
     private SoulfulBlockTags() {

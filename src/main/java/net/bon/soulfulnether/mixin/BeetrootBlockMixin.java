@@ -4,13 +4,21 @@ package net.bon.soulfulnether.mixin;
 import net.bon.soulfulnether.block.SoulfulBlocks;
 import net.bon.soulfulnether.util.SoulfulBlockTags;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
+import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.BeetrootBlock;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.CropBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.injection.At;
+import org.spongepowered.asm.mixin.injection.Inject;
+
+import javax.annotation.Nullable;
 
 @SuppressWarnings("deprecation")
 
@@ -29,11 +37,11 @@ public class BeetrootBlockMixin extends CropBlock {
         return super.mayPlaceOn(floor, world, pos);
     }
 
-    @Override
-    public void onPlace(BlockState state, Level world, BlockPos pos, BlockState oldState, boolean notify) {
+   @Override
+    public void onPlace(BlockState state, Level world, BlockPos pos, BlockState blockState, boolean notify) {
         BlockState floor = world.getBlockState(pos.below());
-        if (state.is(Blocks.BEETROOTS) && floor.is(SoulfulBlockTags.SOUL_CONVERTING_BLOCKS)) {
-            world.setBlock(pos, SoulfulBlocks.SOULROOTS.get().defaultBlockState(), UPDATE_ALL);
+        if (floor.is(SoulfulBlockTags.SOUL_CONVERTING_BLOCKS)) {
+            world.setBlock(pos, SoulfulBlocks.SOULROOTS.get().defaultBlockState(), 0);
         }
     }
 }

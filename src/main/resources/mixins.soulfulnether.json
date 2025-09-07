@@ -11,7 +11,8 @@
     "RootsBlockMixin",
     "SproutsBlockMixin",
     "FireBlockMixin",
-    "SoulFireBlockMixin"
+    "SoulFireBlockMixin",
+    "NyliumBlockMixin"
   ],
   "client": [],
   "server": [],

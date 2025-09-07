@@ -7,7 +7,7 @@
       {
         "target": {
           "predicate_type": "minecraft:tag_match",
-          "tag": "soulfulnether:fright_forest_floors"
+          "tag": "soulfulnether:valid_basalt_rock_placement"
         },
         "state": {
           "Name": "minecraft:basalt"

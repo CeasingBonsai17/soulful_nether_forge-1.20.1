@@ -6,6 +6,9 @@
   "advancements.nether.snow_flakes.title": "¿Que es? ¿Que es?",
   "advancements.nether.snow_flakes.description": "Encontrá un bioma de Deltas Cenizos",
 
+  "painting.soulfulnether.hell_rose.title": "Hell Rose",
+  "painting.soulfulnether.hell_rose.author": "CeasingBonsai17",
+
   "block.soulfulnether.fright_stem": "Tallo espantoso",
   "block.soulfulnether.fright_hyphae": "Hifas espantosas",
   "block.soulfulnether.stripped_fright_stem": "Tallo espantoso sin corteza",
@@ -59,13 +62,26 @@
 
 
   "block.soulfulnether.ashen_basalt": "Basalto cenizo",
+  "block.soulfulnether.smooth_ashen_basalt": "Smooth Ashen Basalt",
   "block.soulfulnether.polished_ashen_basalt": "Basalto cenizo pulido",
   "block.soulfulnether.volcanic_quartz_block": "Cuarzo volcánico",
   "block.soulfulnether.volcanic_quartz_bricks": "Ladrillos de cuarzo volcánico",
   "block.soulfulnether.polished_volcanic_quartz": "Cuarzo volcánico pulido",
+  "block.soulfulnether.volcanic_ice": "Volcanic Ice",
+  "block.soulfulnether.packed_volcanic_ice": "Packed Volcanic Ice",
   "block.soulfulnether.ashen_snow_block": "Bloque de nieve ceniza",
   "block.soulfulnether.ashen_snow_layer": "Capa de nieve ceniza",
   "item.soulfulnether.ashen_snow": "Nieve ceniza",
+  "item.soulfulnether.ashen_snowball": "Ashen Snowball",
+
+
+  "block.soulfulnether.gloom_fungus_stem": "Gloom Fungus Stem",
+  "block.soulfulnether.gloom_fungus_hyphae": "Gloom Fungus Hyphae",
+  "block.soulfulnether.gloom_fungus_cap": "Gloom Fungus Cap",
+  "block.soulfulnether.gloom_fungus": "Gloom Fungus",
+  "block.soulfulnether.gloomy_fiddlehead": "Gloomy Fiddlehead",
+  "block.soulfulnether.tall_gloomy_fiddlehead": "Large Gloomy Fiddlehead",
+  "block.soulfulnether.drowsy_vines": "Drowsy Vines",
 
   "effect.soulfulnether.frostbite": "Frostbite",
 

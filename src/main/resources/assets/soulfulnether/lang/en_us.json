@@ -24,14 +24,14 @@
   "block.soulfulnether.fright_sign": "Fright Sign",
   "block.soulfulnether.fright_hanging_sign": "Fright Hanging Sign",
   "block.soulfulnether.fright_button": "Fright Button",
-  "item.soulfulnether.fright_fungus": "Fright Fungus",
-  "item.soulfulnether.fright_roots": "Fright Roots",
+  "block.soulfulnether.fright_fungus": "Fright Fungus",
+  "block.soulfulnether.fright_roots": "Fright Roots",
   "block.soulfulnether.fright_wart_block": "Fright Wart Block",
-  "item.soulfulnether.spiraling_vines": "Spiraling Vines",
-  "item.soulfulnether.lichoss_block": "Lichoss Block",
-  "item.soulfulnether.hanging_lichoss": "Hanging Lichoss",
-  "item.soulfulnether.lichoss_carpet": "Lichoss Carpet",
-  "item.soulfulnether.ember_roots": "Ember Roots",
+  "block.soulfulnether.spiraling_vines": "Spiraling Vines",
+  "block.soulfulnether.lichoss_block": "Lichoss Block",
+  "block.soulfulnether.hanging_lichoss": "Hanging Lichoss",
+  "block.soulfulnether.lichoss_carpet": "Lichoss Carpet",
+  "block.soulfulnether.ember_roots": "Ember Roots",
   "item.soulfulnether.soulroot_seeds": "Soulroot Seeds",
 
   "item.soulfulnether.frostbitten_soulroot": "Frostbitten Soulroot",
@@ -72,14 +72,16 @@
   "block.soulfulnether.ashen_snow_block": "Ashen Snow Block",
   "block.soulfulnether.ashen_snow_layer": "Ashen Snow Layer",
   "item.soulfulnether.ashen_snow": "Ashen Snow",
+  "item.soulfulnether.ashen_snowball": "Ashen Snowball",
 
 
   "block.soulfulnether.gloom_fungus_stem": "Gloom Fungus Stem",
+  "block.soulfulnether.gloom_fungus_hyphae": "Gloom Fungus Hyphae",
   "block.soulfulnether.gloom_fungus_cap": "Gloom Fungus Cap",
   "block.soulfulnether.gloom_fungus": "Gloom Fungus",
+  "block.soulfulnether.gloomy_fiddlehead": "Gloomy Fiddlehead",
+  "block.soulfulnether.tall_gloomy_fiddlehead": "Large Gloomy Fiddlehead",
   "block.soulfulnether.drowsy_vines": "Drowsy Vines",
-
-  "block.soulfulnether.warped_vein_root": "Warped VeinRoot",
 
   "effect.soulfulnether.frostbite": "Frostbite",
 
