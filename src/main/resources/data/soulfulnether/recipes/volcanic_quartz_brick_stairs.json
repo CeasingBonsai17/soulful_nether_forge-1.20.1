@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "soulfulnether:volcanic_quartz_bricks"
+    }
+  },
+  "result": {
+    "item": "soulfulnether:volcanic_quartz_brick_stairs",
+    "count": 4
+  },
+  "show_notification": true
+}

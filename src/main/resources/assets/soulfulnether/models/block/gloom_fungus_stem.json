@@ -1,0 +1,9 @@
+{
+  "parent": "soulfulnether:block/template_gloom_stem",
+  "textures": {
+    "side": "soulfulnether:block/gloom_stem_side",
+    "bottom": "soulfulnether:block/gloom_stem_top",
+    "top": "soulfulnether:block/gloom_stem_top",
+    "particle": "soulfulnether:block/gloom_stem_side"
+  }
+}

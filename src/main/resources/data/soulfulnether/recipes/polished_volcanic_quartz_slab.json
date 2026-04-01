@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "soulfulnether:polished_volcanic_quartz"
+    }
+  },
+  "result": {
+    "item": "soulfulnether:polished_volcanic_quartz_slab",
+    "count": 6
+  },
+  "show_notification": true
+}

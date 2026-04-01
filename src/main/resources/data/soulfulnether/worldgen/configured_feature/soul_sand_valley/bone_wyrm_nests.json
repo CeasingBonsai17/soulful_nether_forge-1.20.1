@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:ore",
+  "config": {
+    "discard_chance_on_air_exposure": 0,
+    "size": 17,
+    "targets": [
+      {
+        "state": {
+          "Name": "soulfulnether:bone_wyrm_nest",
+          "Properties": {
+            "grub_count": "3"
+          }
+        },
+        "target": {
+          "predicate_type": "minecraft:block_match",
+          "block": "minecraft:bone_block"
+        }
+      }
+    ]
+  }
+}

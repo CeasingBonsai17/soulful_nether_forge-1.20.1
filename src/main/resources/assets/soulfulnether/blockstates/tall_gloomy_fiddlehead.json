@@ -1,0 +1,18 @@
+{
+  "variants": {
+    "half=lower,hanging=true": {
+      "model": "soulfulnether:block/tall_gloomy_fiddlehead_bottom",
+      "x": 180
+    },
+    "half=lower,hanging=false": {
+      "model": "soulfulnether:block/tall_gloomy_fiddlehead_bottom"
+    },
+    "half=upper,hanging=true": {
+      "model": "soulfulnether:block/tall_gloomy_fiddlehead_top",
+      "x": 180
+    },
+    "half=upper,hanging=false": {
+      "model": "soulfulnether:block/tall_gloomy_fiddlehead_top"
+    }
+  }
+}

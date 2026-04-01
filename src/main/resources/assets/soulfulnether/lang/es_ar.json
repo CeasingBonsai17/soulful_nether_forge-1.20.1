@@ -1,13 +1,15 @@
 {
-  "advancements.nether.not_quite_mandrakes.title": "No exactamente una mandrágora",
+  "advancements.nether.not_quite_mandrakes.title": "No es una mandrágora exactamente",
   "advancements.nether.not_quite_mandrakes.description": "Obtené una remolalma plantando una remolacha en cualquier bloque de almas.",
   "advancements.nether.food_for_the_soul.title": "Comida para el alma",
   "advancements.nether.food_for_the_soul.description": "Comé todas las comidas de remolalma.",
   "advancements.nether.snow_flakes.title": "¿Que es? ¿Que es?",
-  "advancements.nether.snow_flakes.description": "Encontrá un bioma de Deltas Cenizos",
+  "advancements.nether.snow_flakes.description": "Encontrá un bioma de Deltas Cenizos.",
 
-  "painting.soulfulnether.hell_rose.title": "Hell Rose",
-  "painting.soulfulnether.hell_rose.author": "CeasingBonsai17",
+  "subtitles.soulfulnether.gloomy_amber.squish": "Gloomy Amber squishes",
+
+  "painting.soulfulnether.hell_rose.title": "Rosa infernal",
+  "painting.soulfulnether.hell_rose.author": "CeasingBonsai",
 
   "block.soulfulnether.fright_stem": "Tallo espantoso",
   "block.soulfulnether.fright_hyphae": "Hifas espantosas",
@@ -60,33 +62,65 @@
 
   "item.soulfulnether.marshmarrow_mochi": "Mochi de malvacaracú",
 
+  "item.soulfulnether.marshmarrow_on_a_stick": "Caña con malvacaracú",
+
+  "item.soulfulnether.bone_wyrm_spawn_egg": "Generar sierpe huesuda",
+  "entity.soulfulnether.bone_wyrm": "Sierpe huesuda",
+  "block.soulfulnether.bone_wyrm_nest": "Bone Wyrm Nest",
+  "item.soulfulnether.bone_wyrm_larva": "Bone Wyrm Larva",
 
   "block.soulfulnether.ashen_basalt": "Basalto cenizo",
-  "block.soulfulnether.smooth_ashen_basalt": "Smooth Ashen Basalt",
+  "block.soulfulnether.smooth_ashen_basalt": "Basalto cenizo liso",
   "block.soulfulnether.polished_ashen_basalt": "Basalto cenizo pulido",
   "block.soulfulnether.volcanic_quartz_block": "Cuarzo volcánico",
   "block.soulfulnether.volcanic_quartz_bricks": "Ladrillos de cuarzo volcánico",
+  "block.soulfulnether.volcanic_quartz_brick_stairs": "Escaleras de ladrillos de cuarzo volcánico",
+  "block.soulfulnether.volcanic_quartz_brick_slab": "Baldosa de ladrillos de cuarzo volcánico",
   "block.soulfulnether.polished_volcanic_quartz": "Cuarzo volcánico pulido",
-  "block.soulfulnether.volcanic_ice": "Volcanic Ice",
-  "block.soulfulnether.packed_volcanic_ice": "Packed Volcanic Ice",
+  "block.soulfulnether.polished_volcanic_quartz_stairs": "Escaleras de cuarzo volcánico pulido",
+  "block.soulfulnether.polished_volcanic_quartz_slab": "Baldosa de cuarzo volcánico pulido",
+  "block.soulfulnether.volcanic_ice": "Hielo volcánico",
+  "block.soulfulnether.packed_volcanic_ice": "Hielo volcánico comprimido",
   "block.soulfulnether.ashen_snow_block": "Bloque de nieve ceniza",
   "block.soulfulnether.ashen_snow_layer": "Capa de nieve ceniza",
   "item.soulfulnether.ashen_snow": "Nieve ceniza",
-  "item.soulfulnether.ashen_snowball": "Ashen Snowball",
+  "item.soulfulnether.ashen_snowball": "Bola de nieve ceniza",
 
+  "block.soulfulnether.gloom_fungus_stem": "Tallo de hongo lóbrego",
+  "block.soulfulnether.gloom_fungus_hyphae": "Hifas de hongo lóbrego",
+  "block.soulfulnether.gloom_fungus_cap": "Sombrero de hongo lóbrego",
+  "block.soulfulnether.gloom_fungus": "Hongo lóbrego",
+  "block.soulfulnether.gloomy_fiddlehead": "Helecho lóbrego",
+  "block.soulfulnether.tall_gloomy_fiddlehead": "Helecho lóbrego alto",
+  "block.soulfulnether.drowsy_vines": "Enredaderas soñolientas",
 
-  "block.soulfulnether.gloom_fungus_stem": "Gloom Fungus Stem",
-  "block.soulfulnether.gloom_fungus_hyphae": "Gloom Fungus Hyphae",
-  "block.soulfulnether.gloom_fungus_cap": "Gloom Fungus Cap",
-  "block.soulfulnether.gloom_fungus": "Gloom Fungus",
-  "block.soulfulnether.gloomy_fiddlehead": "Gloomy Fiddlehead",
-  "block.soulfulnether.tall_gloomy_fiddlehead": "Large Gloomy Fiddlehead",
-  "block.soulfulnether.drowsy_vines": "Drowsy Vines",
+  "block.soulfulnether.gloomy_amber_clump": "Terrón de ámbar lóbrego",
+  "block.soulfulnether.gloomy_amber_block": "Bloque de ámbar lóbrego",
+  "item.soulfulnether.gloomy_amber_brick": "Ladrillo de ámbar lóbrego",
+  "block.soulfulnether.gloomy_amber_bricks": "Ladrillos de ámbar lóbrego",
+  "block.soulfulnether.gloomy_amber_brick_stairs": "Escaleras de ladrillos de ámbar lóbrego",
+  "block.soulfulnether.gloomy_amber_brick_slab": "Baldosa de ladrillos de ámbar lóbrego",
+  "block.soulfulnether.gloomy_amber_brick_wall": "Pared de ladrillos de ámbar lóbrego",
+  "block.soulfulnether.chiseled_gloomy_amber_bricks": "Ladrillos de ámbar lóbrego cincelados",
+  "block.soulfulnether.gloomy_amber_vines": "Enredaderas de ámbar lóbrego",
+  "block.soulfulnether.gloomy_amber_vines_plant": "Planta de enredaderas de ámbar lóbrego",
+  "block.soulfulnether.gloomy_amber_vine_block": "Bloque de enredadera de ámbar lóbrego",
 
-  "effect.soulfulnether.frostbite": "Frostbite",
+  "effect.soulfulnether.frostbite": "Congelamiento",
+  "effect.soulfulnether.frostbite.description": "Inflige daño con el tiempo a la vez que reduce la velocidad de movimiento; los niveles más altos aumentan tanto el daño como la lentitud.",
+
+  "subtitles.soulfulnether.bone_wyrm.saddle": "Montura equipada",
+  "subtitles.soulfulnether.bone_wyrm.ambient": "Chillido de sierpe huesuda",
+  "subtitles.soulfulnether.bone_wyrm.hurt": "Sierpe huesuda herida",
+  "subtitles.soulfulnether.bone_wyrm.death": "Sierpe huesuda muere",
+  "subtitles.soulfulnether.bone_wyrm_larva.death": "Bone Wyrm Larva dies",
+
+  "subtitles.soulfulnether.wallow.ambient": "Wallow chuckles",
+  "subtitles.soulfulnether.wallow.hurt": "Wallow hurts",
+  "subtitles.soulfulnether.wallow.death": "Wallow dies",
 
   "creativetab.soulfulnether": "Soulful Nether",
 
   "biome.soulfulnether.fright_forest": "Bosque espantoso",
   "biome.soulfulnether.ashen_deltas": "Deltas cenizos"
-}
+  }

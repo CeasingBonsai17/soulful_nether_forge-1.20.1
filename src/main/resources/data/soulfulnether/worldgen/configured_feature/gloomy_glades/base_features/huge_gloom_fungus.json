@@ -1,0 +1,18 @@
+{
+  "type": "soulfulnether:huge_gloom_fungus",
+  "config": {
+    "cap_provider": {
+      "type": "minecraft:simple_state_provider",
+      "state": {
+        "Name": "soulfulnether:gloom_fungus_cap"
+      }
+    },
+    "foliage_radius": 2,
+    "stem_provider": {
+      "type": "minecraft:simple_state_provider",
+      "state": {
+        "Name": "soulfulnether:gloom_fungus_stem"
+      }
+    }
+  }
+}

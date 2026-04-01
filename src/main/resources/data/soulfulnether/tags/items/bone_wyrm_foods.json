@@ -1,0 +1,16 @@
+{
+  "values": [
+    "minecraft:bone",
+    "minecraft:bone_meal",
+    {
+      "id": "netherexp:roasted_bone",
+      "required": false
+    },
+    "soulfulnether:marshmarrow",
+    "soulfulnether:marshmarrow_stack",
+    "soulfulnether:toasty_marshmarrow",
+    "soulfulnether:toasty_marshmarrow_stack",
+    "soulfulnether:roasted_marshmarrow",
+    "soulfulnether:roasted_marshmarrow_stack"
+  ]
+}

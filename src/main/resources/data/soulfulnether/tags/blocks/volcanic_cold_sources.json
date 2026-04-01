@@ -1,0 +1,21 @@
+{
+  "values": [
+    "soulfulnether:ashen_snow_block",
+    "soulfulnether:ashen_snow_layer",
+    "soulfulnether:volcanic_ice",
+    "soulfulnether:packed_volcanic_ice",
+    "minecraft:blue_ice",
+    {
+      "id": "netherexp:thin_black_ice",
+      "required": false
+    },
+    {
+      "id": "netherexp:black_ice",
+      "required": false
+    },
+    {
+      "id": "netherexp:soul_permafrost",
+      "required": false
+    }
+  ]
+}

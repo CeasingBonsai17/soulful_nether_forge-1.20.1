@@ -1,0 +1,12 @@
+{
+  "feature": "soulfulnether:soul_sand_valley/bone_wyrm_nests",
+  "placement": [
+    {
+      "type": "minecraft:count_on_every_layer",
+      "count": 5
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}

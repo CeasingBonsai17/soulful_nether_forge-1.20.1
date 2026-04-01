@@ -5,14 +5,14 @@
   "compatibilityLevel": "JAVA_17",
   "minVersion": "0.8",
   "mixins": [
-    "BeetrootBlockMixin",
     "BlockEntityTypeMixin",
-    "FungusBlockMixin",
-    "RootsBlockMixin",
-    "SproutsBlockMixin",
     "FireBlockMixin",
+    "FungusBlockMixin",
+    "ItemEntityMixin",
+    "NyliumBlockMixin",
+    "RootsBlockMixin",
     "SoulFireBlockMixin",
-    "NyliumBlockMixin"
+    "SproutsBlockMixin"
   ],
   "client": [],
   "server": [],

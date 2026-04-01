@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "ambientocclusion": false,
+  "textures": {
+    "bottom": "soulfulnether:block/gloom_cap_inner",
+    "side": "soulfulnether:block/gloom_cap_lower",
+    "top": "soulfulnether:block/gloom_cap_upper"
+  }
+}

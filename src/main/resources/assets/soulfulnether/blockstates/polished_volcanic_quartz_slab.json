@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "soulfulnether:block/polished_volcanic_quartz_slab"
+    },
+    "type=double": {
+      "model": "soulfulnether:block/polished_volcanic_quartz"
+    },
+    "type=top": {
+      "model": "soulfulnether:block/polished_volcanic_quartz_slab_top"
+    }
+  }
+}

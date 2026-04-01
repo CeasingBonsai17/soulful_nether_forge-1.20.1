@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "minecraft:soul_sand_valley",
+  "features": "soulfulnether:soul_sand_valley/bone_wyrm_nests",
+  "step": "vegetal_decoration"
+}

@@ -1,13 +1,9 @@
 package net.bon.soulfulnether.block.type;
 
-import net.bon.soulfulnether.block.SoulfulBlocks;
 import net.bon.soulfulnether.item.SoulfulItems;
-import net.bon.soulfulnether.util.SoulfulBlockTags;
+import net.bon.soulfulnether.util.SoulfulTags;
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.Direction;
-import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.tags.BlockTags;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
@@ -19,13 +15,11 @@ import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.BonemealableBlock;
 import net.minecraft.world.level.block.BushBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
-import net.minecraft.world.level.block.state.StateHolder;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.level.block.state.properties.Property;
@@ -33,29 +27,32 @@ import net.minecraft.world.level.gameevent.GameEvent;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
-import net.minecraftforge.client.model.geometry.BlockGeometryBakingContext;
-
-import java.util.Random;
 
 @SuppressWarnings("deprecation")
 
 public class SoulrootsBlock extends BushBlock implements BonemealableBlock {
     public static final int MAX_AGE = 5;
-    public static final IntegerProperty AGE;
-    private static final VoxelShape[] AGE_TO_SHAPE;
+    public static final IntegerProperty AGE = BlockStateProperties.AGE_5;
+    private static final VoxelShape[] AGE_TO_SHAPE = new VoxelShape[]{
+            Block.box(0.0, 0.0, 0.0, 16.0, 2.0, 16.0),
+            Block.box(0.0, 0.0, 0.0, 16.0, 3.0, 16.0),
+            Block.box(0.0, 0.0, 0.0, 16.0, 6.0, 16.0),
+            Block.box(0.0, 0.0, 0.0, 16.0, 8.0, 16.0),
+            Block.box(0.0, 0.0, 0.0, 16.0, 11.0, 16.0),
+            Block.box(0.0, 0.0, 0.0, 16.0, 13.0, 16.0)};
 
     public SoulrootsBlock(BlockBehaviour.Properties properties) {
         super(properties);
-        this.registerDefaultState(this.stateDefinition.any().setValue(AGE, 0));
+        registerDefaultState(stateDefinition.any().setValue(AGE, 0));
     }
 
     protected boolean mayPlaceOn(BlockState state, BlockGetter blockGetter, BlockPos pos) {
-        return state.is(SoulfulBlockTags.SOUL_CONVERTING_BLOCKS) && !state.is(BlockTags.DIRT) && !state.is(Blocks.FARMLAND);
+        return state.is(SoulfulTags.SOUL_CONVERTING_BLOCKS);
     }
 
     public boolean canSurvive(BlockState state, LevelReader level, BlockPos pos) {
         BlockPos blockpos = pos.below();
-        return this.mayPlaceOn(level.getBlockState(blockpos), level, blockpos);
+        return mayPlaceOn(level.getBlockState(blockpos), level, blockpos);
     }
 
     protected IntegerProperty getAgeProperty() {
@@ -64,7 +61,7 @@ public class SoulrootsBlock extends BushBlock implements BonemealableBlock {
 
 
     public int getAge(BlockState state) {
-        return (Integer)state.getValue(this.getAgeProperty());
+        return state.getValue(getAgeProperty());
     }
 
     public int getMaxAge() {
@@ -77,11 +74,11 @@ public class SoulrootsBlock extends BushBlock implements BonemealableBlock {
     }
 
     public ItemStack getCloneItemStack(BlockGetter block, BlockPos pos, BlockState state) {
-        return new ItemStack(this.getBaseSeedId());
+        return new ItemStack(getBaseSeedId());
     }
 
     public VoxelShape getShape(BlockState state, BlockGetter blockGetter, BlockPos pos, CollisionContext context) {
-        return AGE_TO_SHAPE[this.getAge(state)];
+        return AGE_TO_SHAPE[getAge(state)];
     }
 
     public boolean isRandomlyTicking(BlockState state) {
@@ -89,9 +86,9 @@ public class SoulrootsBlock extends BushBlock implements BonemealableBlock {
     }
 
     public void randomTick(BlockState state, ServerLevel serverLevel, BlockPos pos, RandomSource random) {
-        int i = state.getValue(AGE);
-        if (i < 5 && random.nextInt(5) == 0 && serverLevel.getRawBrightness(pos.above(), 0) >= 0) {
-            BlockState blockState = state.setValue(AGE, i + 1);
+        int age = state.getValue(AGE);
+        if (age < 5 && random.nextInt(5) == 0) {
+            BlockState blockState = state.setValue(AGE, age + 1);
             serverLevel.setBlockAndUpdate(pos, blockState);
             serverLevel.gameEvent(GameEvent.BLOCK_CHANGE, pos, GameEvent.Context.of(blockState));
         }
@@ -108,7 +105,7 @@ public class SoulrootsBlock extends BushBlock implements BonemealableBlock {
     }
 
     public boolean isValidBonemealTarget(LevelReader world, BlockPos pos, BlockState state, boolean isClient) {
-        return (Integer)state.getValue(AGE) < 5;
+        return state.getValue(AGE) < 5;
     }
 
     public boolean isBonemealSuccess(Level level, RandomSource randomSource, BlockPos blockPos, BlockState blockState) {
@@ -117,16 +114,11 @@ public class SoulrootsBlock extends BushBlock implements BonemealableBlock {
 
     @Override
     public void performBonemeal(ServerLevel world, RandomSource randomSource, BlockPos pos, BlockState state) {
-        int i = Math.min(5, (Integer)state.getValue(AGE) + 2);
-        world.setBlockAndUpdate(pos, (BlockState)state.setValue(AGE, i));
+        int i = Math.min(5, state.getValue(AGE) + 2);
+        world.setBlockAndUpdate(pos, state.setValue(AGE, i));
     }
 
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> state) {
         state.add(new Property[]{AGE});
-    }
-
-    static {
-        AGE = BlockStateProperties.AGE_5;
-        AGE_TO_SHAPE = new VoxelShape[]{Block.box(0.0, 0.0, 0.0, 16.0, 2.0, 16.0), Block.box(0.0, 0.0, 0.0, 16.0, 3.0, 16.0), Block.box(0.0, 0.0, 0.0, 16.0, 6.0, 16.0), Block.box(0.0, 0.0, 0.0, 16.0, 8.0, 16.0), Block.box(0.0, 0.0, 0.0, 16.0, 11.0, 16.0), Block.box(0.0, 0.0, 0.0, 16.0, 13.0, 16.0)};
     }
 }

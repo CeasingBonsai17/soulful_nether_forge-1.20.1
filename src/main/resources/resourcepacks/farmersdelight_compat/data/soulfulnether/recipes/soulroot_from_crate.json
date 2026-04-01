@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "soulfulnether:soulroot_crate"
+    }
+  ],
+  "result": {
+    "counts": 9,
+    "item": "soulfulnether:soulroot"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "parent": "soulfulnether:block/template_horizontal_gloom_stem",
+  "ambientocclusion": false,
+  "textures": {
+    "side": "soulfulnether:block/gloom_stem_half_lit_side",
+    "bottom": "soulfulnether:block/gloom_stem_side",
+    "top": "soulfulnether:block/gloom_stem_lit_side",
+    "end": "soulfulnether:block/gloom_stem_half_lit_top",
+    "particle": "soulfulnether:block/gloom_stem_half_lit_side"
+  }
+}

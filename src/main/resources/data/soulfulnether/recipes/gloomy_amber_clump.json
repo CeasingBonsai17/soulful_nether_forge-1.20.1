@@ -1,0 +1,13 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "category": "building",
+    "ingredients": [
+        {
+            "item": "soulfulnether:gloomy_fiddlehead"
+        }
+    ],
+    "result": {
+        "item": "soulfulnether:gloomy_amber_clump",
+        "count": 1
+    }
+}

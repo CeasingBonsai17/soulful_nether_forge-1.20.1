@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/template_wall_post",
+  "textures": {
+    "wall": "soulfulnether:block/gloomy_amber_bricks"
+  }
+}

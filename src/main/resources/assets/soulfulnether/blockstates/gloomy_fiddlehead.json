@@ -1,0 +1,11 @@
+{
+  "variants": {
+    "hanging=true": {
+      "model": "soulfulnether:block/gloomy_fiddlehead",
+      "x": 180
+    },
+    "hanging=false": {
+      "model": "soulfulnether:block/gloomy_fiddlehead"
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "parent": "soulfulnether:block/template_drowsy_vines",
+  "ambientocclusion": false,
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "star_vine": "soulfulnether:block/drowsy_vines",
+    "star_novine": "soulfulnether:block/drowsy_vines_novine",
+    "particle": "soulfulnether:block/drowsy_vines_novine"
+  }
+}

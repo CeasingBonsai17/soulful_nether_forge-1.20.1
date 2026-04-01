@@ -17,7 +17,8 @@ public class SoulfulSurfaceRules {
     private static final SurfaceRules.RuleSource NETHERRACK = SurfaceRules.state(Blocks.NETHERRACK.defaultBlockState());
     private static final SurfaceRules.RuleSource SMOOTH_ASHEN_BASALT = SurfaceRules.state(SoulfulBlocks.SMOOTH_ASHEN_BASALT.get().defaultBlockState());
 
-    public static SurfaceRules.RuleSource register() {return SurfaceRules.sequence(
+    public static SurfaceRules.RuleSource register() {
+        return SurfaceRules.sequence(
             SurfaceRules.ifTrue(SurfaceRules.verticalGradient("bedrock_floor", VerticalAnchor.bottom(), VerticalAnchor.aboveBottom(5)), BEDROCK),
             SurfaceRules.ifTrue(SurfaceRules.not(SurfaceRules.verticalGradient("bedrock_roof", VerticalAnchor.belowTop(5), VerticalAnchor.top())), SurfaceRules.ifTrue(SurfaceRules.yBlockCheck(VerticalAnchor.belowTop(5), 0), BEDROCK)),
 
@@ -48,9 +49,8 @@ public class SoulfulSurfaceRules {
                             SOUL_SOIL
                     ))
             )),
-
             SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR, SurfaceRules.sequence(
-                    SurfaceRules.ifTrue(SurfaceRules.isBiome(SoulfulBiomes.GLOOM_FOREST), SurfaceRules.sequence(
+                    SurfaceRules.ifTrue(SurfaceRules.isBiome(SoulfulBiomes.GLOOMY_GLADES), SurfaceRules.sequence(
                             SurfaceRules.ifTrue(SurfaceRules.not(SurfaceRules.noiseCondition(Noises.NETHERRACK, 0.54, 1.7976931348623157E308)),
                                     SurfaceRules.ifTrue(SurfaceRules.yStartCheck(VerticalAnchor.absolute(31), 0),
                                             SurfaceRules.sequence(SurfaceRules.ifTrue(SurfaceRules.noiseCondition(Noises.NETHER_WART, 1.17, 1.7976931348623157E308), WARPED_WART_BLOCK),

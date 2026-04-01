@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "soulfulnether:ashen_snow_block"
+    }
+  },
+  "result": {
+    "item": "soulfulnether:ashen_snow_layer",
+    "count": 6
+  },
+  "show_notification": true
+}

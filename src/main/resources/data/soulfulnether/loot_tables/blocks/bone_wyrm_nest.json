@@ -1,0 +1,85 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "rolls": 1,
+      "bonus_rolls": 0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "soulfulnether:bone_wyrm_nest"
+        }
+      ]
+    },
+    {
+      "bonus_rolls": 0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "condition": "minecraft:inverted",
+              "term": {
+                "condition": "minecraft:block_state_property",
+                "block": "soulfulnether:bone_wyrm_nest",
+                "properties": {
+                  "grub_count": "0"
+                }
+              }
+            }
+          ],
+          "functions": [
+            {
+              "add": false,
+              "conditions": [
+                {
+                  "block": "soulfulnether:bone_wyrm_nest",
+                  "condition": "minecraft:block_state_property",
+                  "properties": {
+                    "grub_count": "1"
+                  }
+                }
+              ],
+              "count": 1,
+              "function": "minecraft:set_count"
+            },
+            {
+              "add": false,
+              "conditions": [
+                {
+                  "block": "soulfulnether:bone_wyrm_nest",
+                  "condition": "minecraft:block_state_property",
+                  "properties": {
+                    "grub_count": "2"
+                  }
+                }
+              ],
+              "count": 2,
+              "function": "minecraft:set_count"
+            },
+            {
+              "add": false,
+              "conditions": [
+                {
+                  "block": "soulfulnether:bone_wyrm_nest",
+                  "condition": "minecraft:block_state_property",
+                  "properties": {
+                    "grub_count": "3"
+                  }
+                }
+              ],
+              "count": 3,
+              "function": "minecraft:set_count"
+            },
+            {
+              "function": "minecraft:explosion_decay"
+            }
+          ],
+          "name": "soulfulnether:bone_wyrm_larva"
+        }
+      ],
+      "rolls": 1
+    }
+  ],
+  "random_sequence": "soulfulnether:blocks/bone_wyrm_nest"
+}

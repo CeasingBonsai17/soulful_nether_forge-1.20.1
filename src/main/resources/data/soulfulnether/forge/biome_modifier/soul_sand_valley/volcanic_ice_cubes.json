@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "minecraft:soul_sand_valley",
+  "features": "soulfulnether:ashen_deltas/volcanic_ice_cubes",
+  "step": "vegetal_decoration"
+}

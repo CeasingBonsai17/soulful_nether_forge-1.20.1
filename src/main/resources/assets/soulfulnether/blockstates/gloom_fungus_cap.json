@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "up=false": {
+      "model": "soulfulnether:block/gloom_fungus_cap_lower"
+    },
+    "up=true": {
+      "model": "soulfulnether:block/gloom_fungus_cap_upper"
+    }
+  }
+}

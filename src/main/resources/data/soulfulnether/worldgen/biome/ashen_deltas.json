@@ -1,6 +1,9 @@
 {
   "carvers": {
-    "air": "minecraft:nether_cave"
+    "air": [
+      "minecraft:nether_cave",
+      "soulfulnether:nether_canyon"
+    ]
   },
   "downfall": 0,
   "effects": {
@@ -47,6 +50,7 @@
     [
       "soulfulnether:ashen_deltas/ashen_basalt_blobs",
       "minecraft:blackstone_blobs",
+      "soulfulnether:ashen_deltas/blackstone_base",
       "minecraft:patch_fire",
       "minecraft:patch_soul_fire",
       "soulfulnether:ashen_deltas/patch_soul_fire_ashen",

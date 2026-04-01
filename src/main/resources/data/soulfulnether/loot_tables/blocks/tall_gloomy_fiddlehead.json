@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "block": "soulfulnether:tall_gloomy_fiddlehead",
+              "condition": "minecraft:block_state_property",
+              "properties": {
+                "half": "lower"
+              }
+            }
+          ],
+          "name": "soulfulnether:tall_gloomy_fiddlehead"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "soulfulnether:blocks/tall_gloomy_fiddlehead"
+}

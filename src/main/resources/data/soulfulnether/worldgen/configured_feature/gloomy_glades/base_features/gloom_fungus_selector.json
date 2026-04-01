@@ -1,0 +1,95 @@
+{
+  "type": "minecraft:random_selector",
+  "config": {
+    "features": [
+      {
+        "chance": 0.1,
+        "feature": {
+          "feature": {
+            "config": {
+              "tries": 3,
+              "xz_spread": 3,
+              "y_spread": 0,
+              "feature": {
+                "feature": {
+                  "config": {
+                    "to_place": {
+                      "type": "minecraft:simple_state_provider",
+                      "state": {
+                        "Name": "soulfulnether:gloom_fungus"
+                      }
+                    }
+                  },
+                  "type": "minecraft:simple_block"
+                },
+                "placement": [
+                  {
+                    "type": "minecraft:environment_scan",
+                    "direction_of_search": "down",
+                    "max_steps": 17,
+                    "target_condition": {
+                      "type": "minecraft:matching_blocks",
+                      "offset": [0, -1, 0],
+                      "blocks": "minecraft:warped_nylium"
+                    },
+                    "allowed_search_condition": {
+                      "type": "minecraft:matching_blocks",
+                      "blocks": "minecraft:air"
+                    }
+                  }
+                ]
+              }
+            },
+            "type": "minecraft:random_patch"
+          },
+          "placement": []
+        }
+      },
+      {
+        "chance": 0.4,
+        "feature": {
+          "feature": {
+            "config": {
+              "cap_provider": {
+                "type": "minecraft:simple_state_provider",
+                "state": {
+                  "Name": "soulfulnether:gloom_fungus_cap"
+                }
+              },
+              "foliage_radius": 2,
+              "stem_provider": {
+                "type": "minecraft:simple_state_provider",
+                "state": {
+                  "Name": "soulfulnether:gloom_fungus_stem"
+                }
+              }
+            },
+            "type": "soulfulnether:large_gloom_fungus"
+          },
+          "placement": []
+        }
+      }
+    ],
+    "default": {
+      "feature": {
+        "config": {
+          "cap_provider": {
+            "type": "minecraft:simple_state_provider",
+            "state": {
+              "Name": "soulfulnether:gloom_fungus_cap"
+            }
+          },
+          "foliage_radius": 2,
+          "stem_provider": {
+            "type": "minecraft:simple_state_provider",
+            "state": {
+              "Name": "soulfulnether:gloom_fungus_stem"
+            }
+          }
+        },
+        "type": "soulfulnether:huge_gloom_fungus"
+      },
+      "placement": []
+    }
+  }
+}

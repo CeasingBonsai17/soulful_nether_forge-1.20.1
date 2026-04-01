@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "bark",
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "soulfulnether:gloom_fungus_stem"
+    }
+  },
+  "result": {
+    "item": "soulfulnether:gloom_fungus_hyphae"
+  },
+  "show_notification": true
+}

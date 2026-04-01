@@ -1,0 +1,18 @@
+{
+  "blocks": "#soulfulnether:soul_converting_blocks",
+  "item_condition": "minecraft:beetroot_seeds",
+  "behaviors": {
+    "type": "place",
+    "blockstate": {
+      "Name": "soulfulnether:soulroots"
+    },
+    "pos": "above",
+    "after_use_item": "consume",
+    "can_replace_solids": false,
+    "sounds": {
+      "sound_event": "minecraft:item.crop.plant",
+      "volume": 1.0,
+      "pitch": 1.0
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "soulfulnether:ashen_snow"
+    }
+  ],
+  "result": {
+    "item": "soulfulnether:ashen_snowball",
+    "count": 4
+  }
+}

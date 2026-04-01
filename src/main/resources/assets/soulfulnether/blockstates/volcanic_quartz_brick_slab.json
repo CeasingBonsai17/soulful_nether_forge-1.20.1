@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "soulfulnether:block/volcanic_quartz_brick_slab"
+    },
+    "type=double": {
+      "model": "soulfulnether:block/volcanic_quartz_bricks"
+    },
+    "type=top": {
+      "model": "soulfulnether:block/volcanic_quartz_brick_slab_top"
+    }
+  }
+}

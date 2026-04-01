@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "soulfulnether:gloomy_amber_brick"
+    }
+  },
+  "result": {
+    "item": "soulfulnether:gloomy_amber_bricks",
+    "count": 1
+  },
+  "show_notification": true
+}

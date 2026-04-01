@@ -28,23 +28,17 @@ public class LichossBlock extends Block implements BonemealableBlock {
     }
 
     public void performBonemeal(ServerLevel level, RandomSource source, BlockPos pos, BlockState blockState) {
-        level.registryAccess().registry(Registries.CONFIGURED_FEATURE).flatMap((registry) -> {
-            return registry.getHolder(SoulfulConfiguredFeatures.LICHOSS_PATCH_BONE_MEAL);
 
-        }).ifPresent((reference) -> {
-            ((ConfiguredFeature)reference.value()).place(level, level.getChunkSource().getGenerator(), source, pos.above());
-        });
-        level.registryAccess().registry(Registries.CONFIGURED_FEATURE).flatMap((registry) -> {
-            return registry.getHolder(SoulfulConfiguredFeatures.LICHOSS_PATCH_CEILING);
+        level.registryAccess().registry(Registries.CONFIGURED_FEATURE).flatMap((registry) ->
+                registry.getHolder(SoulfulConfiguredFeatures.LICHOSS_PATCH_BONE_MEAL)).ifPresent((reference) -> {
+                    reference.value().place(level, level.getChunkSource().getGenerator(), source, pos);});
 
-        }).ifPresent((reference) -> {
-            ((ConfiguredFeature)reference.value()).place(level, level.getChunkSource().getGenerator(), source, pos.above());
-        });
-        level.registryAccess().registry(Registries.CONFIGURED_FEATURE).flatMap((registry) -> {
-            return registry.getHolder(SoulfulConfiguredFeatures.LICHOSS_PATCH_CEILING_BONE_MEAL);
+        level.registryAccess().registry(Registries.CONFIGURED_FEATURE).flatMap((registry) ->
+                registry.getHolder(SoulfulConfiguredFeatures.LICHOSS_PATCH_CEILING)).ifPresent((reference) -> {
+                    reference.value().place(level, level.getChunkSource().getGenerator(), source, pos);});
 
-        }).ifPresent((reference) -> {
-            ((ConfiguredFeature)reference.value()).place(level, level.getChunkSource().getGenerator(), source, pos.above());
-        });
+        level.registryAccess().registry(Registries.CONFIGURED_FEATURE).flatMap((registry) ->
+                registry.getHolder(SoulfulConfiguredFeatures.LICHOSS_PATCH_CEILING_BONEMEAL)).ifPresent((reference) -> {
+                    reference.value().place(level, level.getChunkSource().getGenerator(), source, pos);});
     }
 }

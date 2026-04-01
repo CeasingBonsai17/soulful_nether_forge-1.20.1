@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smelting",
+  "category": "blocks",
+  "ingredient": {
+    "item": "soulfulnether:ashen_basalt"
+  },
+  "result": "soulfulnether:smooth_ashen_basalt",
+  "experience": 0.1,
+  "cookingtime": 200
+}

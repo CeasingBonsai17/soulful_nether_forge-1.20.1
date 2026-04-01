@@ -1,0 +1,12 @@
+{
+  "feature": "soulfulnether:ashen_deltas/blackstone_base",
+  "placement": [
+    {
+      "type": "minecraft:count_on_every_layer",
+      "count": 100
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}

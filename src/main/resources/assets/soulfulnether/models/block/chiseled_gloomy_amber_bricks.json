@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "soulfulnether:block/chiseled_gloomy_amber_bricks"
+  }
+}

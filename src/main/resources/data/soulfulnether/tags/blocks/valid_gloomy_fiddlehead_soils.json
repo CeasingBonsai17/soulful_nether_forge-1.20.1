@@ -1,0 +1,12 @@
+{
+  "values": [
+    "#soulfulnether:valid_root_bases",
+    "soulfulnether:gloom_fungus_cap",
+    "minecraft:netherrack",
+    "#minecraft:dirt",
+    "minecraft:farmland",
+    "minecraft:warped_wart_block",
+    "minecraft:nether_bricks",
+    "soulfulnether:gloomy_amber_vine_block"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "soulfulnether:gloomy_amber_bricks"
+    }
+  },
+  "result": {
+    "item": "soulfulnether:gloomy_amber_brick_slab",
+    "count": 6
+  },
+  "show_notification": true
+}

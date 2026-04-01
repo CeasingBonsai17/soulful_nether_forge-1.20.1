@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "soulfulnether:volcanic_ice"
+    },
+    {
+      "item": "soulfulnether:volcanic_ice"
+    },
+    {
+      "item": "soulfulnether:volcanic_ice"
+    },
+    {
+      "item": "soulfulnether:volcanic_ice"
+    },
+    {
+      "item": "soulfulnether:volcanic_ice"
+    },
+    {
+      "item": "soulfulnether:volcanic_ice"
+    },
+    {
+      "item": "soulfulnether:volcanic_ice"
+    },
+    {
+      "item": "soulfulnether:volcanic_ice"
+    },
+    {
+      "item": "soulfulnether:volcanic_ice"
+    }
+  ],
+  "result": {
+    "item": "soulfulnether:packed_volcanic_ice"
+  }
+}

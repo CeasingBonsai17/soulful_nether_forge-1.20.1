@@ -1,0 +1,94 @@
+{
+  "type": "minecraft:random_selector",
+  "config": {
+    "features": [
+      {
+        "chance": 0.3,
+        "feature": {
+          "feature": {
+            "type": "minecraft:block_column",
+            "config": {
+              "allowed_placement": {
+                "type": "minecraft:matching_blocks",
+                "blocks": "minecraft:air"
+              },
+              "direction": "up",
+              "layers": [
+                {
+                  "height": 1,
+                  "provider": {
+                    "type": "minecraft:simple_state_provider",
+                    "state": {
+                      "Name": "soulfulnether:tall_gloomy_fiddlehead",
+                      "Properties": {
+                        "half": "lower"
+                      }
+                    }
+                  }
+                },
+                {
+                  "height": 1,
+                  "provider": {
+                    "type": "minecraft:simple_state_provider",
+                    "state": {
+                      "Name": "soulfulnether:tall_gloomy_fiddlehead",
+                      "Properties": {
+                        "half": "upper"
+                      }
+                    }
+                  }
+                }
+              ],
+              "prioritize_tip": true
+            }
+          },
+          "placement": [
+            {
+              "type": "minecraft:environment_scan",
+              "direction_of_search": "down",
+              "max_steps": 17,
+              "target_condition": {
+                "type": "minecraft:matching_blocks",
+                "offset": [0, -1, 0],
+                "blocks": "minecraft:warped_nylium"
+              },
+              "allowed_search_condition": {
+                "type": "minecraft:matching_blocks",
+                "blocks": "minecraft:air"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "default": {
+      "feature": {
+        "config": {
+          "to_place": {
+            "type": "minecraft:simple_state_provider",
+            "state": {
+              "Name": "soulfulnether:gloomy_fiddlehead"
+            }
+          }
+        },
+        "type": "minecraft:simple_block"
+      },
+      "placement": [
+        {
+          "type": "minecraft:environment_scan",
+          "direction_of_search": "down",
+          "max_steps": 17,
+          "target_condition": {
+            "type": "minecraft:matching_blocks",
+            "offset": [0, -1, 0],
+            "blocks": "minecraft:warped_nylium"
+          },
+          "allowed_search_condition": {
+            "type": "minecraft:matching_blocks",
+            "blocks": "minecraft:air"
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+	"ambientocclusion": false,
+	"textures": {
+		"0": "soulfulnether:block/gloom_hyphae_lit_side",
+		"1": "soulfulnether:block/gloom_hyphae_lit_side1",
+		"2": "soulfulnether:block/gloom_stem_half_lit_up",
+		"3": "soulfulnether:block/gloom_stem_side",
+		"4": "soulfulnether:block/gloom_stem_lit_side",
+		"particle": "soulfulnether:block/gloom_stem_half_lit_up"
+	},
+	"elements": [
+		{
+			"from": [0, 0, 0],
+			"to": [16, 16, 16],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 0, 8]},
+			"faces": {
+				"north": {"uv": [0, 0, 16, 16], "texture": "#3"},
+				"east": {"uv": [0, 0, 16, 16], "texture": "#1"},
+				"south": {"uv": [0, 0, 16, 16], "texture": "#4"},
+				"west": {"uv": [0, 0, 16, 16], "texture": "#0"},
+				"up": {"uv": [0, 16, 16, 0], "texture": "#2"},
+				"down": {"uv": [0, 0, 16, 16], "texture": "#2"}
+			}
+		}
+	]
+}

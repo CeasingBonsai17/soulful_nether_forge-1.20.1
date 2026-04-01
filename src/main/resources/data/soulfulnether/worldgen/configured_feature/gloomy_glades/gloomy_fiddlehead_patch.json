@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:random_patch",
+  "config": {
+    "tries": 7,
+    "xz_spread": 5,
+    "feature": {
+      "feature": "soulfulnether:gloomy_glades/base_features/gloomy_fiddlehead_selector",
+      "placement": []
+    }
+  }
+}

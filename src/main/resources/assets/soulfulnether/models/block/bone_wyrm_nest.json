@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "soulfulnether:block/bone_wyrm_nest_top",
+    "side": "soulfulnether:block/bone_wyrm_nest"
+  }
+}

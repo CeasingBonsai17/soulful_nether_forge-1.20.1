@@ -6,8 +6,10 @@
   "advancements.nether.snow_flakes.title": "Whats this! Whats this!",
   "advancements.nether.snow_flakes.description": "Find the Ashen Deltas biome",
 
+  "subtitles.soulfulnether.gloomy_amber.squish": "Gloomy Amber squishes",
+
   "painting.soulfulnether.hell_rose.title": "Hell Rose",
-  "painting.soulfulnether.hell_rose.author": "CeasingBonsai17",
+  "painting.soulfulnether.hell_rose.author": "CeasingBonsai",
 
   "block.soulfulnether.fright_stem": "Fright Stem",
   "block.soulfulnether.fright_hyphae": "Fright Hyphae",
@@ -60,20 +62,29 @@
 
   "item.soulfulnether.marshmarrow_mochi": "Marshmarrow Mochi",
 
+  "item.soulfulnether.marshmarrow_on_a_stick": "Marshmarrow on a Stick",
+
+  "item.soulfulnether.bone_wyrm_spawn_egg": "Bone Wyrm Spawn Egg",
+  "entity.soulfulnether.bone_wyrm": "Bone Wyrm",
+  "block.soulfulnether.bone_wyrm_nest": "Bone Wyrm Nest",
+  "item.soulfulnether.bone_wyrm_larva": "Bone Wyrm Larva",
 
   "block.soulfulnether.ashen_basalt": "Ashen Basalt",
   "block.soulfulnether.smooth_ashen_basalt": "Smooth Ashen Basalt",
   "block.soulfulnether.polished_ashen_basalt": "Polished Ashen Basalt",
   "block.soulfulnether.volcanic_quartz_block": "Volcanic Quartz Block",
   "block.soulfulnether.volcanic_quartz_bricks": "Volcanic Quartz Bricks",
+  "block.soulfulnether.volcanic_quartz_brick_stairs": "Volcanic Quartz Brick Stairs",
+  "block.soulfulnether.volcanic_quartz_brick_slab": "Volcanic Quartz Brick Slab",
   "block.soulfulnether.polished_volcanic_quartz": "Polished Volcanic Quartz",
+  "block.soulfulnether.polished_volcanic_quartz_stairs": "Polished Volcanic Quartz Stairs",
+  "block.soulfulnether.polished_volcanic_quartz_slab": "Polished Volcanic Quartz Slab",
   "block.soulfulnether.volcanic_ice": "Volcanic Ice",
   "block.soulfulnether.packed_volcanic_ice": "Packed Volcanic Ice",
   "block.soulfulnether.ashen_snow_block": "Ashen Snow Block",
   "block.soulfulnether.ashen_snow_layer": "Ashen Snow Layer",
   "item.soulfulnether.ashen_snow": "Ashen Snow",
   "item.soulfulnether.ashen_snowball": "Ashen Snowball",
-
 
   "block.soulfulnether.gloom_fungus_stem": "Gloom Fungus Stem",
   "block.soulfulnether.gloom_fungus_hyphae": "Gloom Fungus Hyphae",
@@ -83,7 +94,30 @@
   "block.soulfulnether.tall_gloomy_fiddlehead": "Large Gloomy Fiddlehead",
   "block.soulfulnether.drowsy_vines": "Drowsy Vines",
 
+  "block.soulfulnether.gloomy_amber_clump": "Gloomy Amber Clump",
+  "block.soulfulnether.gloomy_amber_block": "Gloomy Amber Block",
+  "item.soulfulnether.gloomy_amber_brick": "Gloomy Amber Brick",
+  "block.soulfulnether.gloomy_amber_bricks": "Gloomy Amber Bricks",
+  "block.soulfulnether.gloomy_amber_brick_stairs": "Gloomy Amber Brick Stairs",
+  "block.soulfulnether.gloomy_amber_brick_slab": "Gloomy Amber Brick Slab",
+  "block.soulfulnether.gloomy_amber_brick_wall": "Gloomy Amber Brick Wall",
+  "block.soulfulnether.chiseled_gloomy_amber_bricks": "Chiseled Gloomy Amber Bricks",
+  "block.soulfulnether.gloomy_amber_vines": "Gloomy Amber Vines",
+  "block.soulfulnether.gloomy_amber_vines_plant": "Gloomy Amber Vines Plant",
+  "block.soulfulnether.gloomy_amber_vine_block": "Gloomy Amber Vine Block",
+
   "effect.soulfulnether.frostbite": "Frostbite",
+  "effect.soulfulnether.frostbite.description": "Inflicts damage overtime while slowing down walking speed; higher levels increase both damage and slowing further.",
+
+  "subtitles.soulfulnether.bone_wyrm.saddle": "Saddle Equips",
+  "subtitles.soulfulnether.bone_wyrm.ambient": "Bone Wyrm chirps",
+  "subtitles.soulfulnether.bone_wyrm.hurt": "Bone Wyrm hurts",
+  "subtitles.soulfulnether.bone_wyrm.death": "Bone Wyrm dies",
+  "subtitles.soulfulnether.bone_wyrm_larva.death": "Bone Wyrm Larva dies",
+
+  "subtitles.soulfulnether.wallow.ambient": "Wallow chuckles",
+  "subtitles.soulfulnether.wallow.hurt": "Wallow hurts",
+  "subtitles.soulfulnether.wallow.death": "Wallow dies",
 
   "creativetab.soulfulnether": "Soulful Nether",
 

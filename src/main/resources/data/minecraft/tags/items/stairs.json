@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "soulfulnether:fright_stairs"
+    "soulfulnether:fright_stairs",
+    "soulfulnether:gloomy_amber_brick_stairs"
   ]
 }

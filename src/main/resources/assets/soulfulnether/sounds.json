@@ -1,3 +1,81 @@
 {
+  "block.gloom_cap.break": {
+    "sounds": [
+      "soulfulnether:block/gloom_cap/break1",
+      "soulfulnether:block/gloom_cap/break2",
+      "soulfulnether:block/gloom_cap/break3",
+      "soulfulnether:block/gloom_cap/break4"
+    ],
+    "subtitle": "subtitles.block.generic.break"
+  },
+  "block.gloomy_amber.squish": {
+    "sounds": [
+      "soulfulnether:block/gloomy_amber/squish1",
+      "soulfulnether:block/gloomy_amber/squish2"
+    ],
+    "subtitle": "subtitles.soulfulnether.gloomy_amber.squish"
+  },
 
+
+
+  "entity.bone_wyrm.saddle": {
+    "sounds": [
+      "mob/horse/leather"
+    ],
+    "subtitle": "subtitles.soulfulnether.bone_wyrm.saddle"
+  },
+  "entity.bone_wyrm.ambient": {
+    "sounds": [
+      "soulfulnether:entity/bone_wyrm/chirp1",
+      "soulfulnether:entity/bone_wyrm/chirp2",
+      "soulfulnether:entity/bone_wyrm/chirp3",
+      "soulfulnether:entity/bone_wyrm/chirp4"
+    ],
+    "subtitle": "subtitles.soulfulnether.bone_wyrm.ambient"
+  },
+  "entity.bone_wyrm.hurt": {
+  "sounds": [
+    "soulfulnether:entity/bone_wyrm/chirp1",
+    "soulfulnether:entity/bone_wyrm/chirp2",
+    "soulfulnether:entity/bone_wyrm/chirp3",
+    "soulfulnether:entity/bone_wyrm/chirp4"
+  ],
+  "subtitle": "subtitles.soulfulnether.bone_wyrm.hurt"
+  },
+  "entity.bone_wyrm.death": {
+    "sounds": [
+      "soulfulnether:entity/bone_wyrm/death"
+    ],
+    "subtitle": "subtitles.soulfulnether.bone_wyrm.death"
+  },
+  "entity.bone_wyrm_larva.death": {
+    "sounds": [
+      "soulfulnether:entity/bone_wyrm/larva_death"
+    ],
+    "subtitle": "subtitles.soulfulnether.bone_wyrm_larva.death"
+  },
+
+
+  "entity.wallow.ambient": {
+    "sounds": [
+      "soulfulnether:entity/wallow/ambient1",
+      "soulfulnether:entity/wallow/ambient2",
+      "soulfulnether:entity/wallow/ambient3"
+    ],
+    "subtitle": "subtitles.soulfulnether.wallow.ambient"
+  },
+  "entity.wallow.hurt": {
+    "sounds": [
+      "soulfulnether:entity/wallow/ambient1",
+      "soulfulnether:entity/wallow/ambient2",
+      "soulfulnether:entity/wallow/ambient3"
+    ],
+    "subtitle": "subtitles.soulfulnether.wallow.hurt"
+  },
+  "entity.wallow.death": {
+    "sounds": [
+      "soulfulnether:entity/wallow/death"
+    ],
+    "subtitle": "subtitles.soulfulnether.wallow.death"
+  }
 }

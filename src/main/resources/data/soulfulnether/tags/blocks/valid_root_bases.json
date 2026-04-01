@@ -6,6 +6,7 @@
     {
       "id": "#netherexp:roots_plantable_on",
       "required": false
-    }
+    },
+    "soulfulnether:gloomy_amber_vine_block"
   ]
 }

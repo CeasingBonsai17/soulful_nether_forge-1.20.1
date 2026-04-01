@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "soulfulnether:block/bone_wyrm_nest",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "soulfulnether:block/bone_wyrm_nest"
+    },
+    "axis=z": {
+      "model": "soulfulnether:block/bone_wyrm_nest",
+      "x": 90
+    }
+  }
+}

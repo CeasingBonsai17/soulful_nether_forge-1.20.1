@@ -51,9 +51,7 @@ public class  SoulfulCreativeTab {
                         if (CompatUtil.checkFarmersDelight()) {
                             output.accept(SoulfulBlocks.CHARRED_SOULROOT_CRATE.get());
                         }
-                        if (CompatUtil.checkRubinatedNether()) {
-                            output.accept(SoulfulItems.FROZEN_SOULROOT.get());
-                        }
+                        output.accept(SoulfulItems.FROZEN_SOULROOT.get());
                         if (CompatUtil.checkFarmersDelight() && CompatUtil.checkRubinatedNether()) {
                             output.accept(SoulfulBlocks.FROZEN_SOULROOT_CRATE.get());
                         }
@@ -74,9 +72,10 @@ public class  SoulfulCreativeTab {
                         output.accept(SoulfulItems.ROASTED_MARSHMARROW.get());
                         output.accept(SoulfulBlocks.ROASTED_MARSHMARROW_STACK.get());
                         output.accept(SoulfulItems.MARSHMARROW_HEART.get());
-                        if (CompatUtil.checkRubinatedNether()) {
-                            output.accept(SoulfulItems.MARSHMARROW_MOCHI.get());
-                        }
+                        output.accept(SoulfulItems.MARSHMARROW_MOCHI.get());
+                        output.accept(SoulfulItems.MARSHMARROW_ON_A_STICK.get());
+                        output.accept(SoulfulItems.BONE_WYRM_SPAWN_EGG.get());
+                        output.accept(SoulfulItems.BONE_WYRM_LARVA.get());
                         output.accept(SoulfulBlocks.VOLCANIC_ICE.get());
                         output.accept(SoulfulBlocks.PACKED_VOLCANIC_ICE.get());
                         output.accept(SoulfulBlocks.ASHEN_SNOW_BLOCK.get());
@@ -88,13 +87,28 @@ public class  SoulfulCreativeTab {
                         output.accept(SoulfulBlocks.POLISHED_ASHEN_BASALT.get());
                         output.accept(SoulfulBlocks.VOLCANIC_QUARTZ_BLOCK.get());
                         output.accept(SoulfulBlocks.VOLCANIC_QUARTZ_BRICKS.get());
+                        output.accept(SoulfulBlocks.VOLCANIC_QUARTZ_BRICK_STAIRS.get());
+                        output.accept(SoulfulBlocks.VOLCANIC_QUARTZ_BRICK_SLAB.get());
                         output.accept(SoulfulBlocks.POLISHED_VOLCANIC_QUARTZ.get());
+                        output.accept(SoulfulBlocks.POLISHED_VOLCANIC_QUARTZ_STAIRS.get());
+                        output.accept(SoulfulBlocks.POLISHED_VOLCANIC_QUARTZ_SLAB.get());
                         output.accept(SoulfulBlocks.GLOOM_FUNGUS_STEM.get());
+                        output.accept(SoulfulBlocks.GLOOM_FUNGUS_HYPHAE.get());
                         output.accept(SoulfulBlocks.GLOOM_FUNGUS_CAP.get());
                         output.accept(SoulfulBlocks.GLOOM_FUNGUS.get());
                         output.accept(SoulfulBlocks.GLOOMY_FIDDLEHEAD.get());
                         output.accept(SoulfulBlocks.TALL_GLOOMY_FIDDLEHEAD.get());
                         output.accept(SoulfulBlocks.DROWSY_VINES.get());
+                        output.accept(SoulfulBlocks.GLOOMY_AMBER_CLUMP.get());
+                        output.accept(SoulfulBlocks.GLOOMY_AMBER_BLOCK.get());
+                        output.accept(SoulfulItems.GLOOMY_AMBER_BRICK.get());
+                        output.accept(SoulfulBlocks.GLOOMY_AMBER_BRICKS.get());
+                        output.accept(SoulfulBlocks.GLOOMY_AMBER_BRICK_STAIRS.get());
+                        output.accept(SoulfulBlocks.GLOOMY_AMBER_BRICK_SLAB.get());
+                        output.accept(SoulfulBlocks.GLOOMY_AMBER_BRICK_WALL.get());
+                        output.accept(SoulfulBlocks.CHISELED_GLOOMY_AMBER_BRICKS.get());
+                        output.accept(SoulfulBlocks.GLOOMY_AMBER_VINES.get());
+                        output.accept(SoulfulBlocks.GLOOMY_AMBER_VINE_BLOCK.get());
 
 
 
@@ -104,7 +118,7 @@ public class  SoulfulCreativeTab {
                     .build());
 
 
-    public static void register(IEventBus eventBus) {
+    public static void init(IEventBus eventBus) {
         CREATIVE_MODE_TAB.register(eventBus);
     }
 }

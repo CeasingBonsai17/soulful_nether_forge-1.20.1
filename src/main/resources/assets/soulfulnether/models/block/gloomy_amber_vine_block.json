@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "soulfulnether:block/gloomy_amber_vine_block"
+  }
+}

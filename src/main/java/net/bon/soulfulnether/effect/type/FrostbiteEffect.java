@@ -20,16 +20,11 @@ public class FrostbiteEffect extends MobEffect {
 
     @Override
     public boolean isDurationEffectTick(int p_19455_, int p_19456_) {
-        int i;
-        if (this == SoulfulEffects.FROSTBITE.get()) {
-            i = 30 >> p_19456_;
-            if (i > 0) {
-                return p_19455_ % i == 0;
-            } else {
-                return true;
-            }
+        int i = 30 >> p_19456_;
+        if (i > 0) {
+            return p_19455_ % i == 0;
         } else {
-            return this == MobEffects.HUNGER;
+            return true;
         }
     }
 }

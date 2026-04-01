@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:random_patch",
+  "config": {
+    "tries": 6,
+    "xz_spread": 5,
+    "feature": {
+      "feature": "soulfulnether:gloomy_glades/base_features/gloom_fungus_selector",
+      "placement": []
+    }
+  }
+}

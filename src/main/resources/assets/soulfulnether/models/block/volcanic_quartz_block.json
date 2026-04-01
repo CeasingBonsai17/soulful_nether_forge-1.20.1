@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:block/cube_column",
   "textures": {
-    "end": "soulfulnether:block/ashen_quartz_top",
-    "side": "soulfulnether:block/ashen_quartz"
+    "end": "soulfulnether:block/volcanic_quartz_top",
+    "side": "soulfulnether:block/volcanic_quartz"
   }
 }

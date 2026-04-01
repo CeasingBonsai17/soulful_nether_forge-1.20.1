@@ -7,6 +7,25 @@
     },
     {
       "type": "minecraft:biome"
+    },
+    {
+      "type": "minecraft:environment_scan",
+      "direction_of_search": "down",
+      "max_steps": 17,
+      "target_condition": {
+        "type": "minecraft:matching_blocks",
+        "offset": [0, -1, 0],
+        "blocks": [
+          "minecraft:soul_sand",
+          "minecraft:soul_soil",
+          "soulfulnether:lichoss_block",
+          "soulfulnether:fright_wart_block"
+        ]
+      },
+      "allowed_search_condition": {
+        "type": "minecraft:matching_blocks",
+        "blocks": "minecraft:air"
+      }
     }
   ]
 }

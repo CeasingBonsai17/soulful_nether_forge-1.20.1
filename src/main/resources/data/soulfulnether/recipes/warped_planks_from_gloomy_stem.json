@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "group": "planks",
+  "ingredients": [
+    {
+      "item": "soulfulnether:gloom_fungus_stem"
+    }
+  ],
+  "result": {
+    "item": "minecraft:warped_planks"
+  }
+}

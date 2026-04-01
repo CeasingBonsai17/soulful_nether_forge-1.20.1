@@ -1,0 +1,28 @@
+{
+  "variants": {
+    "axis=x,lit=false": {
+      "model": "soulfulnether:block/gloom_fungus_stem",
+      "x": 90,
+      "y": 90
+    },
+    "axis=x,lit=true": {
+      "model": "soulfulnether:block/horizontal_lit_gloom_stem",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y,lit=false": {
+      "model": "soulfulnether:block/gloom_fungus_stem"
+    },
+    "axis=y,lit=true": {
+      "model": "soulfulnether:block/lit_gloom_fungus_stem"
+    },
+    "axis=z,lit=false": {
+      "model": "soulfulnether:block/gloom_fungus_stem",
+      "x": 90
+    },
+    "axis=z,lit=true": {
+      "model": "soulfulnether:block/horizontal_lit_gloom_stem",
+      "x": 90
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "soulfulnether:block/volcanic_quartz_bricks",
+    "side": "soulfulnether:block/volcanic_quartz_bricks",
+    "top": "soulfulnether:block/volcanic_quartz_bricks"
+  }
+}

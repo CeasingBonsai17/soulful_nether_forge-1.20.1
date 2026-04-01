@@ -1,7 +1,7 @@
 package net.bon.soulfulnether.worldgen.feature;
 
 import net.bon.soulfulnether.SoulfulNether;
-import net.bon.soulfulnether.worldgen.feature.custom.*;
+import net.bon.soulfulnether.worldgen.feature.type.*;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.configurations.BlockStateConfiguration;
 import net.minecraft.world.level.levelgen.feature.configurations.HugeMushroomFeatureConfiguration;
@@ -24,7 +24,7 @@ public class SoulfulFeature {
             new VolcanicIceCubesFeature(BlockStateConfiguration.CODEC));
 
 
-    public static void register(IEventBus eventBus) {
+    public static void init(IEventBus eventBus) {
         FEATURES.register(eventBus);
     }
 }

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "soulfulnether:gloomy_amber_vine_block"
+    }
+  ],
+  "result": {
+    "item": "soulfulnether:gloomy_amber_vines",
+    "count": 4
+  }
+}

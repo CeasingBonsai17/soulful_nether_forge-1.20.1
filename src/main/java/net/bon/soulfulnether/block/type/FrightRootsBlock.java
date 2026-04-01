@@ -1,7 +1,7 @@
 package net.bon.soulfulnether.block.type;
 
 import net.bon.soulfulnether.block.SoulfulBlocks;
-import net.bon.soulfulnether.util.SoulfulBlockTags;
+import net.bon.soulfulnether.util.SoulfulTags;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.Blocks;
@@ -13,6 +13,6 @@ public class FrightRootsBlock extends RootsBlock {
         super(properties);
     }
     protected boolean mayPlaceOn(BlockState state, BlockGetter blockGetter, BlockPos pos) {
-        return state.is(SoulfulBlocks.FRIGHT_WART_BLOCK.get()) || state.is(SoulfulBlockTags.VALID_ROOT_BASES) || state.is(Blocks.NETHERRACK) || super.mayPlaceOn(state, blockGetter, pos);
+        return state.is(SoulfulBlocks.FRIGHT_WART_BLOCK.get()) || state.is(SoulfulTags.VALID_ROOT_BASES) || state.is(Blocks.NETHERRACK) || super.mayPlaceOn(state, blockGetter, pos);
     }
 }

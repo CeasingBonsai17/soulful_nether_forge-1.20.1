@@ -1,0 +1,16 @@
+{
+  "feature": "soulfulnether:gloomy_glades/gloomy_amber_boulder",
+  "placement": [
+    {
+      "type": "minecraft:count_on_every_layer",
+      "count": 1
+    },
+    {
+      "type": "minecraft:biome"
+    },
+    {
+      "type": "minecraft:rarity_filter",
+      "chance": 2
+    }
+  ]
+}

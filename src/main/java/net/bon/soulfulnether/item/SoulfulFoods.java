@@ -16,4 +16,5 @@ public class SoulfulFoods {
     public static final FoodProperties TOASTY_MARSHMARROW = (new FoodProperties.Builder()).nutrition(4).saturationMod(0.4F).build();
     public static final FoodProperties ROASTED_MARSHMARROW = (new FoodProperties.Builder()).nutrition(4).saturationMod(0.6F).build();
     public static final FoodProperties MARSHMARROW_FOODS = (new FoodProperties.Builder()).nutrition(6).saturationMod(0.6F).build();
-    }
+    public static final FoodProperties BONE_WYRM_LARVA = (new FoodProperties.Builder()).nutrition(3).saturationMod(0.4F).build();
+}

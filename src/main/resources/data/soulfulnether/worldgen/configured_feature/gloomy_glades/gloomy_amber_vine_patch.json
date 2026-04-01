@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:vegetation_patch",
+  "config": {
+    "surface": "ceiling",
+    "depth": 1,
+    "vertical_range": 5,
+    "extra_bottom_block_chance": 0,
+    "extra_edge_column_chance": 0.75,
+    "vegetation_chance": 0.8,
+    "xz_radius": {
+      "type": "minecraft:uniform",
+      "value": {
+        "min_inclusive": 2,
+        "max_inclusive": 3
+      }
+    },
+    "replaceable": "#soulfulnether:gloomy_amber_vines_replaceable",
+    "ground_state": {
+      "type": "minecraft:simple_state_provider",
+      "state": {
+        "Name": "soulfulnether:gloomy_amber_vine_block"
+      }
+    },
+    "vegetation_feature": {
+      "feature": "soulfulnether:gloomy_glades/long_gloomy_amber_vines",
+      "placement": []
+    }
+  },
+  "silly": "soulfulnether:gloomy_amber_vine_block"
+}

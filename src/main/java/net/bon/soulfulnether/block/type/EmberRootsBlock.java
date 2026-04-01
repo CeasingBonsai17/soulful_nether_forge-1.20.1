@@ -1,7 +1,7 @@
 package net.bon.soulfulnether.block.type;
 
 import net.bon.soulfulnether.block.SoulfulBlocks;
-import net.bon.soulfulnether.util.SoulfulBlockTags;
+import net.bon.soulfulnether.util.SoulfulTags;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.tags.BlockTags;
@@ -30,7 +30,7 @@ public class EmberRootsBlock extends Block {
 
     public EmberRootsBlock(BlockBehaviour.Properties properties) {
         super(properties);
-        this.registerDefaultState((BlockState)this.stateDefinition.any().setValue(HANGING, false));
+        this.registerDefaultState(this.stateDefinition.any().setValue(HANGING, false));
     }
 
     @Nullable
@@ -62,7 +62,7 @@ public class EmberRootsBlock extends Block {
     public static boolean mayPlaceOn(LevelReader level, BlockPos pos, Direction direction) {
         BlockState blockstate = level.getBlockState(pos);
         return direction == Direction.DOWN && blockstate.is(Blocks.BASALT) || blockstate.is(SoulfulBlocks.FRIGHT_WART_BLOCK.get()) ||
-                blockstate.is(SoulfulBlockTags.VALID_ROOT_BASES) || blockstate.is(BlockTags.DIRT) || blockstate.is(Blocks.FARMLAND);
+                blockstate.is(SoulfulTags.VALID_ROOT_BASES) || blockstate.is(BlockTags.DIRT) || blockstate.is(Blocks.FARMLAND);
     }
 
     protected static Direction getConnectedDirection(BlockState state) {

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "soulfulnether:block/smooth_ashen_basalt"
+  }
+}

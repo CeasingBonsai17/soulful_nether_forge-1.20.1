@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "head=false": {
+      "model": "soulfulnether:block/drowsy_vines_plant"
+    },
+    "head=true": {
+      "model": "soulfulnether:block/drowsy_vines"
+    }
+  }
+}

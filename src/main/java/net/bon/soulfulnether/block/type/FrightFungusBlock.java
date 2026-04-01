@@ -1,7 +1,6 @@
 package net.bon.soulfulnether.block.type;
 
 import net.bon.soulfulnether.block.SoulfulBlocks;
-import net.bon.soulfulnether.util.SoulfulBlockTags;
 import net.bon.soulfulnether.worldgen.feature.SoulfulConfiguredFeatures;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.registries.Registries;

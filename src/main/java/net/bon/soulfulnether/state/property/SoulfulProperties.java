@@ -8,5 +8,5 @@ public class SoulfulProperties {
     public static final BooleanProperty TOASTY = BooleanProperty.create("toasty");
     public static final BooleanProperty HEAD = BooleanProperty.create("head");
     public static final BooleanProperty GROWING = BooleanProperty.create("growing");
-
+    public static final IntegerProperty GRUB_COUNT = IntegerProperty.create("grub_count", 0, 3);
 }

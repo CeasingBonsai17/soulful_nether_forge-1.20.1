@@ -3,11 +3,14 @@ package net.bon.soulfulnether;
 import com.mojang.logging.LogUtils;
 import net.bon.soulfulnether.block.SoulfulBlocks;
 import net.bon.soulfulnether.effect.SoulfulEffects;
+import net.bon.soulfulnether.entity.SoulfulEntityTypes;
+import net.bon.soulfulnether.entity.client.BoneWyrmRenderer;
 import net.bon.soulfulnether.item.SoulfulCreativeTab;
 import net.bon.soulfulnether.item.SoulfulItems;
 import net.bon.soulfulnether.pack.SoulfulBuiltInPacks;
 import net.bon.soulfulnether.painting.SoulfulPaintings;
 import net.bon.soulfulnether.particle.SoulfulParticleTypes;
+import net.bon.soulfulnether.sound.SoulfulSoundEvents;
 import net.bon.soulfulnether.util.CompatUtil;
 import net.bon.soulfulnether.world.entity.SoulfulEntityType;
 import net.bon.soulfulnether.worldgen.SoulfulBiomes;
@@ -15,6 +18,8 @@ import net.bon.soulfulnether.worldgen.SoulfulSurfaceRules;
 import net.bon.soulfulnether.worldgen.feature.SoulfulFeature;
 import net.jadenxgamer.elysium_api.api.biome.ElysiumBiomeRegistry;
 import net.jadenxgamer.elysium_api.api.surface_rules.SurfaceRulesRegistry;
+import net.minecraft.client.renderer.entity.EntityRenderer;
+import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.core.RegistryAccess;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.packs.PackType;
@@ -24,6 +29,7 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.AddPackFindersEvent;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
+import net.minecraftforge.event.entity.item.ItemExpireEvent;
 import net.minecraftforge.event.server.ServerAboutToStartEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -37,7 +43,8 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
 
-// The value here should match an entry in the META-INF/mods.toml file
+import java.util.Objects;
+
 @Mod(SoulfulNether.MOD_ID)
 public class SoulfulNether
 {
@@ -46,15 +53,17 @@ public class SoulfulNether
 
     public SoulfulNether() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
-        DistExecutor.safeRunWhenOn(Dist.CLIENT, () -> SoulfulNetherClient::register);
-        SoulfulBlocks.register(modEventBus);
-        SoulfulItems.register(modEventBus);
-        SoulfulPaintings.register(modEventBus);
-        SoulfulCreativeTab.register(modEventBus);
-        SoulfulFeature.register(modEventBus);
-        SoulfulParticleTypes.register(modEventBus);
-        SoulfulEffects.register(modEventBus);
-        SoulfulEntityType.register(modEventBus);
+        DistExecutor.safeRunWhenOn(Dist.CLIENT, () -> SoulfulNetherClient::init);
+        SoulfulBlocks.init(modEventBus);
+        SoulfulSoundEvents.init(modEventBus);
+        SoulfulItems.init(modEventBus);
+        SoulfulPaintings.init(modEventBus);
+        SoulfulCreativeTab.init(modEventBus);
+        SoulfulFeature.init(modEventBus);
+        SoulfulParticleTypes.init(modEventBus);
+        SoulfulEffects.init(modEventBus);
+        SoulfulEntityType.init(modEventBus);
+        SoulfulEntityTypes.init(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
         modEventBus.addListener(SoulfulNether::addBuiltInPacks);
@@ -69,7 +78,7 @@ public class SoulfulNether
 
     private void commonSetup(final FMLCommonSetupEvent event) {
         event.enqueueWork(() -> {
-            SurfaceRulesRegistry.registerSurfaceRule(SoulfulSurfaceRules.register());
+            SurfaceRulesRegistry.registerNetherSurfaceRule(SoulfulSurfaceRules.register(), SoulfulNether.MOD_ID);
             registerCompostables();
         });
     }
@@ -82,20 +91,28 @@ public class SoulfulNether
     }
 
     @SubscribeEvent
+    public void growBoneWyrm(ItemExpireEvent event) {
+        if (event.getEntity().getItem().is(SoulfulItems.BONE_WYRM_LARVA.get())) {
+            event.getEntity().level().addFreshEntity(Objects.requireNonNull(SoulfulEntityTypes.BONE_WYRM.get().create(event.getEntity().level())));
+        }
+    }
+
+    @SubscribeEvent
     public void onServerAboutToStart(ServerAboutToStartEvent event) {
         RegistryAccess registryAccess = event.getServer().registryAccess();
         ElysiumBiomeRegistry.replaceNetherBiome(Biomes.SOUL_SAND_VALLEY, SoulfulBiomes.FRIGHT_FOREST, 0.2, 20,
-                new ResourceLocation(MOD_ID, "soul_sand_vally1"), registryAccess);
-        ElysiumBiomeRegistry.replaceNetherBiome(Biomes.BASALT_DELTAS, SoulfulBiomes.ASHEN_DELTAS, 0.2, 20,
-                new ResourceLocation(MOD_ID, "basalt_deltas1"), registryAccess);
-        ElysiumBiomeRegistry.replaceNetherBiome(Biomes.WARPED_FOREST, SoulfulBiomes.GLOOM_FOREST, 0.2, 16,
-                new ResourceLocation(MOD_ID, "warped_forest1"), registryAccess);
+                new ResourceLocation(MOD_ID, "fright_forest"), registryAccess);
+        ElysiumBiomeRegistry.replaceNetherBiome(Biomes.BASALT_DELTAS, SoulfulBiomes.ASHEN_DELTAS, 0.15, 20,
+                new ResourceLocation(MOD_ID, "ashen_deltas"), registryAccess);
+        ElysiumBiomeRegistry.replaceNetherBiome(Biomes.WARPED_FOREST, SoulfulBiomes.GLOOMY_GLADES, 0.1, 18,
+                new ResourceLocation(MOD_ID, "gloomy_glades"), registryAccess);
     }
 
     @Mod.EventBusSubscriber(modid = MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
     public static class ClientModEvents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
+            SoulfulNetherClient.registerEntityRenderers();
         }
     }
 

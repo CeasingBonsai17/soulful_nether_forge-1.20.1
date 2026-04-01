@@ -18,7 +18,7 @@ public class SoulfulEffects {
             new FrostbiteEffect(MobEffectCategory.HARMFUL, 7440021).addAttributeModifier(Attributes.MOVEMENT_SPEED, "7107DE5E-7CE8-4030-940E-514C1F160890", -0.1800002135, AttributeModifier.Operation.MULTIPLY_TOTAL));
 
 
-    public static void register(IEventBus eventBus) {
+    public static void init(IEventBus eventBus) {
         MOB_EFFECT.register(eventBus);
     }
 }

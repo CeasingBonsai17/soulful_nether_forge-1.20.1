@@ -1,5 +1,5 @@
 {
-  "parent": "soulfulnether:item/handheld_flipped",
+  "parent": "minecraft:item/handheld_rod",
   "textures": {
     "layer0": "soulfulnether:item/frostbitten_popsicle"
   }
